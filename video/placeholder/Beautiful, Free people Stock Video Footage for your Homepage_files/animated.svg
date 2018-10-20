@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>002-layers</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="002-layers" fill-rule="nonzero">
+            <polygon id="Shape" fill="#FFDC64" points="29.9741176 8.50352941 15 17.0588235 0.0258823529 8.50352941 15 0"></polygon>
+            <polygon id="Shape" fill="#F6BB42" points="15 17.0588235 5.70588235 11.7488235 0.0258823529 14.9741176 15 23.5294118 29.9741176 14.9741176 24.2941176 11.7488235"></polygon>
+            <polygon id="Shape" fill="#E6646E" points="15 23.5294118 5.70588235 18.2194118 0.0258823529 21.4447059 15 30 29.9741176 21.4447059 24.2941176 18.2194118"></polygon>
+        </g>
+    </g>
+</svg>

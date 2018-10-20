@@ -1,0 +1,87 @@
+// font-family: 'Abril Fatface', cursive;
+// font-family: 'Playfair Display', serif;
+/*
+
+    font-family: 'Catamaran', sans-serif;
+
+    font-family: 'Titillium Web', sans-serif;
+
+    font-family: 'Coda', cursive;  //+1
+
+    font-family: 'Faster One', cursive; // racer
+
+    font-family: 'Poller One', cursive; //+1
+
+    font-family: 'PT Serif', serif;
+
+    font-family: 'Open Sans', sans-serif;
+
+
+*/
+
+%headline {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+
+  line-height: 125%;
+}
+
+.headline {
+  &--s {
+    @extend %headline;
+  }
+
+  &--m {
+    @extend %headline;
+    font-size: 5rem;
+  }
+
+  &--l {
+    @extend %headline;
+  }
+
+  &--xl {
+    @extend %headline;
+    font-size: 10rem;
+    color: white;
+  }
+}
+
+%text {
+  text-align: justify;
+}
+
+.text {
+  &--s {
+    @extend %text;
+    line-height: 1.5;
+    font-size: 2rem;
+  }
+
+  &--m {
+    @extend %text;
+    font-size: 2.5rem;
+  }
+
+  &--l {
+  }
+}
+
+.quote {
+  &--s {
+  }
+
+  &--m {
+    font-size: 3.5rem;
+    line-height: 160%;
+    color: white;
+    font-weight: 600;
+    text-align: right;
+    z-index: 50;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+  }
+
+  &--l {
+  }
+}

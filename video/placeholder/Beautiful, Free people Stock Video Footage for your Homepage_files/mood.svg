@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>017-rainbow</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="017-rainbow" fill-rule="nonzero">
+            <path d="M0,30 L14.5161328,30 C14.5161328,21.4484766 21.4485352,14.5161328 30,14.5161328 L30,0 C13.4314453,0 0,13.4314453 0,30 Z" id="Shape" fill="#E6646E"></path>
+            <path d="M30,14.4210671 L30,2.25 C14.6740955,2.25 2.25,14.6740955 2.25,30 L14.4210671,30 C14.4210671,21.3959731 21.3959731,14.4210671 30,14.4210671 Z" id="Shape" fill="#FFDC64"></path>
+            <path d="M30,14.3076832 L30,4.5 C15.916713,4.5 4.5,15.916713 4.5,30 L14.3076832,30 C14.3076832,21.3333527 21.3333527,14.3076832 30,14.3076832 Z" id="Shape" fill="#18C746"></path>
+            <path d="M30,14.6808535 L30,7.5 C17.5735773,7.5 7.5,17.5735773 7.5,30 L14.6808535,30 C14.6808535,21.5394495 21.5394495,14.6808535 30,14.6808535 Z" id="Shape" fill="#3B8CFE"></path>
+            <path d="M30,14.5714453 L30,9.75 C18.8162274,9.75 9.75,18.8162274 9.75,30 L14.5714453,30 C14.5714453,21.4790249 21.4790249,14.5714453 30,14.5714453 Z" id="Shape" fill="#1173FF"></path>
+            <path d="M30,14.4324165 L30,12 C20.058904,12 12,20.0588451 12,30 L14.4324165,30 C14.4324165,21.4022412 21.4022412,14.4324165 30,14.4324165 Z" id="Shape" fill="#9013FE"></path>
+        </g>
+    </g>
+</svg>
