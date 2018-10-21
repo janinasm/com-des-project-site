@@ -21,35 +21,35 @@
 
 %headline {
   text-align: center;
-  text-transform: uppercase;
-  font-family: "Oswald", sans-serif;
-
+  font-family: 'Oswald', sans-serif;
   line-height: 125%;
 }
 
 .headline {
   &--s {
     @extend %headline;
+    font-size: 5rem;
   }
 
   &--m {
     @extend %headline;
-    font-size: 5rem;
+    font-size: 7rem;
   }
 
   &--l {
     @extend %headline;
+    font-size: 10rem;
   }
 
   &--xl {
     @extend %headline;
-    font-size: 10rem;
+    font-size: 14rem;
     color: white;
   }
 }
 
 %text {
-  text-align: justify;
+  font-family: 'Open Sans';
 }
 
 .text {
@@ -65,6 +65,11 @@
   }
 
   &--l {
+    font-size: 3rem;
+  }
+
+  &--xl {
+    font-size: 5rem;
   }
 }
 

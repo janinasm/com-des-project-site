@@ -1,13 +1,16 @@
-// MODULES
+/*
+TODO--
+responsiv
+chart
+map
 
-.container {
-  
-  //display: grid;
-  //grid-template-rows: repeat(auto-fit, minmax(50rem, 1fr));
-  //grid-template-columns: [full-start] repeat(4, minmax(5rem, 1fr)) [full-end];
-  //grid-template-rows: 100vh min-content 40vw repeat(3, min-content);
-  ///grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(2, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
-}
+hidden class
+parallax
+animasjon
+
+responsive bilder med picture tag*/
+
+// MODULES
 
 .multimedia {
 }
@@ -47,7 +50,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: no-repeat center url(/img/placeholder/us-flag.svg);
+      background: no-repeat center url(../img/placeholder/us-flag.svg);
       background-size: cover;
       grid-area: 1 / 1 / -1 / -1;
       z-index: -1;
@@ -63,7 +66,6 @@
 //test
 .header_landing {
   background: black;
-  position: sticky;
   top: 0;
   height: 200vh;
   display: grid;
@@ -85,9 +87,8 @@
       left: 0;
       width: 100%;
       height: 100vh;
-      background: no-repeat center url(/img/placeholder/nor-flagg-lines.svg);
+      background: no-repeat center url(../img/placeholder/nor-flagg-lines.svg);
       background-size: cover;
-      opacity: 9;
     }
   }
 
@@ -130,7 +131,7 @@
     text-align: center;
     z-index: -3;
 
-    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 5px 20px rgba(30, 40, 45, 0.6);
 
     &::before {
       content: "";
@@ -139,11 +140,11 @@
       left: 0;
       width: 100%;
       height: 100vh;
-      background: no-repeat center url(/img/placeholder/am-flag.jpg);
+      background: no-repeat center url(../img/placeholder/am-flag.jpg);
       background-size: cover;
       grid-area: 1 / 1 / -1 / -1;
       z-index: -1;
-      opacity: 0.7;
+      opacity: 0.6;
     }
 
     &_headline {
@@ -158,10 +159,50 @@
   }
 }
 
+// 2nd headline
+.img-b {
+  top: 0;
+  height: 200vh;
+  display: grid;
+  overflow: hidden;
+  height: 150vh;
+  width: 100%;
+
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: no-repeat center url(../img/foto-vinner-closeup_8452.jpg);
+      background-size: cover;
+      grid-area: 1 / 1 / -1 / -1;
+      z-index: -20;
+    }
+
+    &_headline {
+      height: 100vh;
+    grid-area: 1 / 1 / -1 / -1;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    }
+
+    &_subtitle {
+      color: white;
+      margin: 0 auto;
+      width: 80%;
+      font-weight: 400;
+    }
+  }
+
 .introduction {
   padding: 20rem 0rem;
   display: grid;
- 
+
   align-content: center;
   justify-content: center;
   justify-items: center;
@@ -176,12 +217,14 @@
 .multimedia-a {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 50rem));
+  grid-gap: 5rem;
   justify-content: center;
 
   &_media {
     display: grid;
-    grid-template-rows: repeat(6, minmax(10rem, 10rem));
+    grid-template-rows: repeat(10, minmax(10rem, 10rem));
     grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: auto;
 
     &_img--1 {
       grid-row: 2 / 5;
@@ -204,8 +247,6 @@
     grid-row-gap: 2rem;
 
     &_headline {
-      margin-bottom: 2rem;
-      line-height: 120%;
     }
   }
 }
@@ -214,8 +255,8 @@
 .multimedia-b {
   width: 100%;
 
-  background: linear-gradient(rgba(0, 0, 0, 0.7) 100%, rgba(0, 0, 0, 0.7) 100%),
-    no-repeat center url(/img/bil-svart_8440.jpg);
+  background: linear-gradient(55deg, #1c586e79 0%, #80464667 85%),
+    no-repeat center url(../img/bil-svart_8440.jpg);
   background-size: cover;
 
   display: grid;
@@ -237,7 +278,7 @@
   }
 
   &_excerpt {
-    margin: 10rem 0rem ;
+    margin: 10rem 0rem;
     max-width: 45rem;
     padding: 1.5rem;
   }
@@ -248,9 +289,10 @@
   //padding: 20rem 0rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+  grid-gap: 3rem;
 
   &_media {
-    border: 2rem solid white;
+    padding: 5rem;
 
     &_image img {
       height: 100%;
@@ -259,7 +301,8 @@
   }
 
   &_text {
-    width: 60%;
+    padding: 15rem 0rem;
+    max-width: 40rem;
 
     display: grid;
     align-self: center;
@@ -271,64 +314,57 @@
 // MULTIMEDIA D
 .multimedia-d {
   display: grid;
-  
   grid-template-columns: repeat(auto-fit, minmax(50rem, 70rem));
+  grid-gap: 10rem;
   justify-content: center;
-  min-height: 100vh;
 
-  background: linear-gradient(rgba(0, 0, 0, 0.7) 100%, rgba(0, 0, 0, 0.7) 100%),
-    no-repeat center url(/img/felger-vegg_8384.jpg);
-  background-size: cover;
-  position: relative;
+  background: linear-gradient(55deg, #58191942 0%, #010c1d9f 85%),
+    no-repeat center url(../img/felger-vegg_8384.jpg);
 
   &_media {
-    position: relative;
+    display: grid;
+    grid-template-rows: repeat(6, minmax(10rem, 10rem));
+    grid-template-columns: repeat(6, 1fr);
 
     &_img--1 {
-      width: 80rem;
-      height: 100%;
-
-      position: absolute;
-      top: 30rem;
-      right: 20rem;
+      grid-row: 2 / 5;
+      grid-column: 2 / 5;
+      width: 150%;
     }
 
     &_img--2 {
-      width: 50rem;
-      height: 100%;
-
-      position: absolute;
-      top: 80rem;
-      right: 60rem;
+      grid-row: 5;
+      grid-column: 4 / 7;
+      z-index: 20;
     }
   }
 
   &_text {
-    padding: 5rem 10rem;
+    max-width: 60rem;
+    margin: 15rem 0rem;
+    padding: 5rem;
     display: grid;
     align-self: center;
     justify-self: center;
     grid-row-gap: 2rem;
   }
 
- /* &_excerpt {
-    width: 20%;
-    position: absolute;
-    top: 20rem;
-    right: 80rem;
-  }*/
+  &_excerpt {
+    grid-row: 1;
+    grid-column: 4 / -1;
+  }
 }
 
 // MULTIMEDIA E
 .multimedia-e {
+  padding: 5rem;
   display: grid;
-  min-height: 70vh;
   grid-template-columns: repeat(auto-fit, minmax(50rem, 70rem));
+  grid-gap: 5rem;
   justify-content: center;
 
   &_text {
-    width: 60%;
-
+    max-width: 50rem;
     display: grid;
     align-self: center;
     justify-self: center;
@@ -336,10 +372,9 @@
   }
 
   &_media {
-    padding: 10rem;
-    
+    position: relative;
+
     &_image img {
-      height: 100%;
       object-fit: cover;
     }
   }
@@ -349,14 +384,25 @@
   }
 
   .next {
+    font-size: 15rem;
+    position: absolute;
+    top: 25rem;
+    left: 0;
+  }
+
+  .number {
+    position: absolute;
+    top: 25rem;
+    right: -15rem;
+    font-size: 15rem;
+    font-family: Arial, Helvetica, sans-serif;
   }
 }
 
 // MULTIMEDIA F
 .multimedia-f {
-  min-height: 100vh;
-
-  background: no-repeat center url(/img/kart-closeup_8416.jpg);
+  background: linear-gradient(55deg, #1c586e42 0%, #80464633 85%),
+    no-repeat center url(../img/kart-closeup_8416.jpg);
   background-size: cover;
 
   display: grid;
@@ -509,21 +555,14 @@
 
 // TEXT A
 .text-a {
-  padding: 20rem 0rem;
+  padding: 10rem;
 
   &_text {
+    max-width: 50rem;
     display: grid;
     grid-row-gap: 2rem;
     margin: 0 auto;
-    width: 40%;
   }
-}
-
-// IMG A
-.img-b {
-  height: 150vh;
-  width: 100%;
-  background: none;
 }
 
 // VIDEO A
@@ -532,8 +571,8 @@
 // DV SMALL A
 .dv-small-a {
   padding: 10rem 0rem;
-  background: linear-gradient(rgba(0, 0, 0, 0.7) 100%, rgba(0, 0, 0, 0.7) 100%),
-    no-repeat center url(/img/magasiner_8395.jpg);
+  background: linear-gradient(55deg, #2c0303a2 0%, #3a3a3aa8 85%),
+    no-repeat center url(../img/bilder-bak_8443.jpg);
 
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(50rem, 70rem));
@@ -558,6 +597,17 @@
     align-self: center;
     justify-self: center;
     background: greenyellow;
+
+    position: relative;
+
+    &_number {
+      font-size: 15rem;
+      color: white;
+
+      position: absolute;
+      top: -12rem;
+      right: 0;
+    }
   }
 }
 // DV SMALL B
@@ -592,6 +642,6 @@
   min-height: 100vh;
 
   //TODO
-  background: no-repeat center url(/img/kart-closeup_8416.jpg);
+  background: no-repeat center url(../img/kart-closeup_8416.jpg);
   background-size: cover;
 }
