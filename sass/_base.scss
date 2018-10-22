@@ -58,9 +58,29 @@ body {
     background: white;
     color: #333;
   }
+  
+  .fade-in {
+    opacity: 0;
+  }
+
+  .sticky {
+    position: fixed;
+  }
 
   .bg-black {
     background: rgba(6, 9, 10, 0.7);
+    padding: 5rem;
+    max-width: 60rem;
     color: white;
+  }
+
+  .zindex {
+    position: relative;
+    z-index: 100;
+  }
+
+  .ease {
+    --ease: all .2s ease;
+    transition: var(--ease);
   }
 }

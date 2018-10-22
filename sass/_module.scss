@@ -65,20 +65,27 @@ responsive bilder med picture tag*/
 
 //test
 .header_landing {
+  --ease: all 1s ease;
   background: black;
   top: 0;
   height: 200vh;
   display: grid;
   overflow: hidden;
+  position: sticky;
   z-index: -10;
+  transition: var(--ease);
 
   .header_landing_grid {
+    --ease: all 1s ease;
+
     grid-area: 1 / 1 / -1 / -1;
     z-index: -5;
     height: 100vh;
     display: grid;
     grid-template: 43% 50% / 32.5% 1fr;
     grid-gap: 20rem;
+
+    transition: var(--ease);
 
     &::before {
       content: "";
@@ -93,6 +100,7 @@ responsive bilder med picture tag*/
   }
 
   &_video {
+    z-index: -1;
     grid-row: 1;
     grid-column: 1;
 
@@ -160,45 +168,55 @@ responsive bilder med picture tag*/
 }
 
 // 2nd headline
-.img-b {
-  top: 0;
-  height: 200vh;
+.multimedia-scroll {
+  background: #f8f9fa;
+  height: 100%;
+
   display: grid;
-  overflow: hidden;
-  height: 150vh;
-  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 50rem));
+  grid-gap: 15rem;
+  justify-content: center;
 
+  position: relative;
 
-    &::before {
-      content: "";
+  &_media {
+    grid-column: 2;
+
+    &_test {
+      background: no-repeat url(../img/bil-svart_8440.jpg);
+      background-size: contain;
+      background-position: center center;
+
       position: absolute;
+      height: 100vh;
+      width: 50%;
+      max-width: 80rem;
+      left: 50%;
       top: 0;
-      left: 0;
-      width: 100%;
-      height: 100vh;
-      background: no-repeat center url(../img/foto-vinner-closeup_8452.jpg);
-      background-size: cover;
-      grid-area: 1 / 1 / -1 / -1;
-      z-index: -20;
-    }
-
-    &_headline {
-      height: 100vh;
-    grid-area: 1 / 1 / -1 / -1;
-    display: grid;
-    justify-content: center;
-    align-content: center;
-    text-align: center;
-    }
-
-    &_subtitle {
-      color: white;
-      margin: 0 auto;
-      width: 80%;
-      font-weight: 400;
     }
   }
 
+  &_text {
+    grid-column: 1;
+    min-height: 50vh;
+    z-index: 9999;
+
+    &_quoteblock {
+      position: relative;
+
+      & p {
+        position: relative;
+        min-height: 100vh;
+      }
+
+      &--1 {
+        min-height: 50vh;
+      }
+    }
+  }
+}
+
+// INTRO
 .introduction {
   padding: 20rem 0rem;
   display: grid;
@@ -255,8 +273,9 @@ responsive bilder med picture tag*/
 .multimedia-b {
   width: 100%;
 
-  background: linear-gradient(55deg, #1c586e79 0%, #80464667 85%),
-    no-repeat center url(../img/bil-svart_8440.jpg);
+  background: linear-gradient(55deg, #1c3d6e79 0%, #80464667 85%),
+    //no-repeat center url(../img/bil-svart_8440.jpg);
+      no-repeat center url(../img/familien_8429.jpg);
   background-size: cover;
 
   display: grid;
@@ -265,9 +284,7 @@ responsive bilder med picture tag*/
   grid-template-columns: repeat(auto-fit, minmax(70rem, 1fr));
 
   &_text {
-    padding: 7rem 10rem;
     margin: 25rem 10rem;
-    max-width: 70rem;
     align-self: center;
     justify-self: center;
 
@@ -340,9 +357,7 @@ responsive bilder med picture tag*/
   }
 
   &_text {
-    max-width: 60rem;
     margin: 15rem 0rem;
-    padding: 5rem;
     display: grid;
     align-self: center;
     justify-self: center;
@@ -412,8 +427,6 @@ responsive bilder med picture tag*/
     justify-self: end;
     display: grid;
     grid-row-gap: 3rem;
-    max-width: 60rem;
-    padding: 7rem;
     margin: 10rem;
 
     background: $color-white-bg;
@@ -579,7 +592,6 @@ responsive bilder med picture tag*/
   justify-content: center;
 
   &_text {
-    background: white;
     width: 80%;
     padding: 5rem;
 
