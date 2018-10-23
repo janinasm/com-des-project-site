@@ -44,43 +44,45 @@ body {
     }
   }
 
-  img {
-    width: 100%;
-    height: auto;
-  }
-
-  video {
-    width: 100%;
-    height: auto;
-  }
-
-  .bg-white {
-    background: white;
-    color: #333;
-  }
   
-  .fade-in {
-    opacity: 0;
-  }
+}
 
-  .sticky {
-    position: fixed;
-  }
+img {
+  width: 100%;
+  height: auto;
+}
 
-  .bg-black {
-    background: rgba(6, 9, 10, 0.7);
-    padding: 5rem;
-    max-width: 60rem;
-    color: white;
-  }
+video {
+  width: 100%;
+  height: auto;
+}
 
-  .zindex {
-    position: relative;
-    z-index: 100;
-  }
+.bg-white {
+  background: white;
+  color: #333;
+}
 
-  .ease {
-    --ease: all .2s ease;
-    transition: var(--ease);
-  }
+.fade-in {
+  opacity: 0;
+}
+
+.sticky {
+  position: fixed !important;
+}
+
+.bg-black {
+  background: #06090ab3;
+  padding: 5rem;
+  max-width: 60rem;
+  color: white;
+}
+
+.zindex {
+  position: relative;
+  z-index: 100;
+}
+
+.ease {
+  --ease: all .5s ease;
+  transition: var(--ease);
 }

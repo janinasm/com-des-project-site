@@ -22,43 +22,43 @@ body {
   }
 }
 
-body img {
+img {
   width: 100%;
   height: auto;
 }
 
-body video {
+video {
   width: 100%;
   height: auto;
 }
 
-body .bg-white {
+.bg-white {
   background: white;
   color: #333;
 }
 
-body .fade-in {
+.fade-in {
   opacity: 0;
 }
 
-body .sticky {
-  position: fixed;
+.sticky {
+  position: fixed !important;
 }
 
-body .bg-black {
-  background: rgba(6, 9, 10, 0.7);
+.bg-black {
+  background: #06090ab3;
   padding: 5rem;
   max-width: 60rem;
   color: white;
 }
 
-body .zindex {
+.zindex {
   position: relative;
   z-index: 100;
 }
 
-body .ease {
-  --ease: all .2s ease;
+.ease {
+  --ease: all .5s ease;
   -webkit-transition: var(--ease);
   transition: var(--ease);
 }
@@ -193,7 +193,6 @@ responsive bilder med picture tag*/
   }
 }*/
 .header_landing {
-  --ease: all 1s ease;
   background: black;
   top: 0;
   height: 200vh;
@@ -203,12 +202,9 @@ responsive bilder med picture tag*/
   position: -webkit-sticky;
   position: sticky;
   z-index: -10;
-  -webkit-transition: var(--ease);
-  transition: var(--ease);
 }
 
-.header_landing .header_landing_grid {
-  --ease: all 1s ease;
+.header_landing_grid {
   grid-area: 1 / 1 / -1 / -1;
   z-index: -5;
   height: 100vh;
@@ -218,11 +214,11 @@ responsive bilder med picture tag*/
   -ms-grid-columns: 32.5% 1fr;
       grid-template: 43% 50% / 32.5% 1fr;
   grid-gap: 20rem;
-  -webkit-transition: var(--ease);
-  transition: var(--ease);
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
-.header_landing .header_landing_grid::before {
+.header_landing_grid::before {
   content: "";
   position: absolute;
   top: 0;
@@ -299,7 +295,7 @@ responsive bilder med picture tag*/
   background: no-repeat center url(../img/placeholder/am-flag.jpg);
   background-size: cover;
   grid-area: 1 / 1 / -1 / -1;
-  z-index: -1;
+  z-index: -10;
   opacity: 0.6;
 }
 
@@ -329,10 +325,7 @@ responsive bilder med picture tag*/
   grid-column: 2;
 }
 
-.multimedia-scroll_media_test {
-  background: no-repeat url(../img/bil-svart_8440.jpg);
-  background-size: contain;
-  background-position: center center;
+.multimedia-scroll_media_img--1, .multimedia-scroll_media_img--2, .multimedia-scroll_media_img--3 {
   position: absolute;
   height: 100vh;
   width: 50%;
@@ -431,7 +424,7 @@ responsive bilder med picture tag*/
 
 .multimedia-b {
   width: 100%;
-  background: linear-gradient(55deg, #1c3d6e79 0%, #80464667 85%), no-repeat center url(../img/familien_8429.jpg);
+  background: linear-gradient(55deg, #182949de 0%, #804646a4 85%), no-repeat center url(../img/familien_8429.jpg);
   background-size: cover;
   display: -ms-grid;
   display: grid;
@@ -448,7 +441,6 @@ responsive bilder med picture tag*/
   display: -ms-grid;
   display: grid;
   grid-row-gap: 3rem;
-  background: whitesmoke;
 }
 
 .multimedia-b_excerpt {
@@ -466,7 +458,7 @@ responsive bilder med picture tag*/
 }
 
 .multimedia-c_media {
-  padding: 5rem;
+  padding: 2rem;
 }
 
 .multimedia-c_media_image img {
@@ -496,7 +488,7 @@ responsive bilder med picture tag*/
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: linear-gradient(55deg, #58191942 0%, #010c1d9f 85%), no-repeat center url(../img/felger-vegg_8384.jpg);
+  background: linear-gradient(55deg, #804646a4 0%, #182949de 85%), no-repeat center url(../img/felger-vegg_8384.jpg);
 }
 
 .multimedia-d_media {
@@ -611,11 +603,9 @@ responsive bilder med picture tag*/
   display: grid;
   grid-row-gap: 3rem;
   margin: 10rem;
-  background: whitesmoke;
 }
 
 .image-grid-a_media {
-  background: black;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: (15vw)[3];
@@ -623,6 +613,12 @@ responsive bilder med picture tag*/
       grid-template: repeat(3, 15vw)/repeat(6, 1fr);
   grid-gap: 1.5rem;
   padding: 1.5rem;
+}
+
+@media only screen and (max-width: 50em) {
+  .image-grid-a_media {
+    grid-gap: .3rem;
+  }
 }
 
 .image-grid-a_media_img--1 {
