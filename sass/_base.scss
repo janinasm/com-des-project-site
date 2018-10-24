@@ -1,3 +1,50 @@
+/*
+TODO--
+responsiv
+chart
+map
+
+hidden class
+parallax
+animasjon
+
+responsive bilder med picture tag*/
+
+// ROOT
+:root {
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #868e96;
+  --gray-dark: #343a40;
+  --primary: #007bff;
+  --secondary: #868e96;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+
+  --font-family-sans-serif: Arial,sans-serif;
+  --font-family-monospace: monospace;
+}
+
+
 // RESPONSIVE BREAKPOINTS
 $bp-largest: 75em; // 1200px
 $bp-large: 62.5em; // 1000px
@@ -43,46 +90,18 @@ body {
     @media only screen and (max-width: $bp-medium) {
     }
   }
-
-  
 }
 
-img {
-  width: 100%;
-  height: auto;
+.page-loader {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0%;
+  left: 0;
+  right: 0%;
+  background: black;
+  z-index: 99;
+  overflow: hidden;
+  position: fixed;
 }
 
-video {
-  width: 100%;
-  height: auto;
-}
-
-.bg-white {
-  background: white;
-  color: #333;
-}
-
-.fade-in {
-  opacity: 0;
-}
-
-.sticky {
-  position: fixed !important;
-}
-
-.bg-black {
-  background: #06090ab3;
-  padding: 5rem;
-  max-width: 60rem;
-  color: white;
-}
-
-.zindex {
-  position: relative;
-  z-index: 100;
-}
-
-.ease {
-  --ease: all .5s ease;
-  transition: var(--ease);
-}

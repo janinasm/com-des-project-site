@@ -1,0 +1,50 @@
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+video {
+  width: 100%;
+  height: auto;
+}
+
+.fill-page {
+  min-height: 100vh;
+
+  @media only screen and (max-width: 1000px) {
+    min-height: initial;
+  }
+}
+
+.bg-white {
+  background: white;
+  color: #333;
+}
+
+.fade-in {
+  opacity: 0;
+}
+
+.sticky {
+  position: fixed !important;
+}
+
+.bg-black {
+  background: #06090ab3;
+  padding: 5rem;
+  max-width: 60rem;
+  color: white;
+
+}
+
+.zindex {
+  position: relative;
+  z-index: 100;
+}
+
+
+.ease {
+  --ease: all 0.5s ease;
+  transition: var(--ease);
+}

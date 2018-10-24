@@ -1,0 +1,308 @@
+// MODULES
+
+// INTRO
+.introduction {
+  padding: 20rem 0rem;
+  display: grid;
+
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  grid-gap: 4rem;
+
+  &_text {
+    max-width: 50rem;
+  }
+}
+
+.multimedia {
+}
+
+// MULTIMEDIA A -
+.multimedia-a {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 50rem));
+  grid-gap: 5rem;
+  justify-content: center;
+
+  &_media {
+    display: grid;
+    grid-template-rows: repeat(10, minmax(10rem, 10rem));
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: auto;
+
+    &_img--1 {
+      grid-row: 2 / 5;
+      grid-column: 1 / 4;
+      width: 160%;
+    }
+
+    &_img--2 {
+      grid-row: 6 / 6;
+      grid-column: 3 / 6;
+      z-index: 20;
+    }
+  }
+
+  &_text {
+    padding: 20rem 0rem;
+    display: grid;
+    align-self: start;
+    justify-self: left;
+    grid-row-gap: 2rem;
+
+    &_headline {
+    }
+  }
+}
+
+// MULTIMEDIA B
+.multimedia-b {
+  width: 100%;
+
+  background: linear-gradient(55deg, #182949de 0%, #804646a4 85%),
+      no-repeat center url(../img/familien_8429.jpg);
+  background-size: cover;
+
+  display: grid;
+  //grid-template-columns: repeat(auto-fit, minmax(70rem, 1fr));
+  //grid-template-columns: 1.1fr 1.8fr 1.1fr;
+  grid-template-columns: repeat(auto-fit, minmax(70rem, 1fr));
+
+  &_text {
+    margin: 25rem 10rem;
+    align-self: center;
+    justify-self: center;
+
+    display: grid;
+    grid-row-gap: 3rem;
+  }
+
+  &_excerpt {
+    margin: 10rem 0rem;
+    max-width: 45rem;
+    padding: 1.5rem;
+    justify-self: right;
+  }
+}
+
+// MULTIMEDIA C
+.multimedia-c {
+  //padding: 20rem 0rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+  grid-gap: 3rem;
+
+  &_media {
+    padding: 2rem;
+
+    &_image img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &_text {
+    padding: 15rem 0rem;
+    max-width: 40rem;
+
+    display: grid;
+    align-self: center;
+    justify-self: center;
+    grid-row-gap: 2rem;
+  }
+}
+
+// MULTIMEDIA D
+.multimedia-d {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50rem, 70rem));
+  grid-gap: 10rem;
+  justify-content: center;
+
+  background: linear-gradient(55deg, #804646a4 0%, #182949de 85%),
+    no-repeat center url(../img/felger-vegg_8384.jpg);
+
+  &_media {
+    display: grid;
+    grid-template-rows: repeat(6, minmax(10rem, 10rem));
+    grid-template-columns: repeat(6, 1fr);
+
+    &_img--1 {
+      grid-row: 4;
+      grid-column: 2 / 5;
+      width: 150%;
+    }
+
+    &_img--2 {
+      grid-row: 7;
+      grid-column: 4 / 7;
+      z-index: 20;
+    }
+  }
+
+  &_text {
+    margin: 15rem 0rem;
+    display: grid;
+    align-self: center;
+    justify-self: center;
+    grid-row-gap: 2rem;
+  }
+
+  &_excerpt {
+    grid-row: 2;
+    grid-column: 4 / -1;
+  }
+}
+
+// MULTIMEDIA E
+.multimedia-e {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+  grid-gap: 3rem;
+  justify-content: center;
+
+  &_text {
+    max-width: 50rem;
+    display: grid;
+    align-self: center;
+    justify-self: center;
+    grid-row-gap: 2rem;
+  }
+
+  &_media {
+    position: relative;
+    padding: 2rem;
+
+    &_image img {
+      object-fit: cover;
+      height: 100%;
+    }
+  }
+
+  .slides {
+    display: none;
+  }
+
+  .next {
+    height: 15rem;
+    width: 15rem;
+    font-size: 15rem;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+    color: var(--light);
+    background: var(--gray-dark);
+    cursor: pointer;
+    line-height: 0;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::selection {
+      background: none;
+    }
+  }
+
+  .number {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 15rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: orangered;
+  }
+}
+
+// MULTIMEDIA F
+.multimedia-f {
+  background: linear-gradient(55deg, #1c586e42 0%, #80464633 85%),
+    no-repeat center url(../img/kart-closeup_8416.jpg);
+  background-size: cover;
+
+  display: grid;
+
+  &_text {
+    align-self: start;
+    justify-self: end;
+    display: grid;
+    grid-row-gap: 3rem;
+    margin: 10rem;
+  }
+}
+
+
+
+// TEXT A
+.text-a {
+  padding: 10rem;
+
+  &_text {
+    max-width: 50rem;
+    display: grid;
+    grid-row-gap: 2rem;
+    margin: 0 auto;
+  }
+}
+
+// VIDEO A
+
+
+
+// MULTIMEDIA SCROLL, sticky images with scrolling text
+.multimedia-scroll {
+  background: var(--light);
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 50rem));
+  grid-gap: 15rem;
+  justify-content: center;
+
+  position: relative;
+
+  &_media {
+    grid-column: 2;
+
+    &_img--1,
+    &_img--2,
+    &_img--3 {
+      position: absolute;
+      height: 100vh;
+      width: 50%;
+      max-width: 80rem;
+      left: 50%;
+      top: 0;
+
+      display: flex;
+
+      img {
+        align-self: center;
+        width: 80%;
+      }
+    }
+  }
+
+  &_text {
+    grid-column: 1;
+    min-height: 50vh;
+    z-index: 9999;
+
+    &_quoteblock {
+      position: relative;
+
+      & p {
+        position: relative;
+        min-height: 100vh;
+      }
+
+      &--1 {
+        min-height: 50vh;
+      }
+    }
+  }
+}
+
+
