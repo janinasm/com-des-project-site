@@ -1,4 +1,6 @@
+
 // MULTIMEDIA E - IMAGE-BOX
+
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -65,6 +67,24 @@ var header_height = header.offsetHeight;
 var header_grid = document.getElementById("header_landing_grid");
 var header_grid_height = header_grid.offsetHeight;
 
+window.addEventListener("scroll", function() {
+  scrollpos = window.scrollY;
+
+  if (scrollpos > header_height) {
+    header.classList.add("fade-out");
+  } else {
+    header.classList.remove("fade-out");
+  }
+
+  if (scrollpos > 50 && scrollpos <= header_grid_height * 2) {
+    header_grid.classList.add("fade-out");
+  } else {
+    header_grid.classList.remove("fade-out");
+  }
+});
+/*
+
+
 var multimedia_scroll_media = document.getElementById(
   "multimedia-scroll_media"
 );
@@ -78,43 +98,9 @@ var scroll_container_height = scroll_container.offsetHeight;
 var multimedia_scroll = document.getElementById("multimedia-scroll");
 var multimedia_scroll_height = multimedia_scroll.offsetHeight;
 
-window.addEventListener("scroll", function() {
-  scrollpos = window.scrollY;
-
-  if (scrollpos > header_height) {
-    header.classList.add("fade-in");
-  } else {
-    header.classList.remove("fade-in");
-  }
-
-  if (scrollpos > 50 && scrollpos <= header_grid_height * 2) {
-    header_grid.classList.add("fade-in");
-  } else {
-    header_grid.classList.remove("fade-in");
-  }
-
-  // scroll container
-
-  /*
-	if(scrollpos >= scroll_container_height && scrollpos < scroll_container_height + multimedia_scroll_height) {
-		mutlimedia_scroll_media.classList.remove("fade-in");
-	}
-	else  {
-		mutlimedia_scroll_media.classList.add("fade-in");
-	}
 
 
-	if(scrollpos >= scroll_container_height) {
-		img1.classList.add("sticky");
-	}
-	else  {
-		img1.classList.remove("sticky");
-	}
-
-
-	
-});
-*/
+ 
 
   if (
     scrollpos >= scroll_container_height &&
@@ -125,34 +111,21 @@ window.addEventListener("scroll", function() {
     multimedia_scroll_media.classList.add("fade-in");
   }
 
-  if (scrollpos >= scroll_container_height) {
-    img1.classList.add("sticky");
+
+
+
+
+
+
+  if (scrollpos >= scroll_container_height + (multimedia_scroll_height /2)) {
+    img2.classList.remove("fade-in");
   } else {
-    img1.classList.remove("sticky");
+    img2.classList.add("fade-in");
   }
 
-
-
-
-
-
-
-  if (scrollpos >= scroll_container_height) {
-    img2.classList.add("sticky");
-  } else {
-    img2.classList.remove("sticky");
-  }
-
-
-
-
-  if (scrollpos >= scroll_container_height) {
-	img3.classList.add("sticky");
-  } else {
-    img3.classList.remove("sticky");
-  }
-
+ // console.log(scrollpos);
 });
+
 
 /*
 
@@ -186,3 +159,89 @@ window.addEventListener('scroll', function() {
 
 
 */
+ // scroll container
+
+  /*
+	if(scrollpos >= scroll_container_height && scrollpos < scroll_container_height + multimedia_scroll_height) {
+		mutlimedia_scroll_media.classList.remove("fade-in");
+	}
+	else  {
+		mutlimedia_scroll_media.classList.add("fade-in");
+	}
+
+
+	if(scrollpos >= scroll_container_height) {
+		img1.classList.add("sticky");
+	}
+	else  {
+		img1.classList.remove("sticky");
+	}
+
+
+	
+});
+*/
+
+/*
+function isInViewport(elem) {
+  let elemTop = elem.offsetTop;
+  let elemBottom = elemTop + elem.height;
+  let viewportTop = window.scrollY;
+  let viewportBottom = viewportTop + window.innerHeight;
+  return elemBottom > viewportTop && elemTop < viewportBottom;
+};*/
+
+var multimedia_scroll = document.getElementById('multimedia-scroll');
+
+var quote1 = document.getElementsByClassName('multimedia-scroll_text_quoteblock')[1];
+var quote2 = document.getElementsByClassName('multimedia-scroll_text_quoteblock')[2];
+var quote3 = document.getElementsByClassName('multimedia-scroll_text_quoteblock')[3];
+
+var img1 = document.getElementById('img-1');
+var img2 = document.getElementById('img-2');
+var img3 = document.getElementById('img-3');
+
+var visible = false;
+
+// https://jsfiddle.net/shaaraddalvi/4rp09jL0/
+window.addEventListener('scroll', function(e) {
+
+
+  if(isScrolledIntoView(multimedia_scroll)) {
+    img1.classList.remove('fade-out');
+  } 
+
+  if(!isScrolledIntoView(multimedia_scroll)) {
+    img1.classList.add('fade-out');
+    img2.classList.add('fade-out');
+    img3.classList.add('fade-out');
+  } 
+
+
+
+	if(isScrolledIntoView(quote1)) {
+    img2.classList.add('fade-out');
+  } 
+
+  if(isScrolledIntoView(quote2)) {
+    img1.classList.add('fade-out');
+    img2.classList.remove('fade-out');
+    img3.classList.add('fade-out');
+  } 
+
+  if(isScrolledIntoView(quote3)) {
+    img2.classList.add('fade-out');
+    img3.classList.remove('fade-out');
+  } 
+  
+})
+
+
+function isScrolledIntoView(el) {
+  var elemTop = el.getBoundingClientRect().top;
+  var elemBottom = el.getBoundingClientRect().bottom;
+
+  // var isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
+  var isVisible = elemTop < window.innerHeight && elemBottom >= 0
+  return isVisible;
+}

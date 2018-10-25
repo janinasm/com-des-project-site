@@ -23,7 +23,11 @@ video {
 }
 
 .fade-in {
-  opacity: 0;
+  opacity: 1 !important;
+}
+
+.fade-out {
+  opacity: 0 !important;
 }
 
 .sticky {
