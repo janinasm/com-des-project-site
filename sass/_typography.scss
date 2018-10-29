@@ -19,10 +19,17 @@
 
 */
 
+::selection {
+  background: darkred;
+  color: white;
+}
+
 %headline {
   text-align: center;
   font-family: 'Oswald', sans-serif;
   font-family: 'Anton', sans-serif;
+  //font-family: lft-etica, sans-serif;
+
   line-height: 125%;
 }
 
@@ -46,6 +53,7 @@
     @extend %headline;
     font-size: 14rem;
     color: white;
+    letter-spacing: .1rem;
   }
 }
 
@@ -66,6 +74,7 @@
   }
 
   &--l {
+    @extend %text;
     font-size: 3rem;
   }
 
@@ -74,20 +83,34 @@
   }
 }
 
+%quote {
+  color: white;
+  font-weight: 600;
+  text-align: right;
+  z-index: 50;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+  font-family: 'Anton', sans-serif;
+  font-weight: 400;
+}
+
 .quote {
+
   &--s {
+    @extend %quote;
   }
 
   &--m {
+    @extend %quote;
     font-size: 3.5rem;
     line-height: 160%;
-    color: white;
-    font-weight: 600;
-    text-align: right;
-    z-index: 50;
-    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
   }
 
   &--l {
+    @extend %quote;
+    font-size: 4.5rem;
+    line-height: 120%;
   }
+}
+
+.bold {
 }

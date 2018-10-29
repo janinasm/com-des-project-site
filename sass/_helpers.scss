@@ -30,6 +30,14 @@ video {
   opacity: 0 !important;
 }
 
+.visible {
+  display: initial !important;
+}
+
+.not-visible {
+  display: none !important;
+}
+
 .sticky {
   position: fixed !important;
 }
