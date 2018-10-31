@@ -1,24 +1,4 @@
-// font-family: 'Abril Fatface', cursive;
-// font-family: 'Playfair Display', serif;
-/*
-
-    font-family: 'Catamaran', sans-serif;
-
-    font-family: 'Titillium Web', sans-serif;
-
-    font-family: 'Coda', cursive;  //+1
-
-    font-family: 'Faster One', cursive; // racer
-
-    font-family: 'Poller One', cursive; //+1
-
-    font-family: 'PT Serif', serif;
-
-    font-family: 'Open Sans', sans-serif;
-
-
-*/
-
+// Typography
 ::selection {
   background: darkred;
   color: white;
@@ -37,16 +17,29 @@
   &--s {
     @extend %headline;
     font-size: 5rem;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 4.5rem;
+    }
   }
 
   &--m {
     @extend %headline;
     font-size: 7rem;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 6rem;
+    }
   }
 
   &--l {
     @extend %headline;
     font-size: 10rem;
+    letter-spacing: .1rem;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 8rem;
+    }
   }
 
   &--xl {
@@ -54,6 +47,10 @@
     font-size: 14rem;
     color: white;
     letter-spacing: .1rem;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 10rem;
+    }
   }
 }
 
@@ -66,11 +63,19 @@
     @extend %text;
     line-height: 1.5;
     font-size: 2rem;
+
+    @media only screen and (max-width: $bp-largest) {
+      font-size: 2.5rem;
+    }
   }
 
   &--m {
     @extend %text;
     font-size: 2.5rem;
+
+    @media only screen and (max-width: $bp-largest) {
+      font-size: 3rem;
+    }
   }
 
   &--l {

@@ -26,7 +26,7 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "block";
 }
 
-
+// headline
 var scrollpos = window.scrollY;
 var header = document.getElementById("header_landing");
 var header_height = header.offsetHeight;
@@ -50,9 +50,13 @@ window.addEventListener("scroll", function() {
   }
 });
 
-
+// scroll-seksjon
 var multimedia_scroll = document.getElementById('multimedia-scroll');
 var multimedia_scroll_media = document.getElementById('multimedia-scroll_media');
+
+var video_a = document.getElementById('video-a');
+var video = document.getElementById('video');
+var mm_a = document.getElementById('multimedia-a');
 
 var quote1 = document.getElementsByClassName('multimedia-scroll_text_quoteblock')[1];
 var quote2 = document.getElementsByClassName('multimedia-scroll_text_quoteblock')[2];
@@ -66,6 +70,28 @@ var visible = false;
 
 // https://jsfiddle.net/shaaraddalvi/4rp09jL0/
 window.addEventListener('scroll', function(e) {
+
+  if(isBottomScrolledIntoView(video)) {
+    video.classList.add("sticky");
+  }
+
+  if(isBottomScrolledIntoView(video_a) || isScrolledIntoView(mm_a)) {
+    video.classList.remove("sticky");
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   if(isScrolledIntoView(multimedia_scroll)) {
 
@@ -97,12 +123,37 @@ window.addEventListener('scroll', function(e) {
   
 })
 
-
+// top or bottom
 function isScrolledIntoView(el) {
   var elemTop = el.getBoundingClientRect().top;
   var elemBottom = el.getBoundingClientRect().bottom;
 
   // var isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
   var isVisible = elemTop < window.innerHeight && elemBottom >= 0
+  return isVisible;
+}
+
+// fully
+function isScrolledFullyIntoView(el) {
+  var elemTop = el.getBoundingClientRect().top;
+  var elemBottom = el.getBoundingClientRect().bottom;
+
+  var isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
+  return isVisible;
+}
+
+// top
+function isTopScrolledIntoView(el) {
+  var elemTop = el.getBoundingClientRect().top;
+
+  var isVisible = (elemTop <= window.innerHeight);
+  return isVisible;
+}
+
+// bottom
+function isBottomScrolledIntoView(el) {
+  var elemBottom = el.getBoundingClientRect().bottom;
+
+  var isVisible = (elemBottom <= window.innerHeight);
   return isVisible;
 }

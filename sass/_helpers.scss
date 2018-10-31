@@ -1,4 +1,3 @@
-
 img {
   width: 100%;
   height: auto;
@@ -13,13 +12,32 @@ video {
   min-height: 100vh;
 
   @media only screen and (max-width: 1000px) {
-    min-height: initial;
+    //min-height: initial;
   }
 }
 
 .bg-white {
   background: white;
   color: #333;
+
+  @media only screen and (max-width: 600px) {
+    padding-top: 5rem;
+  }
+}
+
+.bg-black {
+  background: #06090ab3;
+  padding: 5rem;
+  max-width: 60rem;
+  color: white;
+
+  @media only screen and (max-width: 600px) {
+  }
+}
+
+.zindex {
+  position: relative;
+  z-index: 100;
 }
 
 .fade-in {
@@ -42,21 +60,7 @@ video {
   position: fixed !important;
 }
 
-.bg-black {
-  background: #06090ab3;
-  padding: 5rem;
-  max-width: 60rem;
-  color: white;
-
-}
-
-.zindex {
-  position: relative;
-  z-index: 100;
-}
-
-
 .ease {
-  --ease: all 0.5s ease;
+  --ease: all .5s ease;
   transition: var(--ease);
 }

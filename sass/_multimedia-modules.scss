@@ -14,7 +14,10 @@
     max-width: 80rem;
     text-align: center;
     line-height: 150%;
-    font-weight: 600;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    padding: 10rem 3rem;
   }
 }
 
@@ -46,6 +49,10 @@
       grid-column: 3 / 6;
       z-index: 20;
       //box-shadow: 0 5px 20px rgba(30, 40, 45, 0.6);
+
+      @media only screen and (max-width: $bp-largest) {
+        grid-column: 4 / 7;
+      }
     }
 
     @media only screen and (max-width: $bp-largest) {
@@ -60,11 +67,8 @@
     justify-self: left;
     grid-row-gap: 2rem;
 
-    &_headline {
-    }
-
     @media only screen and (max-width: $bp-largest) {
-      padding: 1rem 0rem;
+      padding: 10rem 3rem;
     }
   }
 }
@@ -89,6 +93,10 @@
 
     display: grid;
     grid-row-gap: 3rem;
+
+    @media only screen and (max-width: $bp-small) {
+      margin: 2rem 3rem 10rem;
+    }
   }
 
   &_excerpt {
@@ -96,14 +104,16 @@
     max-width: 45rem;
     padding: 1.5rem;
     justify-self: right;
+    text-align: left;
 
-    @media only screen and (max-width: $bp-largest) {
-      margin: 2rem 0rem;
+    @media only screen and (max-width: $bp-small) {
+      justify-self: center;
+      align-self: center;
     }
   }
 
-  @media only screen and (max-width: $bp-largest) {
-
+  @media only screen and (max-width: $bp-small) {
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
   }
 }
 
@@ -113,6 +123,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
   grid-gap: 3rem;
+  margin-top: -15vh;
 
   &_media {
     padding: 2rem;
@@ -120,6 +131,10 @@
     &_image img {
       height: 100%;
       object-fit: cover;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      padding: 0rem 3.5rem;
     }
   }
 
@@ -131,6 +146,14 @@
     align-self: center;
     justify-self: center;
     grid-row-gap: 2rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      padding: 5rem 3rem;
+    }
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    grid-gap: 0rem;
   }
 }
 
@@ -156,6 +179,12 @@
       grid-column: 3 / 5;
       width: 120%;
       box-shadow: 0 5px 20px rgba(30, 40, 45, 0.6);
+
+      @media only screen and (max-width: $bp-small) {
+        grid-row: 3;
+        grid-column: 2 / 4;
+        width: 160%;
+      }
     }
 
     &_img--2 {
@@ -163,6 +192,16 @@
       grid-column: 5 / 7;
       z-index: 20;
       box-shadow: 0 5px 20px rgba(30, 40, 45, 0.6);
+
+      @media only screen and (max-width: $bp-small) {
+        grid-row: 5;
+        grid-column: 4 / 6;
+      }
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      grid-template-rows: repeat(6, 10vh);
+      grid-template-columns: repeat(6, 1fr);
     }
   }
 
@@ -172,11 +211,26 @@
     align-self: center;
     justify-self: center;
     grid-row-gap: 2rem;
+
+    @media only screen and (max-width: $bp-small) {
+      margin: 2rem 3rem 10rem;
+    }
   }
 
   &_excerpt {
     grid-row: 4;
     grid-column: 4 / 7;
+    text-align: left;
+
+    @media only screen and (max-width: $bp-small) {
+      grid-row: 2;
+      grid-column: 2 / 6;
+    }
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    grid-gap: 1rem;
   }
 }
 
@@ -194,6 +248,10 @@
     align-self: center;
     justify-self: center;
     grid-row-gap: 2rem;
+
+    @media only screen and (max-width: $bp-small) {
+      padding: 5rem 3rem;
+    }
   }
 
   &_media {
@@ -215,35 +273,51 @@
     }
 
     &_next {
+      justify-self: right;
+      width: 150%;
+      height: 150%;
       grid-row: 5;
       grid-column: 1;
       font-size: 10rem;
-      color: var(--light);
-      background: var(--gray-dark);
-      cursor: pointer;
+      color: white;
+      background: gray;
       line-height: 0;
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      
 
-      &::selection {
-        background: none;
+      &_a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+
+        transition: background .2s ease-in-out;
+
+        &::selection {
+          background: none;
+        }
+
+        &:hover,
+        &:active {
+          background: darkred;
+        }
       }
 
-      &::hover,
-      &::active {
-        background: darkred;
+      @media only screen and (max-width: $bp-small) {
+        font-size: 6rem;
       }
     }
 
-    .slides, .number {
+    .slides,
+    .number {
       display: none;
     }
 
     .number {
       grid-row: 1 / span 6;
-      grid-column: 1 /span 3;
+      grid-column: 1 / span 3;
       color: white;
     }
   }
@@ -263,12 +337,16 @@
     display: grid;
     grid-row-gap: 3rem;
     margin: 10rem;
+
+    @media only screen and (max-width: $bp-small) {
+      margin: 5rem 3rem;
+    }
   }
 }
 
 // TEXT A
 .text-a {
-  padding: 10rem;
+  padding: 10rem 0rem;
 
   &_text {
     max-width: 50rem;
@@ -276,9 +354,49 @@
     grid-row-gap: 2rem;
     margin: 0 auto;
   }
+
+  @media only screen and (max-width: $bp-small) {
+    padding: 10rem 4rem;
+  }
+}
+
+.text-b {
+  background: #333;
+  padding: 10rem 0rem;
+
+  &_text {
+    color: white;
+    max-width: 80rem;
+    display: grid;
+    grid-row-gap: 2rem;
+    margin: 0 auto;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    padding: 10rem 4rem;
+  }
 }
 
 // VIDEO A
+.video-a {
+  position: relative;
+  height: 115vh;
+}
+
+.video {
+  top: 0;
+  left: 0;
+
+  max-height: 100vh;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  overflow: hidden;
+
+  @media only screen and (max-width: $bp-small) {
+    object-fit: cover;
+  }
+}
 
 // MULTIMEDIA SCROLL, sticky images with scrolling text
 .multimedia-scroll {
@@ -310,6 +428,16 @@
       img {
         align-self: center;
         width: 80%;
+
+        @media only screen and (max-width: $bp-small) {
+          width: 100%;
+          padding: 5rem;
+        }
+      }
+
+      @media only screen and (max-width: $bp-small) {
+        width: 100%;
+        left: 0;
       }
     }
   }
@@ -325,11 +453,24 @@
       & p {
         position: relative;
         min-height: 100vh;
+
+        @media only screen and (max-width: $bp-small) {
+        }
       }
 
       &--1 {
         min-height: 50vh;
       }
     }
+
+    @media only screen and (max-width: $bp-small) {
+      padding: 5rem;
+    }
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 0;
   }
 }
