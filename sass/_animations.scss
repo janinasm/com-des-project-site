@@ -1,7 +1,35 @@
+.slide-up-long {
+    animation: slide-up-long 3s;
+ }
 
-@keyframes bounce {
+ .slide-up-medium {
+    animation: slide-up-medium 2.5s;
+ }
+ 
+ .slide-up-short {
+    animation: slide-up-short 2s;
+ }
+
+ @keyframes bounce {
     0% { bottom: 22%; }
     50%   { bottom: 25%; }
     100% { bottom: 22%; }
  }
- 
+
+ @keyframes slide-up-long {
+    0% {
+        transform: translateY(20rem);
+    }
+ }
+
+ @keyframes slide-up-medium {
+    0% {
+        transform: translateY(15rem);
+    }
+ }
+
+ @keyframes slide-up-short {
+    0% {
+        transform: translateY(10rem);
+    }
+ }

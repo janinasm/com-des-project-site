@@ -51,12 +51,18 @@
       //box-shadow: 0 5px 20px rgba(30, 40, 45, 0.6);
 
       @media only screen and (max-width: $bp-largest) {
+        grid-row: 4;
         grid-column: 4 / 7;
       }
     }
 
     @media only screen and (max-width: $bp-largest) {
       grid-template-rows: repeat(5, minmax(10rem, 10rem));
+      margin: 0rem 2rem;
+    }
+
+    & img {
+      //box-shadow: 2px 2px 5px 1px gray;
     }
   }
 
@@ -84,7 +90,7 @@
   display: grid;
   //grid-template-columns: repeat(auto-fit, minmax(70rem, 1fr));
   //grid-template-columns: 1.1fr 1.8fr 1.1fr;
-  grid-template-columns: repeat(auto-fit, minmax(70rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(60rem, 1fr));
 
   &_text {
     margin: 10rem 10rem;
@@ -100,7 +106,7 @@
   }
 
   &_excerpt {
-    margin: 50% 0rem;
+    margin: 20% 0rem;
     max-width: 45rem;
     padding: 1.5rem;
     justify-self: right;
@@ -155,6 +161,11 @@
   @media only screen and (max-width: $bp-medium) {
     grid-gap: 0rem;
   }
+
+  @media only screen and (max-width: $bp-small) {
+    grid-gap: 0rem;
+    grid-template-columns: 1fr;
+  }
 }
 
 // MULTIMEDIA D
@@ -175,10 +186,9 @@
     grid-auto-rows: auto;
 
     &_img--1 {
-      grid-row: 5;
+      grid-row: 4;
       grid-column: 3 / 5;
       width: 120%;
-      box-shadow: 0 5px 20px rgba(30, 40, 45, 0.6);
 
       @media only screen and (max-width: $bp-small) {
         grid-row: 3;
@@ -191,7 +201,6 @@
       grid-row: 6;
       grid-column: 5 / 7;
       z-index: 20;
-      box-shadow: 0 5px 20px rgba(30, 40, 45, 0.6);
 
       @media only screen and (max-width: $bp-small) {
         grid-row: 5;
@@ -199,7 +208,13 @@
       }
     }
 
+    & img {
+      //box-shadow: 1px 1px 20px 1px #252525d5;
+    }
+
     @media only screen and (max-width: $bp-small) {
+      margin: 0rem 0rem 10rem;
+
       grid-template-rows: repeat(6, 10vh);
       grid-template-columns: repeat(6, 1fr);
     }
@@ -218,7 +233,7 @@
   }
 
   &_excerpt {
-    grid-row: 4;
+    grid-row: 3;
     grid-column: 4 / 7;
     text-align: left;
 
@@ -280,10 +295,8 @@
       grid-column: 1;
       font-size: 10rem;
       color: white;
-      background: gray;
+      background: black;
       line-height: 0;
-
-      
 
       &_a {
         display: flex;
@@ -293,7 +306,7 @@
         height: 100%;
         cursor: pointer;
 
-        transition: background .2s ease-in-out;
+        transition: background 0.1s ease-in-out;
 
         &::selection {
           background: none;
@@ -301,12 +314,16 @@
 
         &:hover,
         &:active {
-          background: darkred;
+          background: #af1010;
         }
       }
 
       @media only screen and (max-width: $bp-small) {
-        font-size: 6rem;
+        justify-self: right;
+        width: 100%;
+        height: 100%;
+        grid-row: 3;
+        grid-column: 1;
       }
     }
 
@@ -320,6 +337,16 @@
       grid-column: 1 / span 3;
       color: white;
     }
+
+    @media only screen and (max-width: $bp-small) {
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    grid-gap: 0rem;
+    grid-template-columns: 1fr;
   }
 }
 
@@ -362,18 +389,18 @@
 
 .text-b {
   background: #333;
-  padding: 10rem 0rem;
 
   &_text {
+    padding: 10rem 4rem;
     color: white;
     max-width: 80rem;
     display: grid;
     grid-row-gap: 2rem;
     margin: 0 auto;
-  }
 
-  @media only screen and (max-width: $bp-small) {
-    padding: 10rem 4rem;
+    @media only screen and (max-width: $bp-small) {
+      padding: 5rem 4rem;
+    }
   }
 }
 
@@ -455,6 +482,10 @@
         min-height: 100vh;
 
         @media only screen and (max-width: $bp-small) {
+        }
+
+        & span {
+          background: var(--light);
         }
       }
 

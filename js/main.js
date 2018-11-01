@@ -1,6 +1,5 @@
 
-// MULTIMEDIA E - IMAGE-BOX
-
+// multimedia-e imageslider
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -51,12 +50,30 @@ window.addEventListener("scroll", function() {
 });
 
 // scroll-seksjon
+// https://jsfiddle.net/shaaraddalvi/4rp09jL0/
 var multimedia_scroll = document.getElementById('multimedia-scroll');
 var multimedia_scroll_media = document.getElementById('multimedia-scroll_media');
 
 var video_a = document.getElementById('video-a');
 var video = document.getElementById('video');
 var mm_a = document.getElementById('multimedia-a');
+
+// multimedia-a nils petter
+var mm_a_text = document.getElementsByClassName('multimedia-a_text')[0];
+var mm_a_media_img1 = document.getElementsByClassName('multimedia-a_media_img--1')[0];
+var mm_a_media_img2 = document.getElementsByClassName('multimedia-a_media_img--2')[0];
+
+// multimedia-a familien
+var mm_b_text = document.getElementsByClassName('multimedia-b_text')[0];
+var mm_b_quote1 = document.getElementsByClassName('multimedia-b_excerpt_p')[0];
+
+// multimedia-d aarum
+var mm_d_text = document.getElementsByClassName('multimedia-d_text')[0];
+var mm_d_media_img1 = document.getElementsByClassName('multimedia-d_media_img--1')[0];
+var mm_d_media_img2 = document.getElementsByClassName('multimedia-d_media_img--2')[0];
+var mm_d_media_quote1 = document.getElementsByClassName('multimedia-d_excerpt_p')[0];
+
+
 
 var quote1 = document.getElementsByClassName('multimedia-scroll_text_quoteblock')[1];
 var quote2 = document.getElementsByClassName('multimedia-scroll_text_quoteblock')[2];
@@ -68,30 +85,30 @@ var img3 = document.getElementById('img-3');
 
 var visible = false;
 
-// https://jsfiddle.net/shaaraddalvi/4rp09jL0/
 window.addEventListener('scroll', function(e) {
+
+  if(isTopScrolledIntoView(mm_a_media_img1)) {
+    mm_a_media_img1.classList.add("slide-up-short");
+    mm_a_media_img2.classList.add("slide-up-long");
+  }
+
+  if(isTopScrolledIntoView(mm_d_media_quote1)) {
+    mm_d_media_img1.classList.add("slide-up-short");
+    mm_d_media_img2.classList.add("slide-up-medium");
+    mm_d_media_quote1.classList.add("slide-up-long");
+  }
+
+  if(isTopScrolledIntoView(mm_b_quote1)) {
+    mm_b_quote1.classList.add("slide-up-medium");
+  }
 
   if(isBottomScrolledIntoView(video)) {
     video.classList.add("sticky");
   }
 
-  if(isBottomScrolledIntoView(video_a) || isScrolledIntoView(mm_a)) {
+  if(isBottomScrolledIntoView(video_a) || isScrolledIntoView(mm_a_text)) {
     video.classList.remove("sticky");
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   if(isScrolledIntoView(multimedia_scroll)) {
 
