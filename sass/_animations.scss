@@ -10,6 +10,16 @@
     animation: slide-up-short 2s;
  }
 
+ .bounce2 {
+    animation: bounce2 3s infinite;
+ }
+
+ @keyframes bounce2 {
+    0% { transform: translateY(0rem); }
+    50%   { transform: translateY(1rem); }
+    100% { transform: translateY(0rem); }
+ }
+
  @keyframes bounce {
     0% { bottom: 22%; }
     50%   { bottom: 25%; }
@@ -18,18 +28,52 @@
 
  @keyframes slide-up-long {
     0% {
-        transform: translateY(20rem);
+        transform: translateY(30rem);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.9;
+    }
+    100% {
+        opacity: 1;
     }
  }
 
  @keyframes slide-up-medium {
     0% {
-        transform: translateY(15rem);
+        transform: translateY(20rem);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.9;
+    }
+    100% {
+        opacity: 1;
     }
  }
 
  @keyframes slide-up-short {
     0% {
         transform: translateY(10rem);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.9;
+    }
+    100% {
+        opacity: 1;
+    }
+ }
+
+ .fade-in-2 {
+    animation: test 0.5s;
+ }
+
+ @keyframes test {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
  }

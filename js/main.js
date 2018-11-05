@@ -1,4 +1,3 @@
-
 // multimedia-e imageslider
 var slideIndex = 1;
 showSlides(slideIndex);
@@ -51,94 +50,113 @@ window.addEventListener("scroll", function() {
 
 // scroll-seksjon
 // https://jsfiddle.net/shaaraddalvi/4rp09jL0/
-var multimedia_scroll = document.getElementById('multimedia-scroll');
-var multimedia_scroll_media = document.getElementById('multimedia-scroll_media');
+var multimedia_scroll = document.getElementById("multimedia-scroll");
+var multimedia_scroll_media = document.getElementById(
+  "multimedia-scroll_media"
+);
 
-var video_a = document.getElementById('video-a');
-var video = document.getElementById('video');
-var mm_a = document.getElementById('multimedia-a');
+var video_a = document.getElementById("video-a");
+var video = document.getElementById("video");
+var mm_a = document.getElementById("multimedia-a");
 
 // multimedia-a nils petter
-var mm_a_text = document.getElementsByClassName('multimedia-a_text')[0];
-var mm_a_media_img1 = document.getElementsByClassName('multimedia-a_media_img--1')[0];
-var mm_a_media_img2 = document.getElementsByClassName('multimedia-a_media_img--2')[0];
+var mm_a_text = document.getElementById("multimedia-a_text");
+var mm_a_media_img1 = document.getElementById(
+  "multimedia-a_media_img--1"
+);
+var mm_a_media_img2 = document.getElementById(
+  "multimedia-a_media_img--2"
+);
 
 // multimedia-a familien
-var mm_b_text = document.getElementsByClassName('multimedia-b_text')[0];
-var mm_b_quote1 = document.getElementsByClassName('multimedia-b_excerpt_p')[0];
+var mm_b_text = document.getElementById("multimedia-b_text");
+var mm_b_quote1 = document.getElementById("multimedia-b_excerpt_p");
 
 // multimedia-d aarum
-var mm_d_text = document.getElementsByClassName('multimedia-d_text')[0];
-var mm_d_media_img1 = document.getElementsByClassName('multimedia-d_media_img--1')[0];
-var mm_d_media_img2 = document.getElementsByClassName('multimedia-d_media_img--2')[0];
-var mm_d_media_quote1 = document.getElementsByClassName('multimedia-d_excerpt_p')[0];
+var mm_d_text = document.getElementsByClassName("multimedia-d_text")[0];
+var mm_d_media_img1 = document.getElementsByClassName(
+  "multimedia-d_media_img--1"
+)[0];
+var mm_d_media_img2 = document.getElementsByClassName(
+  "multimedia-d_media_img--2"
+)[0];
+var mm_d_media_quote1 = document.getElementsByClassName(
+  "multimedia-d_excerpt_p"
+)[0];
 
+var quote1 = document.getElementsByClassName(
+  "multimedia-scroll_text_quoteblock"
+)[1];
+var quote2 = document.getElementsByClassName(
+  "multimedia-scroll_text_quoteblock"
+)[2];
+var quote3 = document.getElementsByClassName(
+  "multimedia-scroll_text_quoteblock"
+)[3];
 
+var img1 = document.getElementById("img-1");
+var img2 = document.getElementById("img-2");
+var img3 = document.getElementById("img-3");
 
-var quote1 = document.getElementsByClassName('multimedia-scroll_text_quoteblock')[1];
-var quote2 = document.getElementsByClassName('multimedia-scroll_text_quoteblock')[2];
-var quote3 = document.getElementsByClassName('multimedia-scroll_text_quoteblock')[3];
+// scroll listener function
+window.addEventListener("scroll", function(e) {
+  if (isTopScrolledIntoView(mm_a_media_img2)) {
+    mm_a_media_img1.classList.remove("fade-out");
+    mm_a_media_img2.classList.remove("fade-out");
 
-var img1 = document.getElementById('img-1');
-var img2 = document.getElementById('img-2');
-var img3 = document.getElementById('img-3');
-
-var visible = false;
-
-window.addEventListener('scroll', function(e) {
-
-  if(isTopScrolledIntoView(mm_a_media_img1)) {
-    mm_a_media_img1.classList.add("slide-up-short");
+    mm_a_media_img1.classList.add("slide-up-long");
     mm_a_media_img2.classList.add("slide-up-long");
   }
 
-  if(isTopScrolledIntoView(mm_d_media_quote1)) {
+  if (isTopScrolledIntoView(mm_d_media_quote1)) {
+    mm_d_media_img1.classList.remove("fade-out");
+    mm_d_media_img2.classList.remove("fade-out");
+    mm_d_media_quote1.classList.remove("fade-out");
+
     mm_d_media_img1.classList.add("slide-up-short");
     mm_d_media_img2.classList.add("slide-up-medium");
     mm_d_media_quote1.classList.add("slide-up-long");
   }
 
-  if(isTopScrolledIntoView(mm_b_quote1)) {
+  if (isTopScrolledIntoView(mm_b_quote1)) {
+    mm_b_quote1.classList.remove("fade-out");
+
     mm_b_quote1.classList.add("slide-up-medium");
   }
 
-  if(isBottomScrolledIntoView(video)) {
+  if (isBottomScrolledIntoView(video)) {
     video.classList.add("sticky");
   }
 
-  if(isBottomScrolledIntoView(video_a) || isScrolledIntoView(mm_a_text)) {
+  if (isBottomScrolledIntoView(video_a) || isScrolledIntoView(mm_a_text)) {
     video.classList.remove("sticky");
   }
 
-  if(isScrolledIntoView(multimedia_scroll)) {
+  if (isScrolledIntoView(multimedia_scroll)) {
+    multimedia_scroll_media.classList.remove("not-visible");
 
-    multimedia_scroll_media.classList.remove('not-visible');
+    img1.classList.remove("fade-out");
+  }
 
-    img1.classList.remove('fade-out');
+  if (!isScrolledIntoView(multimedia_scroll)) {
+    multimedia_scroll_media.classList.add("not-visible");
+  }
 
-  } 
+  if (isScrolledIntoView(quote1)) {
+    img2.classList.add("fade-out");
+  }
 
-  if(!isScrolledIntoView(multimedia_scroll)) {
-    multimedia_scroll_media.classList.add('not-visible');
+  if (isScrolledIntoView(quote2)) {
+    img1.classList.add("fade-out");
+    img2.classList.remove("fade-out");
+    img3.classList.add("fade-out");
+  }
 
-  } 
-
-	if(isScrolledIntoView(quote1)) {
-    img2.classList.add('fade-out');
-  } 
-
-  if(isScrolledIntoView(quote2)) {
-    img1.classList.add('fade-out');
-    img2.classList.remove('fade-out');
-    img3.classList.add('fade-out');
-  } 
-
-  if(isScrolledIntoView(quote3)) {
-    img2.classList.add('fade-out');
-    img3.classList.remove('fade-out');
-  } 
-  
-})
+  if (isScrolledIntoView(quote3)) {
+    img2.classList.add("fade-out");
+    img3.classList.remove("fade-out");
+  }
+});
 
 // top or bottom
 function isScrolledIntoView(el) {
@@ -146,7 +164,7 @@ function isScrolledIntoView(el) {
   var elemBottom = el.getBoundingClientRect().bottom;
 
   // var isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
-  var isVisible = elemTop < window.innerHeight && elemBottom >= 0
+  var isVisible = elemTop < window.innerHeight && elemBottom >= 0;
   return isVisible;
 }
 
@@ -155,7 +173,7 @@ function isScrolledFullyIntoView(el) {
   var elemTop = el.getBoundingClientRect().top;
   var elemBottom = el.getBoundingClientRect().bottom;
 
-  var isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
+  var isVisible = elemTop >= 0 && elemBottom <= window.innerHeight;
   return isVisible;
 }
 
@@ -163,7 +181,7 @@ function isScrolledFullyIntoView(el) {
 function isTopScrolledIntoView(el) {
   var elemTop = el.getBoundingClientRect().top;
 
-  var isVisible = (elemTop <= window.innerHeight);
+  var isVisible = elemTop <= window.innerHeight;
   return isVisible;
 }
 
@@ -171,6 +189,23 @@ function isTopScrolledIntoView(el) {
 function isBottomScrolledIntoView(el) {
   var elemBottom = el.getBoundingClientRect().bottom;
 
-  var isVisible = (elemBottom <= window.innerHeight);
+  var isVisible = elemBottom <= window.innerHeight;
   return isVisible;
+}
+
+// multimedia-f klikk for å vise video
+var mm_f_button = document.getElementById("multimedia-f_button");
+var mm_f_video = document.getElementById("multimedia-f_media_video");
+
+
+mm_f_button.onclick = function() {
+  mm_f_video.classList.remove("fade-out");
+  mm_f_video.classList.add("fade-in-2")
+  mm_f_video.play();
+  mm_f_video.addEventListener('ended', function() {
+    mm_f_button.innerHTML = "Se igjen";
+    mm_f_button.classList.remove("fade-out");
+  })
+
+  mm_f_button.classList.add("fade-out");
 }

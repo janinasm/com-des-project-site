@@ -21,14 +21,11 @@
   }
 }
 
-.multimedia {
-}
-
 // MULTIMEDIA A -
 .multimedia-a {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 50rem));
-  grid-gap: 5rem;
+  grid-gap: 10rem;
   justify-content: center;
 
   &_media {
@@ -46,7 +43,7 @@
 
     &_img--2 {
       grid-row: 6 / 6;
-      grid-column: 3 / 6;
+      grid-column: 4 / 7;
       z-index: 20;
       //box-shadow: 0 5px 20px rgba(30, 40, 45, 0.6);
 
@@ -60,10 +57,6 @@
       grid-template-rows: repeat(5, minmax(10rem, 10rem));
       margin: 0rem 2rem;
     }
-
-    & img {
-      //box-shadow: 2px 2px 5px 1px gray;
-    }
   }
 
   &_text {
@@ -73,9 +66,13 @@
     justify-self: left;
     grid-row-gap: 2rem;
 
-    @media only screen and (max-width: $bp-largest) {
-      padding: 10rem 3rem;
+    @media only screen and (max-width: $bp-small) {
+      padding: 20rem 3rem;
     }
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    grid-gap: 2rem;
   }
 }
 
@@ -106,7 +103,7 @@
   }
 
   &_excerpt {
-    margin: 20% 0rem;
+    margin: 10% 0rem;
     max-width: 45rem;
     padding: 1.5rem;
     justify-self: right;
@@ -140,7 +137,9 @@
     }
 
     @media only screen and (max-width: $bp-medium) {
+      grid-row: 2;
       padding: 0rem 3.5rem;
+      margin-bottom: 5rem;
     }
   }
 
@@ -154,6 +153,7 @@
     grid-row-gap: 2rem;
 
     @media only screen and (max-width: $bp-medium) {
+      grid-row: 1;
       padding: 5rem 3rem;
     }
   }
@@ -186,9 +186,9 @@
     grid-auto-rows: auto;
 
     &_img--1 {
-      grid-row: 4;
-      grid-column: 3 / 5;
-      width: 120%;
+      grid-row: 3;
+      grid-column: 3 / 6;
+      width: 100%;
 
       @media only screen and (max-width: $bp-small) {
         grid-row: 3;
@@ -233,7 +233,7 @@
   }
 
   &_excerpt {
-    grid-row: 3;
+    grid-row: 2;
     grid-column: 4 / 7;
     text-align: left;
 
@@ -289,16 +289,17 @@
 
     &_next {
       justify-self: right;
-      width: 150%;
-      height: 150%;
       grid-row: 5;
       grid-column: 1;
       font-size: 10rem;
       color: white;
-      background: black;
+      
       line-height: 0;
+      //box-shadow: .5px .5px 3px 0px black;
 
       &_a {
+        padding: 2rem;
+        background: black;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -314,7 +315,7 @@
 
         &:hover,
         &:active {
-          background: #af1010;
+          background: none;
         }
       }
 
@@ -357,17 +358,63 @@
   background-size: cover;
 
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50rem, 80rem));
+  justify-content: center;
 
-  &_text {
-    align-self: start;
+  &_button {
+    grid-column: 1;
+    grid-row: 1;
+    background: white;
+    padding: 2rem;
+    align-self: center;
     justify-self: end;
-    display: grid;
-    grid-row-gap: 3rem;
-    margin: 10rem;
+    margin-top: 30%;
+    z-index: 20;
+    cursor: pointer;
 
     @media only screen and (max-width: $bp-small) {
-      margin: 5rem 3rem;
+      grid-column: 1;
+      grid-row: 2;
+      justify-self: center;
+      margin-top: 0;
     }
+  }
+
+  &_media {
+    grid-column: 1;
+    grid-row: 1;
+
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      grid-column: 1;
+      grid-row: 2;
+    }
+  }
+
+  &_text { 
+    grid-column: 2;
+    grid-row: 1;
+    margin: 15rem 0rem;
+    display: grid;
+    align-self: start;
+    justify-self: center;
+    grid-row-gap: 2rem;
+
+    @media only screen and (max-width: $bp-small) {
+      grid-column: 1;
+      grid-row: 1;
+      margin: 3rem;
+    }
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    grid-gap: 1rem;
   }
 }
 

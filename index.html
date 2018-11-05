@@ -15,7 +15,7 @@
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
-    <title>TODO</title>
+    <title>Amcar Halden</title>
 
 </head>
 
@@ -32,10 +32,16 @@
         <!-- Loading -->
         <div class="page-loader"></div>
 
+        <!-- Halden Times Logo/Link 
+        <div class="halden-times-logo">
+            <a href="http://it.hiof.no/HaldenTimes/" class="halden-times-logo">
+                <img src="img/placeholder/halden-times-logo.svg" alt="">
+            </a>-->
+
         <!-- Headline -->
         <header class="header_landing" id="header_landing">
             <div class="header_landing_grid" id="header_landing_grid">
-                <video class="header_landing_video" autoplay muted loop src="video/juke-2.mp4"></video>
+                <video class="header_landing_video" autoplay muted src="video/juke-2.mp4"></video>
                 <img src="img/mod/aarum.jpg" alt="" class="header_landing_img--1">
                 <img src="img/mod/bar-front.jpg" alt="" class="header_landing_img--2">
                 <img src="img/mod/familien-2.jpg" alt="" class="header_landing_img--3">
@@ -46,7 +52,6 @@
                 </h1>
                 <h2 class="header_landing_text_subtitle headline--s">
                     Hver onsdag møtes unge og gamle til quiz, kake og masse bilprat
-
                 </h2>
 
             </div>
@@ -59,46 +64,50 @@
         </header>
 
         <!-- Intro -->
-        <div class="introduction bg-white">
+        <section class="introduction bg-white">
             <p class="introduction_text text--m">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio dolores impedit tempora repudiandae
-                aliquam molestiae repellendus, deserunt at id porro molestias.
+                I Halden holder en av Norges største klubber for tilhengere av amerikanske biler til.
+                Klubben møtes hver onsdag hele året, i sommersesongen er det treff på Fønix på Fiskebrygga, og
+                på vinteren arrangeres det onsdagskafe med diverse aktiviteter.
             </p>
             <p class="introduction_text text--m">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Hook
             </p>
-        </div>
+        </section>
 
-        <div class="multimedia-f fill-page">
+        <section class="multimedia-f fill-page">
+            <div class="multimedia-f_button headline--xs bounce2" id="multimedia-f_button">Se innsiden</div>
+            <div class="multimedia-f_media">
+                <video class="multimedia-f_media_video fade-out" id="multimedia-f_media_video" src="video//klubben-inne.mp4"></video>
+            </div>
             <div class="multimedia-f_text text--s  bg-black">
+                <h2 class="multimedia-f_text_headline headline--m">Stuck in the 50s</h2>
                 <p class="multimedia-f_text_p text--s">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio dolores impedit tempora
-                    repudiandae
+                    Langs Øbergveien i nærheten av Tistedal finner man klubbhuset.
+                    På utsiden virker bygget anonymt og stille, nesten forlatt.
+
                 </p>
                 <p class="multimedia-f_text_p">
-                    aliquam molestiae repellendus, deserunt at id porro molestias. Aspernatur vero quas eveniet
-                    molestiae
-                    quaerat magnam recusandae repellat?
-                </p>
-                <p class="multimedia-f_text_p">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio dolores impedit tempora
-                    repudiandae
+                    Men inne fortelles en annen historie. Her er det full amerikansk stil, hver detalj nøye planlagt.
+                    En jukebox er fylt med gamle slagere fra Creedence Clearwater Revivial og Johnny Cash.
+                    På et skilt står det "Stuck in the 50s" og det er bilder av James Dean og Marilyn Monroe hengende
+                    på veggen.
                 </p>
             </div>
-        </div>
+        </section>
 
         <!-- Nils Petter -->
-        <div class="multimedia-a bg-white fill-page">
+        <section class="multimedia-a bg-white fill-page">
             <div class="multimedia-a_media" id="multimedia-a_media">
-                <picture class="multimedia-a_media_img--1">
-                    <img class="multimedia-a_media_img--2-img" src="img/mod/nils-petter.jpg" alt="">
+                <picture class="multimedia-a_media_img--1 fade-out" id="multimedia-a_media_img--1">
+                    <img src="img/mod/nils-petter.jpg" alt="">
                 </picture>
-                <picture class="multimedia-a_media_img--2">
-                    <img class="" src="img/mod/nils-petter-bak.jpg" alt="">
+                <picture class="multimedia-a_media_img--2 fade-out" id="multimedia-a_media_img--2">
+                    <img src="img/mod/nils-petter-bak.jpg" alt="">
                 </picture>
             </div>
-            <div class="multimedia-a_text text--s">
-                <h1 class="multimedia-a_text_headline headline--m">Uskreven regel</h1>
+            <div class="multimedia-a_text text--s" id="multimedia-a_text">
+                <h2 class="multimedia-a_text_headline headline--m">Uskreven regel</h2>
                 <p class="multimedia-a_text_p">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio dolores impedit tempora
                     repudiandae
@@ -121,15 +130,15 @@
                     quaerat magnam recusandae repellat?
                 </p>
             </div>
-        </div>
+        </section>
 
         <!-- Nils Petter video-intervju -->
-        <div class="video-a" id="video-a">
+        <section class="video-a" id="video-a">
             <video class="video" id="video" src="video/klubben.mp4" controls>
                 <source src="movie.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-        </div>
+        </section>
 
         <!-- <div class="image-grid-b">
             <div class="image-grid-b_media">
@@ -156,13 +165,16 @@
         </div>-->
 
         <!-- Map -->
-        <div class="multimedia-c bg-white fill-page">
+        <section class="multimedia-c bg-white fill-page">
             <div class="multimedia-c_media">
                 <picture class="multimedia-c_media_image">
                     <img class="border-white" src="img/mod/map-closeup_8416-2.jpg" alt="">
                 </picture>
             </div>
             <div class="multimedia-c_text text--s">
+                <h2 class="multimedia-c_heading headline--m">
+                    Headline
+                </h2>
                 <p class="multimedia-c_text_p">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio dolores impedit tempora
                     repudiandae
@@ -178,42 +190,39 @@
                     quaerat magnam recusandae repellat?
                 </p>
             </div>
-        </div>
+        </section>
 
         <!-- Familien -->
-        <div class="multimedia-b fill-page">
+        <section class="multimedia-b fill-page">
             <div class="multimedia-b_excerpt quote--l">
-                <p class="multimedia-b_excerpt_p">
+                <p class="multimedia-b_excerpt_p fade-out" id="multimedia-b_excerpt_p">
                     &laquo; En sykdom man aldri blir kvitt &raquo;</p>
             </div>
-            <div class="multimedia-b_text text--s bg-black">
-                <h1 class="multimedia-b_text_headline headline--m">Ikke Donald</h1>
+            <div class="multimedia-b_text text--s bg-black" id="multimedia-b_text">
+                <h2 class="multimedia-b_text_headline headline--m">Ikke Donald Duck</h2>
                 <p class="multimedia-b_text_p">
-                    <p class="multimedia-b_text_p">
-                        Med nesa dypt i et bil-magasin sitter Severin, en av klubbens yngste stamgjester.
-                        Ikledd svart skinnjakke og caps som fronter “Aarnes amerikanske bildeler” forteller han at han
-                        er den eneste han kjenner på sin alder som er så opptatt av amerikanske biler, men han synes
-                        det er greit.
-
-                    </p>
-                    <p class="multimedia-b_text_p">
-                        Pappa Ole Willy forteller at sønnen bladde i bilblader allerede i småbarns-alder. Han forteller
-                        at han kjøpte barnebøker og Donald Duck-blader, men det ble nesten aldri rørt.
-                    </p>
-                    <p class="multimedia-b_text_p">
-                        Fra båsen ved siden av spøkes det at Amcar er en sykdom man aldri blir kvitt. Ole Willy ler
-                        nikkende.
-                    </p>
+                    Med nesa dypt i et bil-magasin sitter Severin, en av klubbens yngste stamgjester.
+                    Ikledd svart skinnjakke og caps som fronter “Aarnes amerikanske bildeler” forteller han at han
+                    er den eneste han kjenner på sin alder som er så opptatt av amerikanske biler, men han synes
+                    det er greit.
+                </p>
+                <p class="multimedia-b_text_p">
+                    Pappa Ole Willy forteller at sønnen bladde i bilblader allerede i småbarns-alder. Han forteller
+                    at han kjøpte barnebøker og Donald Duck-blader, men det ble nesten aldri rørt.
+                </p>
+                <p class="multimedia-b_text_p">
+                    Fra båsen ved siden av spøkes det at Amcar er en sykdom man aldri blir kvitt. Ole Willy ler
+                    nikkende.
                 </p>
             </div>
-        </div>
+        </section>
 
         <!-- TEKST -->
-        <div class="text-a bg-white">
+        <section class="text-a bg-white">
             <div class="text-a_text text--s">
-                <h1 class="text-a_text headline--m">
+                <h2 class="text-a_text headline--m">
                     Headline
-                </h1>
+                </h2>
                 <p class="text-a_text_p">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio dolores impedit tempora
                     repudiandae
@@ -243,25 +252,25 @@
                     quaerat magnam recusandae repellat?
                 </p>
             </div>
-        </div>
+        </section>
 
         <!-- Kjersti Aarum -->
-        <div class="multimedia-d fill-page zindex">
+        <section class="multimedia-d fill-page zindex">
             <div class="multimedia-d_media">
-                <picture class="multimedia-d_media_img--1">
+                <picture class="multimedia-d_media_img--1 fade-out">
                     <img class="border-white" src="img/mod/aarum.jpg" alt="">
                 </picture>
-                <picture class="multimedia-d_media_img--2">
+                <picture class="multimedia-d_media_img--2 fade-out">
                     <img class="border-white" src="img/mod/aarum-pynter-kake.jpg" alt="">
                 </picture>
 
                 <div class="multimedia-d_excerpt quote--l">
-                    <p class="multimedia-d_excerpt_p">
+                    <p class="multimedia-d_excerpt_p fade-out">
                         &laquo; Alle er velkommen her &raquo;</p>
                 </div>
             </div>
             <div class="multimedia-d_text bg-black text--s">
-                <h1 class="multimedia-d_text_p headline--m">Chevy fra Ebay</h1>
+                <h2 class="multimedia-d_text_p headline--m">Chevy fra Ebay</h2>
                 <p class="multimedia-d_text_p">
                     En av ildsjelene bak onsdagskafeen er Kjersti Aarum. Når vi møter henne står hun ved et biljardbord
                     og pynter diverse kaker hun har bakt hjemme, noen til salgs, andre til premier som skal gis ut i
@@ -276,14 +285,14 @@
                 </p>
 
             </div>
-        </div>
+        </section>
 
         <!-- Fotokonkurransen -->
-        <div class="multimedia-e bg-white zindex  fill-page">
+        <section class="multimedia-e bg-white zindex fill-page">
             <div class="multimedia-e_text text--s">
-                <h1 class="multimedia-e_text_h1 headline--m">
+                <h2 class="multimedia-e_text_h1 headline--m">
                     Chrome and Curves
-                </h1>
+                </h2>
                 <p class="multimedia-e_text_p">
                     I “ute-sesongen” har det i år blitt holdt fotokonkurransen “Chrome and Curves”, hvor man
                     kunne bidra med motiv av amerikanske biler i alle varianter.
@@ -307,12 +316,10 @@
                 <picture class="multimedia-e_media_image slides">
                     <img src="img/mod/fotovinner-2.jpg" alt="">
                 </picture>
-
                 <picture class="multimedia-e_media_image slides">
                     <img src="img/mod/fotovinner-1.jpg" alt="">
                 </picture>
                 <picture class="multimedia-e_media_image slides">
-
                     <img src="img/mod/fotovinner-4.jpg" alt="">
                 </picture>
 
@@ -323,11 +330,8 @@
                 <div class="multimedia-e_media_next">
                     <a class="multimedia-e_media_next_a" onclick="plusSlides(1)">&#10095;</a>
                 </div>
-
-
-
             </div>
-        </div>
+        </section>
 
 
         <!-- <div class="image-grid-b">
@@ -351,9 +355,9 @@
         </div>-->
 
         <!-- TEKST -->
-        <div class="text-b zindex bg-white">
+        <section class="text-b zindex bg-white">
             <div class="text-b_text text--s">
-                <h1 class="headline--m">Fiskebrygga</h1>
+                <h2 class="headline--m">Fiskebrygga</h2>
                 <p class="text-b_text_p">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio dolores impedit tempora
                     repudiandae
@@ -362,10 +366,10 @@
                     quaerat magnam recusandae repellat?
                 </p>
             </div>
-        </div>
+        </section>
 
         <!-- Scroll-seksjon -->
-        <div class="multimedia-scroll" id="multimedia-scroll">
+        <section class="multimedia-scroll" id="multimedia-scroll">
             <div class="multimedia-scroll_media not-visible ease" id="multimedia-scroll_media">
                 <div class="multimedia-scroll_media_img--1 fade-out sticky ease" id="img-1">
                     <img src="img/placeholder/fiskebrygga-kart.png" alt="">
@@ -394,11 +398,10 @@
                     <p><span>orem ipsum dolor sit amet consectetur adipisicing elit. 1</span></p>
                 </div>
             </div>
-
-        </div>
+        </section>
 
         <!-- TEKST -->
-        <div class="text-a bg-white zindex">
+        <section class="text-a bg-white zindex">
             <div class="text-a_text text--s">
                 <h1 class="headline--m">Headline</h1>
                 <p class="text-a_text_p">
@@ -409,7 +412,7 @@
                     quaerat magnam recusandae repellat?
                 </p>
             </div>
-        </div>
+        </section>
 
         <!--
 
@@ -447,24 +450,24 @@
         </div>
         -->
 
-        <div class="dv-big-a zindex">
+        <section class="dv-big-a zindex">
             <div class="div-big-a_map" id="googleMap" style="width:100%; height:400px;">
                 <script>
                     function myMap() {
                         var mapProp = {
-                            center: new google.maps.LatLng(51.508742, -0.120850),
-                            zoom: 15,
+                            center: new google.maps.LatLng(59.1217005, 11.3785392),
+                            zoom: 17,
                         };
                         var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
                     }
                 </script>
             </div>
-        </div>
+        </section>
 
 
-        <div class="text-a bg-white zindex">
+        <section class="text-a bg-white zindex">
             <div class="text-a_text text--s">
-                <h1 class="headline--m">#Amcar</h1>
+                <h2 class="headline--m">#Amcar</h2>
                 <p class="text-a_text_p">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio dolores impedit tempora
                     repudiandae
@@ -473,9 +476,9 @@
                     quaerat magnam recusandae repellat?
                 </p>
             </div>
-        </div>
+        </section>
 
-        <div class="image-grid-a zindex">
+        <section class="image-grid-a zindex">
             <div class="image-grid-a_media bg-white">
                 <picture class="image-grid-a_media_img--1">
                     <img src="img/mod/mat.jpg" alt="">
@@ -503,7 +506,7 @@
                 <picture class="image-grid-a_media_img--12">
                     <img src="img/mod/diner-flagg.jpg" alt=""></picture>
             </div>
-        </div>
+        </section>
 
     </div>
 

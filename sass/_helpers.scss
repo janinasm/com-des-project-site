@@ -61,6 +61,11 @@ video {
 }
 
 .ease {
-  --ease: all .5s ease;
-  transition: var(--ease);
+  transition: all .5s ease;
+}
+
+.scroll-helper {
+  height: 10vh;
+  width: 100%;
+  border: 3px solid orange;
 }
