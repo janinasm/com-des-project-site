@@ -24,7 +24,7 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "block";
 }
 
-// headline
+// header
 var scrollpos = window.scrollY;
 var header = document.getElementById("header_landing");
 var header_height = header.offsetHeight;
@@ -132,6 +132,8 @@ window.addEventListener("scroll", function(e) {
     video.classList.remove("sticky");
   }
 
+
+  
   if (isScrolledIntoView(multimedia_scroll)) {
     multimedia_scroll_media.classList.remove("not-visible");
 
@@ -153,6 +155,7 @@ window.addEventListener("scroll", function(e) {
   }
 
   if (isScrolledIntoView(quote3)) {
+    img1.classList.add("fade-out");
     img2.classList.add("fade-out");
     img3.classList.remove("fade-out");
   }
@@ -194,8 +197,8 @@ function isBottomScrolledIntoView(el) {
 }
 
 // multimedia-f klikk for å vise video
-var mm_f_button = document.getElementById("multimedia-f_button");
-var mm_f_video = document.getElementById("multimedia-f_media_video");
+var mm_f_button = document.getElementById("multimedia-f_button"),
+    mm_f_video = document.getElementById("multimedia-f_media_video");
 
 
 mm_f_button.onclick = function() {
@@ -209,3 +212,6 @@ mm_f_button.onclick = function() {
 
   mm_f_button.classList.add("fade-out");
 }
+
+
+// instagram feed to grid-items

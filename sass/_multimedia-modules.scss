@@ -353,8 +353,7 @@
 
 // MULTIMEDIA F
 .multimedia-f {
-  background: linear-gradient(55deg, #1c586e42 0%, #80464633 85%),
-    no-repeat center url(../img/placeholder/klubben-ute.png);
+  background: no-repeat center url(../img/mod/klubben-ute-2.jpg);
   background-size: cover;
 
   display: grid;
@@ -423,7 +422,7 @@
   padding: 10rem 0rem;
 
   &_text {
-    max-width: 50rem;
+    max-width: 60rem;
     display: grid;
     grid-row-gap: 2rem;
     margin: 0 auto;

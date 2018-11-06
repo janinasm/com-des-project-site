@@ -41,7 +41,7 @@
         <!-- Headline -->
         <header class="header_landing" id="header_landing">
             <div class="header_landing_grid" id="header_landing_grid">
-                <video class="header_landing_video" autoplay muted src="video/juke-2.mp4"></video>
+                <video class="header_landing_video" autoplay muted src="video/juke-2-liten.mp4"></video>
                 <img src="img/mod/aarum.jpg" alt="" class="header_landing_img--1">
                 <img src="img/mod/bar-front.jpg" alt="" class="header_landing_img--2">
                 <img src="img/mod/familien-2.jpg" alt="" class="header_landing_img--3">
@@ -78,18 +78,18 @@
         <section class="multimedia-f fill-page">
             <div class="multimedia-f_button headline--xs bounce2" id="multimedia-f_button">Se innsiden</div>
             <div class="multimedia-f_media">
-                <video class="multimedia-f_media_video fade-out" id="multimedia-f_media_video" src="video//klubben-inne.mp4"></video>
+                <video class="multimedia-f_media_video fade-out" id="multimedia-f_media_video" src="video/klubben-inne-2-liten.mp4"></video>
             </div>
             <div class="multimedia-f_text text--s  bg-black">
                 <h2 class="multimedia-f_text_headline headline--m">Stuck in the 50s</h2>
                 <p class="multimedia-f_text_p text--s">
                     Langs Øbergveien i nærheten av Tistedal finner man klubbhuset.
-                    På utsiden virker bygget anonymt og stille, nesten forlatt.
+                    På utsiden oppleves bygget anonymt og stille, nesten forlatt.
 
                 </p>
                 <p class="multimedia-f_text_p">
                     Men inne fortelles en annen historie. Her er det full amerikansk stil, hver detalj nøye planlagt.
-                    En jukebox er fylt med gamle slagere fra Creedence Clearwater Revivial og Johnny Cash.
+                    En jukebox er fylt med gamle slagere fra Creedence Clearwater Revival og Johnny Cash.
                     På et skilt står det "Stuck in the 50s" og det er bilder av James Dean og Marilyn Monroe hengende
                     på veggen.
                 </p>
@@ -294,7 +294,7 @@
                     Chrome and Curves
                 </h2>
                 <p class="multimedia-e_text_p">
-                    I “ute-sesongen” har det i år blitt holdt fotokonkurransen “Chrome and Curves”, hvor man
+                    I “ute-sesongen” har det i år blitt avholdt fotokonkurransen “Chrome and Curves” hvor man
                     kunne bidra med motiv av amerikanske biler i alle varianter.
                 </p>
                 <p class="multimedia-e_text_p">
@@ -366,19 +366,58 @@
                     quaerat magnam recusandae repellat?
                 </p>
             </div>
+            <div class="div-big-a_map" id="googleMap" style="width:40%; height:400px;">
+                <script>
+                    function myMap() {
+                        var mapProp = {
+                            center: new google.maps.LatLng(59.1217005, 11.3785392),
+                            zoom: 17,
+                        };
+                        var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+                    }
+                </script>
+            </div>
+        </section>
+
+        <!--<section class="dv-big-a zindex">
+            <div class="div-big-a_map" id="googleMap" style="width:100%; height:400px;">
+                <script>
+                    function myMap() {
+                        var mapProp = {
+                            center: new google.maps.LatLng(59.1217005, 11.3785392),
+                            zoom: 17,
+                        };
+                        var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+                    }
+                </script>
+            </div>
+        </section>-->
+
+        <!-- TEKST -->
+        <section class="text-a bg-white zindex">
+            <div class="text-a_text text--s">
+                <h1 class="headline--m">Halden i endring?</h1>
+                <p class="text-a_text_p">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio dolores impedit tempora
+                    repudiandae
+                    aliquam molestiae repellendus, deserunt at id porro molestias. Aspernatur vero quas eveniet
+                    molestiae
+                    quaerat magnam recusandae repellat?
+                </p>
+            </div>
         </section>
 
         <!-- Scroll-seksjon -->
         <section class="multimedia-scroll" id="multimedia-scroll">
             <div class="multimedia-scroll_media not-visible ease" id="multimedia-scroll_media">
                 <div class="multimedia-scroll_media_img--1 fade-out sticky ease" id="img-1">
-                    <img src="img/placeholder/fiskebrygga-kart.png" alt="">
+                    <img src="img/mod/fiskebrygga.jpg" alt="">
                 </div>
                 <div class="multimedia-scroll_media_img--2 fade-out sticky ease" id="img-2">
-                    <img src="img/placeholder/landssnitt7.png" alt="">
+                    <img src="img/placeholder/fiskebrygga-kart.png" alt="">
                 </div>
                 <div class="multimedia-scroll_media_img--3 fade-out sticky ease" id="img-3">
-                    <img src="img/placeholder/landssoyle.png" alt="">
+                    <img src="img/placeholder/klubben-ute.png" alt="">
                 </div>
             </div>
 
@@ -400,19 +439,7 @@
             </div>
         </section>
 
-        <!-- TEKST -->
-        <section class="text-a bg-white zindex">
-            <div class="text-a_text text--s">
-                <h1 class="headline--m">Headline</h1>
-                <p class="text-a_text_p">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio dolores impedit tempora
-                    repudiandae
-                    aliquam molestiae repellendus, deserunt at id porro molestias. Aspernatur vero quas eveniet
-                    molestiae
-                    quaerat magnam recusandae repellat?
-                </p>
-            </div>
-        </section>
+        
 
         <!--
 
@@ -450,19 +477,7 @@
         </div>
         -->
 
-        <section class="dv-big-a zindex">
-            <div class="div-big-a_map" id="googleMap" style="width:100%; height:400px;">
-                <script>
-                    function myMap() {
-                        var mapProp = {
-                            center: new google.maps.LatLng(59.1217005, 11.3785392),
-                            zoom: 17,
-                        };
-                        var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
-                    }
-                </script>
-            </div>
-        </section>
+       
 
 
         <section class="text-a bg-white zindex">

@@ -456,6 +456,10 @@ body {
   line-height: 120%;
 }
 
+.text-quote {
+  font-weight: 600;
+}
+
 .header_landing {
   background: black;
   top: 0;
@@ -1121,7 +1125,7 @@ body {
 }
 
 .multimedia-f {
-  background: linear-gradient(55deg, #1c586e42 0%, #80464633 85%), no-repeat center url(../img/placeholder/klubben-ute.png);
+  background: no-repeat center url(../img/mod/klubben-ute-2.jpg);
   background-size: cover;
   display: -ms-grid;
   display: grid;
@@ -1222,7 +1226,7 @@ body {
 }
 
 .text-a_text {
-  max-width: 50rem;
+  max-width: 60rem;
   display: -ms-grid;
   display: grid;
   grid-row-gap: 2rem;
