@@ -207,7 +207,9 @@ mm_f_button.onclick = function() {
   mm_f_video.play();
   mm_f_video.addEventListener('ended', function() {
     mm_f_button.innerHTML = "Se igjen";
+    mm_f_button.classList.add("fade-in-2");
     mm_f_button.classList.remove("fade-out");
+    
   })
 
   mm_f_button.classList.add("fade-out");
@@ -215,3 +217,9 @@ mm_f_button.onclick = function() {
 
 
 // instagram feed to grid-items
+
+
+
+
+
+
