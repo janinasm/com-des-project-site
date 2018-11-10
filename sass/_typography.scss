@@ -6,9 +6,8 @@
 
 %headline {
   text-align: center;
-  font-family: 'Oswald', sans-serif;
-  font-family: 'Anton', sans-serif;
-  //font-family: lft-etica, sans-serif;
+  //font-family: 'Oswald', Arial, sans-serif;
+  font-family: 'Anton', Arial, sans-serif;
 
   line-height: 125%;
   letter-spacing: .1rem;
@@ -47,6 +46,7 @@
   &--l {
     @extend %headline;
     font-size: 10rem;
+    letter-spacing: .2rem;
 
     @media only screen and (max-width: $bp-small) {
       font-size: 7rem;
@@ -65,7 +65,7 @@
 }
 
 %text {
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', Arial, sans-serif;
 }
 
 .text {

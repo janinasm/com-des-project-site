@@ -1,596 +1,734 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link
+      href="https://fonts.googleapis.com/css?family=Anton|Open+Sans"
+      rel="stylesheet"
+      defer
+    />
 
-    <link href="https://fonts.googleapis.com/css?family=Anton|Open+Sans|Oswald:200,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="sass/main.css" />
 
-    <link rel="stylesheet" href="https://use.typekit.net/qkd7pzn.css">
-
-    <link rel="stylesheet" href="sass/main.css">
-
-    <!--<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>-->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> |Oswald:200,400,600,700-->
 
     <title>Amcar Halden</title>
+  </head>
 
-</head>
-
-<body>
-
+  <body>
     <script>
-        window.onload = function load() {
-            document.getElementsByClassName('page-loader')[0].style.display = "none";
-        };
+      window.onload = function load() {
+        document.getElementsByClassName("page-loader")[0].style.display =
+          "none";
+      };
     </script>
 
     <div class="container">
+      <!-- Loading -->
+      <div class="page-loader"></div>
 
-        <!-- Loading -->
-        <div class="page-loader"></div>
+      <!--
+        Halden Times Logo/Link
 
-        <!-- Halden Times Logo/Link 
+
+
+
+
+
+
+
+
         <div class="halden-times-logo">
+
+
+
+
+
+
+
+
+
+
             <a href="http://it.hiof.no/HaldenTimes/" class="halden-times-logo">
+
+
+
+
+
+
+
+
+
+
                 <img src="img/placeholder/halden-times-logo.svg" alt="">
-            </a>-->
 
-        <!-- Headline -->
-        <header class="header_landing" id="header_landing">
-            <div class="header_landing_grid" id="header_landing_grid">
-                <video class="header_landing_video" autoplay muted src="video/juke-2-liten.mp4"></video>
-                <img src="img/mod/aarum.jpg" alt="" class="header_landing_img--1">
-                <img src="img/mod/bar-front.jpg" alt="" class="header_landing_img--2">
-                <img src="img/mod/familien-2.jpg" alt="" class="header_landing_img--3">
-            </div>
-            <div class="header_landing_text">
-                <h1 class="header_landing_text_headline headline--xl">
-                    Amcar Halden
-                </h1>
-                <h2 class="header_landing_text_subtitle headline--s">
-                    Hver onsdag møtes unge og gamle til quiz, kake og masse bilprat
-                </h2>
 
-            </div>
 
-            <div class="scroll-indicator">
-                <a href="#next">
-                    <img src="img/placeholder/down_arrow.svg" alt="">
-                </a>
-            </div>
-        </header>
 
-        <!-- Intro -->
-        <section class="introduction bg-white">
-            <p class="introduction_text text--m">
-                Street & Cruising Club er en av Norges største klubber for tilhengere av amerikanske biler.
-                Klubben møtes hver onsdag hele året, i sommersesongen er det treff på Fiskebrygga, og
-                på vinteren møtes de på onsdagskafeen.
+
+
+
+
+
+
+            </a>
+      -->
+
+      <!-- Headline -->
+      <header class="header_landing" id="header_landing">
+        <div class="header_landing_grid" id="header_landing_grid">
+          <video
+            class="header_landing_video"
+            autoplay
+            muted
+            src="video/juke-2-liten.mp4"
+          ></video>
+          <img src="img/mod/aarum.jpg" alt="" class="header_landing_img--1" />
+          <img
+            src="img/mod/bar-front.jpg"
+            alt=""
+            class="header_landing_img--2"
+          />
+          <img
+            src="img/mod/familien-2.jpg"
+            alt=""
+            class="header_landing_img--3"
+          />
+        </div>
+        <div class="header_landing_text">
+          <h1 class="header_landing_text_headline headline--xl">
+            Amcar Halden
+          </h1>
+          <h2 class="header_landing_text_subtitle headline--s">
+            Hver onsdag møtes unge og gamle til quiz, kake og masse bilprat
+          </h2>
+        </div>
+
+        <div class="scroll-indicator">
+          <a href="#next">
+            <img src="img/placeholder/down_arrow.svg" alt="" />
+          </a>
+        </div>
+      </header>
+
+      <!-- Intro -->
+      <section class="introduction bg-white">
+        <p class="introduction_text text--m">
+          Street & Cruising Club er Østfolds største klubb for tilhengere av
+          amerikanske biler. Klubben møtes hver onsdag hele året, i
+          sommersesongen er det treff på Fiskebrygga, og på vinteren møtes de på
+          onsdagskafeen.
+        </p>
+        <p class="introduction_text text--m">
+          Bak skinnende felger og amerikanske flagg står mennesker som skaper
+          mye glede for hverandre.
+        </p>
+      </section>
+
+      <section class="multimedia-f fill-page">
+        <div
+          class="multimedia-f_button headline--xs bounce2"
+          id="multimedia-f_button"
+        >
+          Se innsiden
+        </div>
+        <div class="multimedia-f_media">
+          <video
+            class="multimedia-f_media_video fade-out"
+            id="multimedia-f_media_video"
+            src="video/klubben-inne-2-liten.mp4"
+          ></video>
+        </div>
+        <div class="multimedia-f_text text--s  bg-black">
+          <h2 class="multimedia-f_text_headline headline--m">
+            Et lite stykke Amerika
+          </h2>
+          <p class="multimedia-f_text_p text--s">
+            Langs Øbergveien i nærheten av Tistedal finner man klubbhuset. På
+            utsiden oppleves bygget anonymt og stille, nesten forlatt.
+          </p>
+          <p class="multimedia-f_text_p">
+            Men inne fortelles en annen historie. Her er det full amerikansk
+            stil, hver detalj nøye planlagt. En jukebox er fylt med gamle
+            slagere fra Creedence Clearwater Revival og Johnny Cash. På et skilt
+            står det "Stuck in the 50s" og det er bilder av James Dean og
+            Marilyn Monroe hengende på veggen.
+          </p>
+        </div>
+      </section>
+
+      <!-- Nils Petter -->
+      <section class="multimedia-a bg-white fill-page">
+        <div class="multimedia-a_media" id="multimedia-a_media">
+          <picture
+            class="multimedia-a_media_img--1 fade-out"
+            id="multimedia-a_media_img--1"
+          >
+            <img src="img/mod/nils-petter.jpg" alt="" />
+          </picture>
+          <picture
+            class="multimedia-a_media_img--2 fade-out"
+            id="multimedia-a_media_img--2"
+          >
+            <img src="img/mod/nils-petter-bak.jpg" alt="" />
+          </picture>
+        </div>
+        <div class="multimedia-a_text text--s" id="multimedia-a_text">
+          <h2 class="multimedia-a_text_headline headline--m">Uskreven regel</h2>
+          <p class="multimedia-a_text_p">
+            UNDER ARBEID: Nils Petter Nilsen er leder, om klubben, antall
+            medlemmer. Hvor lenge han har vært leder.
+          </p>
+          <p class="multimedia-a_text_p">
+            UNDER ARBEID: Litt bakgrunn. Turer til USA. Ikke sant at bare fordi
+            man er i miljøet at man digger alt som er amerikansk, mye dumt der.
+          </p>
+          <p class="multimedia-a_text_p">
+            UNDER ARBEID: Hvorfor han er involvert, motivasjon osv. Det er en
+            uskreven regel i Amcar-miljøet å fremme interessen. Litt om samhold.
+            Gjør det for alle som bidrar, stiller opp. Pensjonistkjøring,
+            torsdagsklubben
+          </p>
+        </div>
+      </section>
+
+      <!-- Nils Petter video-intervju -->
+      <section class="video-a" id="video-a">
+        <video class="video" id="video" src="video/klubben.mp4" controls>
+          <source src="movie.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </section>
+
+      <!-- Map -->
+      <section class="multimedia-c bg-white fill-page">
+        <div class="multimedia-c_media">
+          <picture class="multimedia-c_media_image">
+            <img
+              class="border-white"
+              src="img/mod/map-closeup_8416-2.jpg"
+              alt=""
+            />
+          </picture>
+        </div>
+        <div class="multimedia-c_text text--s">
+          <h2 class="multimedia-c_heading headline--m">I hjertet</h2>
+          <p>
+            Rundt året samles klubben til quiz, veledighetsarbeid og samhold,
+            men det er entusiasme for bil som har bragt dem sammen.
+          </p>
+          <p>
+            De fleste av dem har en amerikaner eller flere, og for å skape en
+            oversikt har de hengt opp et stort kart over Halden der medlemmer
+            kan markere merke, modell og stedet bilen befinner seg.
+          </p>
+          <p>
+            Vegg i vegg med kafeen har klubben flere verksteder der medlemmer
+            kan ta “drop-in” med biler som trenger noen ekstra øyne eller
+            hender.
+          </p>
+        </div>
+      </section>
+
+      <!-- Familien -->
+      <section class="multimedia-b fill-page">
+        <div class="multimedia-b_excerpt quote--l">
+          <p
+            class="multimedia-b_excerpt_p fade-out"
+            id="multimedia-b_excerpt_p"
+          >
+            &laquo; En sykdom man aldri blir kvitt &raquo;
+          </p>
+        </div>
+        <div class="multimedia-b_text text--s bg-black" id="multimedia-b_text">
+          <h2 class="multimedia-b_text_headline headline--m">
+            Ikke Donald Duck
+          </h2>
+          <p class="multimedia-b_text_p">
+            Med nesa dypt i et bil-magasin sitter Severin, en av klubbens yngste
+            stamgjester. Ikledd svart skinnjakke og caps som fronter “Aarnes
+            amerikanske bildeler” forteller han at han er den eneste han kjenner
+            på sin alder som er så opptatt av amerikanske biler, noe han synes
+            det er litt rart.
+          </p>
+          <p class="multimedia-b_text_p">
+            Pappa Ole Willy forteller at sønnen bladde i bilblader allerede fra
+            småbarns-alder. Han forteller at han kjøpte barnebøker og Donald
+            Duck-blader, men det ble nesten aldri rørt.
+          </p>
+          <p class="multimedia-b_text_p">
+            Fra båsen ved siden av spøkes det at Amcar er en sykdom man aldri
+            blir kvitt. Ole Willy ler nikkende.
+          </p>
+        </div>
+      </section>
+
+      <!-- TEKST -->
+      <section class="text-a bg-white">
+        <div class="text-a_text text--s">
+          <h2 class="text-a_text headline--m">Headline</h2>
+          <p class="text-a_text_p">
+            UNDER ARBEID: Martin og Marcus jobber med intervju
+          </p>
+          <p class="text-a_text_p">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
+            dolores impedit tempora repudiandae aliquam molestiae repellendus,
+            deserunt at id porro molestias. Aspernatur vero quas eveniet
+            molestiae quaerat magnam recusandae repellat?
+          </p>
+          <p class="text-a_text_p">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
+            dolores impedit tempora repudiandae aliquam molestiae repellendus,
+            deserunt at id porro molestias. Aspernatur vero quas eveniet
+            molestiae quaerat magnam recusandae repellat?
+          </p>
+          <p class="text-a_text_p">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
+            dolores impedit tempora repudiandae aliquam molestiae repellendus,
+            deserunt at id porro molestias. Aspernatur vero quas eveniet
+            molestiae quaerat magnam recusandae repellat?
+          </p>
+          <p class="text-a_text_p">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
+            dolores impedit tempora repudiandae aliquam molestiae repellendus,
+            deserunt at id porro molestias. Aspernatur vero quas eveniet
+            molestiae quaerat magnam recusandae repellat?
+          </p>
+        </div>
+      </section>
+
+      <!-- Kjersti Aarum -->
+      <section class="multimedia-d fill-page zindex">
+        <div class="multimedia-d_media">
+          <picture class="multimedia-d_media_img--1 fade-out">
+            <img class="border-white" src="img/mod/aarum.jpg" alt="" />
+          </picture>
+          <picture class="multimedia-d_media_img--2 fade-out">
+            <img
+              class="border-white"
+              src="img/mod/aarum-pynter-kake.jpg"
+              alt=""
+            />
+          </picture>
+
+          <div class="multimedia-d_excerpt quote--l">
+            <p class="multimedia-d_excerpt_p fade-out">
+              &laquo; Alle er velkommen her &raquo;
             </p>
-            <p class="introduction_text text--m">
-                Bak skinnende felger og amerikanske flagg står mennesker som skaper mye glede for hverandre.
+          </div>
+        </div>
+        <div class="multimedia-d_text bg-black text--s">
+          <h2 class="multimedia-d_text_p headline--m">Chevy fra Ebay</h2>
+          <p class="multimedia-d_text_p">
+            En av ildsjelene bak onsdagskafeen er Kjersti Aarum. Når vi møter
+            henne står hun ved et biljardbord og pynter diverse kaker hun har
+            bakt hjemme, noen til salgs, andre til premier som skal gis ut i
+            løpet av kvelden.
+          </p>
+          <p class="multimedia-d_text_p">
+            For henne startet eventyret da ektemannen Tom kjøpte seg veteran-bil
+            i 2005, og to år senere hadde hun sin egen ‘68 Chevrolet Chevy
+            Impala kjøpt gjennom Ebay.
+          </p>
+          <p class="multimedia-d_text_p">
+            Hun er stolt over miljøet i klubben, og presisterer at her er alle
+            velkommen.
+          </p>
+        </div>
+      </section>
+
+      <!-- Fotokonkurransen -->
+      <section class="multimedia-e bg-white zindex fill-page">
+        <div class="multimedia-e_text text--s">
+          <h2 class="multimedia-e_text_h1 headline--m">Chrome and Curves</h2>
+          <p class="multimedia-e_text_p">
+            I “ute-sesongen” har det i år blitt avholdt fotokonkurransen “Chrome
+            and Curves” hvor man kunne bidra med motiv av amerikanske biler i
+            alle varianter.
+          </p>
+          <p class="multimedia-e_text_p">
+            Fra mai til september har styret kåret ukesvinnere som på slutten av
+            sesongen kjempet om tittelen “Årets Blinkskudd” og en premie på 2000
+            kroner.
+          </p>
+          <p class="multimedia-e_text_p">
+            &ndash; For det meste har det ikke vært profesjonelle fotografer som
+            sender inn bidrag, men privatpersoner som enter tar bilder med
+            mobilen eller er “hobbyfotografer”, sier Nils Petter
+          </p>
+          <p class="multimedia-e_text_p">
+            Vinneren av årets fotokonkurranse ble Svein at Hurum.
+          </p>
+          <p class="multimedia-e_text_p">
+            Nils Petter syns det fungerte fint og vurderer sterkt å gjøre
+            konkurransen en årlig event.
+          </p>
+        </div>
+        <div class="multimedia-e_media">
+          <picture class="multimedia-e_media_image slides">
+            <img src="img/mod/fotovinner-2.jpg" alt="" />
+          </picture>
+          <picture class="multimedia-e_media_image slides">
+            <img src="img/mod/fotovinner-1.jpg" alt="" />
+          </picture>
+          <picture class="multimedia-e_media_image slides">
+            <img src="img/mod/fotovinner-4.jpg" alt="" />
+          </picture>
+
+          <div class="number headline--l">1 / 3</div>
+          <div class="number headline--l">2 / 3</div>
+          <div class="number headline--l">3 / 3</div>
+
+          <div class="multimedia-e_media_next">
+            <a class="multimedia-e_media_next_a" onclick="plusSlides(1)"
+              >&#10095;</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Fiskebrygga -->
+      <section class="multimedia-g zindex bg-white fill-page">
+        <div class="multimedia-g_text text--m rellax">
+          <h1 class="multimedia-g_h1 headline--l">Fiskebrygga</h1>
+          <p>
+            UNDER ARBEID: I sommersesongen møtes klubben på Fiskebrygga, her får
+            de vist fram bilene sine. Klubbens egen kiosk har betalt for mye av
+            inventaret i klubbhuset. Viktig møtested. Etter møte kjører de en
+            fast rute.
+          </p>
+        </div>
+        <div class="multimedia-g_media">
+          <picture class="multimedia-g_media_img--1">
+            <img src="img/mod/fiskebrygga-5_5448.jpg" alt="" />
+          </picture>
+          <div
+            class="multimedia-g_media_map"
+            id="googleMap"
+            style="width:100%; height:100%"
+          >
+            <!--
+              Map script
+
+
+              <script async defer>
+
+
+                function myMap() {
+
+
+                  var mapProp = {
+
+
+                    center: new google.maps.LatLng(59.120749, 11.383609),
+
+
+
+                    zoom: 16
+
+
+                  };
+
+
+
+                  var map = new google.maps.Map(
+
+
+                    document.getElementById("googleMap"),
+
+
+
+                    mapProp
+
+
+                  );
+
+
+
+                  var fiskebrygga = { lat: 59.121305, lng: 11.384094 };
+
+
+
+                  var driveCoords = [
+
+
+                    { lat: 59.121934, lng: 11.377741 },
+
+
+
+                    { lat: 59.121521, lng: 11.384136 },
+
+
+
+                    { lat: 59.121752, lng: 11.387505 },
+
+
+
+                    { lat: 59.120303, lng: 11.389263 },
+
+
+
+                    { lat: 59.11938, lng: 11.389161 },
+
+
+
+                    { lat: 59.118961, lng: 11.387478 },
+
+
+
+                    { lat: 59.11936, lng: 11.38481 }
+
+
+                  ];
+
+
+
+                  var drivePath = new google.maps.Polyline({
+
+
+                    path: driveCoords,
+
+
+
+                    geodesic: true,
+
+
+
+                    strokeColor: "#007bff",
+
+
+
+                    strokeOpacity: 1.0,
+
+
+
+                    strokeWeight: 5
+
+
+                  });
+
+
+
+                  drivePath.setMap(map);
+
+
+
+                  var fiskebryggaAreaCoords = [
+
+
+                    { lat: 59.121575, lng: 11.383686 },
+
+
+
+                    { lat: 59.12138, lng: 11.385462 },
+
+
+
+                    { lat: 59.121225, lng: 11.38544 },
+
+
+
+                    { lat: 59.121113, lng: 11.38381 }
+
+
+                  ];
+
+
+
+                  var fiskebryggaArea = new google.maps.Polygon({
+
+
+                    paths: fiskebryggaAreaCoords,
+
+
+
+                    strokeColor: "#FF0000",
+
+
+
+                    strokeOpacity: 0.8,
+
+
+
+                    strokeWeight: 2,
+
+
+
+                    fillColor: "#FF0000",
+
+
+
+                    fillOpacity: 0.35
+
+
+                  });
+
+
+
+                  fiskebryggaArea.setMap(map);
+
+
+
+                  var marker = new google.maps.Marker({
+
+
+                    position: fiskebrygga,
+
+
+
+                    label: "Fiskebrygga",
+
+
+
+                    map: map
+
+
+                  });
+
+
+                }
+
+
+              </script>
+            -->
+          </div>
+
+          <picture class="multimedia-g_media_img--2">
+            <img src="img/mod/fiskebrygga-2_5415.jpg" alt="" />
+          </picture>
+        </div>
+      </section>
+
+      <!-- TEKST -->
+      <section class="text-b bg-white zindex">
+        <div class="text-b_text text--s">
+          <h1 class="headline--m">Nye planer</h1>
+          <p>
+            UNDER ARBEID: Halden Kommune skal gjøre endringer i bybildet og det
+            blir ikke lenger plass til treff på Fiskebrygga, hvordan påvirker
+            dette klubben?
+          </p>
+        </div>
+      </section>
+
+      <!-- Scroll-seksjon -->
+      <section class="multimedia-scroll" id="multimedia-scroll">
+        <div
+          class="multimedia-scroll_media not-visible ease"
+          id="multimedia-scroll_media"
+        >
+          <div
+            class="multimedia-scroll_media_img--1 fade-out sticky ease"
+            id="img-1"
+          >
+            <img src="img/placeholder/fiskebrygga-kart.png" alt="" />
+          </div>
+          <div
+            class="multimedia-scroll_media_img--2 fade-out sticky ease"
+            id="img-2"
+          >
+            <img src="img/mod/fiskebrygga.jpg" alt="" />
+          </div>
+          <div
+            class="multimedia-scroll_media_img--3 fade-out sticky ease"
+            id="img-3"
+          >
+            <img src="img/mod/klubben-ute-2.jpg" alt="" />
+          </div>
+        </div>
+
+        <div class="multimedia-scroll_text text--m">
+          <div
+            class="multimedia-scroll_text_quoteblock multimedia-scroll_text_quoteblock--1"
+          ></div>
+
+          <div class="multimedia-scroll_text_quoteblock">
+            <p><span>Grafikk av planer for Fiskebrygga?</span></p>
+          </div>
+
+          <div class="multimedia-scroll_text_quoteblock">
+            <p>
+              <span
+                >Visualisering av klubbens bruk av Fiskebrygga? Antall treff,
+                antall besøkende o.l?</span
+              >
             </p>
-        </section>
+          </div>
 
-        <section class="multimedia-f fill-page">
-            <div class="multimedia-f_button headline--xs bounce2" id="multimedia-f_button">Se innsiden</div>
-            <div class="multimedia-f_media">
-                <video class="multimedia-f_media_video fade-out" id="multimedia-f_media_video" src="video/klubben-inne-2-liten.mp4"></video>
-            </div>
-            <div class="multimedia-f_text text--s  bg-black">
-                <h2 class="multimedia-f_text_headline headline--m">Et lite stykke Norge</h2>
-                <p class="multimedia-f_text_p text--s">
-                    Langs Øbergveien i nærheten av Tistedal finner man klubbhuset.
-                    På utsiden oppleves bygget anonymt og stille, nesten forlatt.
-
-                </p>
-                <p class="multimedia-f_text_p">
-                    Men inne fortelles en annen historie. Her er det full amerikansk stil, hver detalj nøye planlagt.
-                    En jukebox er fylt med gamle slagere fra Creedence Clearwater Revival og Johnny Cash.
-                    På et skilt står det "Stuck in the 50s" og det er bilder av James Dean og Marilyn Monroe hengende
-                    på veggen.
-                </p>
-            </div>
-        </section>
-
-        <!-- Nils Petter -->
-        <section class="multimedia-a bg-white fill-page">
-            <div class="multimedia-a_media" id="multimedia-a_media">
-                <picture class="multimedia-a_media_img--1 fade-out" id="multimedia-a_media_img--1">
-                    <img src="img/mod/nils-petter.jpg" alt="">
-                </picture>
-                <picture class="multimedia-a_media_img--2 fade-out" id="multimedia-a_media_img--2">
-                    <img src="img/mod/nils-petter-bak.jpg" alt="">
-                </picture>
-            </div>
-            <div class="multimedia-a_text text--s" id="multimedia-a_text">
-                <h2 class="multimedia-a_text_headline headline--m">Uskreven regel</h2>
-                <p class="multimedia-a_text_p">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio dolores impedit tempora
-                    repudiandae
-                    aliquam molestiae repellendus, deserunt at id porro molestias. Aspernatur vero quas eveniet
-                    molestiae
-                    quaerat magnam recusandae repellat?
-                </p>
-                <p class="multimedia-a_text_p">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio dolores impedit tempora
-                    repudiandae
-                    aliquam molestiae repellendus, deserunt at id porro molestias. Aspernatur vero quas eveniet
-                    molestiae
-                    quaerat magnam recusandae repellat?
-                </p>
-                <p class="multimedia-a_text_p">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio dolores impedit tempora
-                    repudiandae
-                    aliquam molestiae repellendus, deserunt at id porro molestias. Aspernatur vero quas eveniet
-                    molestiae
-                    quaerat magnam recusandae repellat?
-                </p>
-            </div>
-        </section>
-
-        <!-- Nils Petter video-intervju -->
-        <section class="video-a" id="video-a">
-            <video class="video" id="video" src="video/klubben.mp4" controls>
-                <source src="movie.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </section>
-
-        <!-- <div class="image-grid-b">
-            <div class="image-grid-b_media">
-                <picture class="image-grid-b_media_img--1">
-                    <img src="img/placeholder/cafe-1.jpg" alt="">
-                </picture>
-                <picture class="image-grid-b_media_img--2">
-                    <img src="img/placeholder/car-bmw.jpg" alt=""></picture>
-                <picture class="image-grid-b_media_img--3">
-                    <img src="img/placeholder/car-interior.jpg" alt=""></picture>
-                <picture class="image-grid-b_media_img--4">
-                    <img src="img/placeholder/classic-car-orange.jpg" alt=""></picture>
-                <picture class="image-grid-b_media_img--5">
-                    <img src="img/placeholder/license-plate.jpg" alt=""></picture>
-                <picture class="image-grid-b_media_img--6">
-                    <img src="img/placeholder/man-closeup.jpg" alt=""></picture>
-                <picture class="image-grid-b_media_img--7">
-                    <img src="img/placeholder/tools.jpg" alt=""></picture>
-            </div>
+          <div class="multimedia-scroll_text_quoteblock">
+            <p><span>Kommentar fra Nils Petter? Med bilde/portrett?</span></p>
+          </div>
         </div>
+      </section>
 
-        <div class="img-b">
-
-        </div>-->
-
-        <!-- Map -->
-        <section class="multimedia-c bg-white fill-page">
-            <div class="multimedia-c_media">
-                <picture class="multimedia-c_media_image">
-                    <img class="border-white" src="img/mod/map-closeup_8416-2.jpg" alt="">
-                </picture>
-            </div>
-            <div class="multimedia-c_text text--s">
-                <h2 class="multimedia-c_heading headline--m">
-                    I hjertet
-                </h2>
-                <p>
-                    Rundt året samles klubben til quiz, veledighetsarbeid og samhold, men det er entusiasme for
-                    bil som har bragt dem sammen.
-                </p>
-                <p>
-                    De fleste av dem har en amerikaner eller flere, og for å skape en oversikt har de
-                    hengt opp et stort kart over Halden der medlemmer kan markere merke, modell og stedet bilen
-                    befinner seg.
-                </p>
-                <p>
-                    Vegg i vegg med kafeen har klubben flere verksteder der medlemmer kan ta
-                    “drop-in” med biler som trenger noen ekstra øyne eller hender.
-                </p>
-            </div>
-        </section>
-
-        <!-- Familien -->
-        <section class="multimedia-b fill-page">
-            <div class="multimedia-b_excerpt quote--l">
-                <p class="multimedia-b_excerpt_p fade-out" id="multimedia-b_excerpt_p">
-                    &laquo; En sykdom man aldri blir kvitt &raquo;</p>
-            </div>
-            <div class="multimedia-b_text text--s bg-black" id="multimedia-b_text">
-                <h2 class="multimedia-b_text_headline headline--m">Ikke Donald Duck</h2>
-                <p class="multimedia-b_text_p">
-                    Med nesa dypt i et bil-magasin sitter Severin, en av klubbens yngste stamgjester.
-                    Ikledd svart skinnjakke og caps som fronter “Aarnes amerikanske bildeler” forteller han at han
-                    er den eneste han kjenner på sin alder som er så opptatt av amerikanske biler, noe han synes det er litt rart.
-                </p>
-                <p class="multimedia-b_text_p">
-                    Pappa Ole Willy forteller at sønnen bladde i bilblader allerede fra småbarns-alder. Han forteller
-                    at han kjøpte barnebøker og Donald Duck-blader, men det ble nesten aldri rørt.
-                </p>
-                <p class="multimedia-b_text_p">
-                    Fra båsen ved siden av spøkes det at Amcar er en sykdom man aldri blir kvitt. Ole Willy ler
-                    nikkende.
-                </p>
-            </div>
-        </section>
-
-        <!-- TEKST -->
-        <section class="text-a bg-white">
-            <div class="text-a_text text--s">
-                <h2 class="text-a_text headline--m">
-                    Headline
-                </h2>
-                <p class="text-a_text_p">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio dolores impedit tempora
-                    repudiandae
-                    aliquam molestiae repellendus, deserunt at id porro molestias. Aspernatur vero quas eveniet
-                    molestiae
-                    quaerat magnam recusandae repellat?
-                </p>
-                <p class="text-a_text_p">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio dolores impedit tempora
-                    repudiandae
-                    aliquam molestiae repellendus, deserunt at id porro molestias. Aspernatur vero quas eveniet
-                    molestiae
-                    quaerat magnam recusandae repellat?
-                </p>
-                <p class="text-a_text_p">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio dolores impedit tempora
-                    repudiandae
-                    aliquam molestiae repellendus, deserunt at id porro molestias. Aspernatur vero quas eveniet
-                    molestiae
-                    quaerat magnam recusandae repellat?
-                </p>
-                <p class="text-a_text_p">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio dolores impedit tempora
-                    repudiandae
-                    aliquam molestiae repellendus, deserunt at id porro molestias. Aspernatur vero quas eveniet
-                    molestiae
-                    quaerat magnam recusandae repellat?
-                </p>
-            </div>
-        </section>
-
-        <!-- Kjersti Aarum -->
-        <section class="multimedia-d fill-page zindex">
-            <div class="multimedia-d_media">
-                <picture class="multimedia-d_media_img--1 fade-out">
-                    <img class="border-white" src="img/mod/aarum.jpg" alt="">
-                </picture>
-                <picture class="multimedia-d_media_img--2 fade-out">
-                    <img class="border-white" src="img/mod/aarum-pynter-kake.jpg" alt="">
-                </picture>
-
-                <div class="multimedia-d_excerpt quote--l">
-                    <p class="multimedia-d_excerpt_p fade-out">
-                        &laquo; Alle er velkommen her &raquo;</p>
-                </div>
-            </div>
-            <div class="multimedia-d_text bg-black text--s">
-                <h2 class="multimedia-d_text_p headline--m">Chevy fra Ebay</h2>
-                <p class="multimedia-d_text_p">
-                    En av ildsjelene bak onsdagskafeen er Kjersti Aarum. Når vi møter henne står hun ved et biljardbord
-                    og pynter diverse kaker hun har bakt hjemme, noen til salgs, andre til premier som skal gis ut i
-                    løpet av kvelden.
-                </p>
-                <p class="multimedia-d_text_p">
-                    For henne startet eventyret da ektemannen Tom kjøpte seg veteran-bil i 2005, og to år
-                    senere hadde hun sin egen ‘68 Chevrolet Chevy Impala kjøpt gjennom Ebay.
-                </p>
-                <p class="multimedia-d_text_p">
-                    Hun er stolt over miljøet i klubben, og presisterer at her er alle velkommen.
-                </p>
-
-            </div>
-        </section>
-
-        <!-- Fotokonkurransen -->
-        <section class="multimedia-e bg-white zindex fill-page">
-            <div class="multimedia-e_text text--s">
-                <h2 class="multimedia-e_text_h1 headline--m">
-                    Chrome and Curves
-                </h2>
-                <p class="multimedia-e_text_p">
-                    I “ute-sesongen” har det i år blitt avholdt fotokonkurransen “Chrome and Curves” hvor man
-                    kunne bidra med motiv av amerikanske biler i alle varianter.
-                </p>
-                <p class="multimedia-e_text_p">
-                    Fra mai til september har styret kåret ukesvinnere som på slutten av sesongen kjempet om tittelen
-                    “Årets Blinkskudd” og en premie på 2000 kroner.
-                </p>
-                <p class="multimedia-e_text_p">
-                    &ndash; For det meste har det ikke vært profesjonelle fotografer som sender inn bidrag, men
-                    privatpersoner som enter tar bilder med mobilen eller er “hobbyfotografer”, sier Nils Petter
-                </p>
-                <p class="multimedia-e_text_p">
-                    Vinneren av årets fotokonkurranse ble Svein at Hurum.
-                </p>
-                <p class="multimedia-e_text_p">
-                    Nils Petter syns det fungerte fint og vurderer sterkt å gjøre konkurransen en årlig event.
-                </p>
-            </div>
-            <div class="multimedia-e_media">
-                <picture class="multimedia-e_media_image slides">
-                    <img src="img/mod/fotovinner-2.jpg" alt="">
-                </picture>
-                <picture class="multimedia-e_media_image slides">
-                    <img src="img/mod/fotovinner-1.jpg" alt="">
-                </picture>
-                <picture class="multimedia-e_media_image slides">
-                    <img src="img/mod/fotovinner-4.jpg" alt="">
-                </picture>
-
-                <div class="number headline--l">1 / 3</div>
-                <div class="number headline--l">2 / 3</div>
-                <div class="number headline--l">3 / 3</div>
-
-                <div class="multimedia-e_media_next">
-                    <a class="multimedia-e_media_next_a" onclick="plusSlides(1)">&#10095;</a>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- <div class="image-grid-b">
-                    <div class="image-grid-b_media">
-                        <picture class="image-grid-b_media_img--1">
-                            <img src="img/mod/klubben-ute-2.jpg" alt="">
-                        </picture>
-                        <picture class="image-grid-b_media_img--2">
-                            <img src="img/mod/juke.jpg" alt=""></picture>
-                        <picture class="image-grid-b_media_img--3">
-                            <img src="img/mod/map-2_8417.jpg" alt=""></picture>
-                        <picture class="image-grid-b_media_img--4">
-                            <img src="img/mod/mat.jpg" alt=""></picture>
-                        <picture class="image-grid-b_media_img--5">
-                            <img src="img/mod/bil-pickup.jpg" alt=""></picture>
-                        <picture class="image-grid-b_media_img--6">
-                            <img src="img/mod/felger.jpg" alt=""></picture>
-                        <picture class="image-grid-b_media_img--7">
-                            <img src="img/mod/scene.jpg" alt=""></picture>
-                    </div>
-                </div>-->
-
-        <!-- FISKEBRYGGA 
-
-        <section class="text-b bg-white zindex">
-                <div class="text-b_text text--s">
-                    <h1 class="headline--m">Fiskebrygga</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio dolores impedit tempora
-                        repudiandae
-                        aliquam molestiae repellendus, deserunt at id porro molestias. Aspernatur vero quas eveniet
-                        molestiae
-                        quaerat magnam recusandae repellat?
-                    </p>
-                </div>
-            </section>-->
-
-        <section class="multimedia-g zindex bg-white fill-page">
-
-            <div class="multimedia-g_text text--m">
-                <h1 class="multimedia-g_h1 headline--l">Fiskebrygga</h1>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio dolores impedit tempora
-                    repudiandae
-                    aliquam molestiae repellendus, deserunt at id porro molestias. Aspernatur vero quas eveniet
-                    molestiae
-                    quaerat magnam recusandae repellat?
-                </p>
-            </div>
-            <picture class="multimedia-g_media_img--1">
-                <img src="img/mod/fiskebrygga.jpg" alt="">
-            </picture>
-            <div class="multimedia-g_media_map" id="googleMap" style="width:100%; height:100%">
-
-                <!-- Map script -->
-                <script async defer>
-                    function myMap() {
-                        var mapProp = {
-                            center: new google.maps.LatLng(59.120749, 11.383609),
-                            zoom: 16,
-                        };
-
-                        var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
-
-                        var fiskebrygga = {lat:59.121305, lng:11.384094};
-
-                        var driveCoords = [
-                            {lat:59.121934, lng:11.377741},
-                            {lat:59.121521, lng:11.384136},
-                            {lat:59.121752, lng:11.387505},
-                            {lat:59.120303, lng:11.389263},
-                            {lat:59.119380, lng:11.389161},
-                            {lat:59.118961, lng:11.387478},
-                            {lat:59.119360, lng:11.384810}
-                        ];
-
-                        var drivePath = new google.maps.Polyline({
-                            path: driveCoords,
-                            geodesic: true,
-                            strokeColor: '#007bff',
-                            strokeOpacity: 1.0,
-                            strokeWeight: 5,
-                        }); 
-
-                        drivePath.setMap(map);
-
-                        var fiskebryggaAreaCoords = [
-                            {lat:59.121575, lng:11.383686},
-                            {lat:59.121380, lng:11.385462},
-                            {lat:59.121225, lng:11.385440},
-                            {lat:59.121113, lng:11.383810}
-                        ]
-
-                        var fiskebryggaArea = new google.maps.Polygon({
-                            paths: fiskebryggaAreaCoords,
-                            strokeColor: '#FF0000',
-                            strokeOpacity: 0.8,
-                            strokeWeight: 2,
-                            fillColor: '#FF0000',
-                            fillOpacity: 0.35,
-                        });
-
-                        fiskebryggaArea.setMap(map);
-
-                        var marker = new google.maps.Marker({position: fiskebrygga, label: "Fiskebrygga", map: map});
-
-                        
-                    }
-                </script>
-
-            </div>
-            <picture class="multimedia-g_media_img--2">
-                <img src="img/mod/bil-pickup.jpg" alt="">
-            </picture>
-
-
-        </section>
-
-        <!--<section class="dv-big-a zindex">
-            <div class="div-big-a_map" id="googleMap" style="width:100%; height:400px;">
-                <script>
-                    function myMap() {
-                        var mapProp = {
-                            center: new google.maps.LatLng(59.1217005, 11.3785392),
-                            zoom: 17,
-                        };
-                        var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
-                    }
-                </script>
-            </div>
-        </section>-->
-
-        <!-- TEKST -->
-        <section class="text-b bg-white zindex">
-            <div class="text-b_text text--s">
-                <h1 class="headline--m">Halden i endring?</h1>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio dolores impedit tempora
-                    repudiandae
-                    aliquam molestiae repellendus, deserunt at id porro molestias. Aspernatur vero quas eveniet
-                    molestiae
-                    quaerat magnam recusandae repellat?
-                </p>
-            </div>
-        </section>
-
-        <!-- Scroll-seksjon -->
-        <section class="multimedia-scroll" id="multimedia-scroll">
-            <div class="multimedia-scroll_media not-visible ease" id="multimedia-scroll_media">
-                <div class="multimedia-scroll_media_img--1 fade-out sticky ease" id="img-1">
-                    <img src="img/mod/fiskebrygga.jpg" alt="">
-                </div>
-                <div class="multimedia-scroll_media_img--2 fade-out sticky ease" id="img-2">
-                    <img src="img/placeholder/fiskebrygga-kart.png" alt="">
-                </div>
-                <div class="multimedia-scroll_media_img--3 fade-out sticky ease" id="img-3">
-                    <img src="img/mod/klubben-ute-2.jpg" alt="">
-                </div>
-            </div>
-
-            <div class="multimedia-scroll_text text--m">
-
-                <div class="multimedia-scroll_text_quoteblock multimedia-scroll_text_quoteblock--1"></div>
-
-                <div class="multimedia-scroll_text_quoteblock">
-                    <p><span>Antall besøkende på Fiskebrygga</span></p>
-                </div>
-
-                <div class="multimedia-scroll_text_quoteblock">
-                    <p><span>Veteran-biler i Halden vs andre lignende byer</span></p>
-                </div>
-
-                <div class="multimedia-scroll_text_quoteblock">
-                    <p><span>orem ipsum dolor sit amet consectetur adipisicing elit. 1</span></p>
-                </div>
-            </div>
-        </section>
-
-
-
-        <!--
-
-        <div class="dv-small-a zindex">
-            <div class="dv-small-a_text text--s bg-black">
-                <h1 class="dv-small-a_text_headline headline--m">HEADLINE</h1>
-                <p class="dv-small-a_text_p">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique
-                    ratione dolorem maxime ipsa facere repellendus distinctio pariatur necessitatibus velit iure, quia
-                    amet ducimus cumque quam a officiis eum iusto reprehenderit!</p>
-                <p class="dv-small-a_text_p">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique
-                    ratione dolorem maxime ipsa facere repellendus distinctio pariatur necessitatibus velit iure, quia
-                    amet ducimus cumque quam a officiis eum iusto reprehenderit!</p>
-            </div>
-            <div class="dv-small-a_data">
-                <div class="dv-small-a_data_number">
-                    72
-                </div>
-
-            </div>
+      <section class="text-a bg-white zindex">
+        <div class="text-a_text text--s">
+          <h2 class="headline--m">#AmcarHalden</h2>
+          <p class="text-a_text_p">
+            UNDER ARBEID: Her kommer instruksjoner om hvordan man kan dele egne
+            bilder til bildevisningen under
+          </p>
         </div>
+      </section>
 
-        <div class="dv-small-b bg-white">
-            <div class="dv-small-b_text text--s">
-                <h1 class="dv-small-b_text_headline headline--m">HEADLINE</h1>
-                <p class="dv-small-b_text_p">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique
-                    ratione dolorem maxime ipsa facere repellendus distinctio pariatur necessitatibus velit iure, quia
-                    amet ducimus cumque quam a officiis eum iusto reprehenderit!</p>
-                <p class="dv-small-b_text_p">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique
-                    ratione dolorem maxime ipsa facere repellendus distinctio pariatur necessitatibus velit iure, quia
-                    amet ducimus cumque quam a officiis eum iusto reprehenderit!</p>
-            </div>
-            <div class="dv-small-b_data">
-                <div class="dv-small-b_data_chart"></div>
-            </div>
+      <section class="image-grid-a zindex">
+        <div class="image-grid-a_media bg-white" id="image-grid-a_media">
+          <picture class="image-grid-a_media_img--1">
+            <img src="img/mod/mat.jpg" alt="" />
+          </picture>
+          <picture class="image-grid-a_media_img--2">
+            <img src="img/mod/juke-sanger.jpg" alt=""
+          /></picture>
+
+          <picture class="image-grid-a_media_img--3">
+            <img src="img/mod/scene.jpg" alt=""
+          /></picture>
+
+          <picture class="image-grid-a_media_img--4">
+            <img src="img/mod/fotovinner-1.jpg" alt=""
+          /></picture>
+
+          <picture class="image-grid-a_media_img--5">
+            <img src="img/mod/skull.jpg" alt=""
+          /></picture>
+
+          <picture class="image-grid-a_media_img-6">
+            <img src="img/mod/familien-far.jpg" alt=""
+          /></picture>
+
+          <picture class="image-grid-a_media_img--7">
+            <img src="img/mod/bil-pickup.jpg" alt=""
+          /></picture>
+
+          <picture class="image-grid-a_media_img--8">
+            <img src="img/mod/biler-bak.jpg" alt=""
+          /></picture>
+
+          <picture class="image-grid-a_media_img--9">
+            <img src="img/mod/skull.jpg" alt=""
+          /></picture>
+
+          <picture class="image-grid-a_media_img--10">
+            <img src="img/mod/familien-2.jpg" alt=""
+          /></picture>
+
+          <picture class="image-grid-a_media_img--11">
+            <img src="img/mod/felger.jpg" alt=""
+          /></picture>
+
+          <picture class="image-grid-a_media_img--12">
+            <img src="img/mod/diner-flagg.jpg" alt=""
+          /></picture>
         </div>
-        -->
-
-
-
-
-        <section class="text-a bg-white zindex">
-            <div class="text-a_text text--s">
-                <h2 class="headline--m">#AmcarHalden</h2>
-                <p class="text-a_text_p">
-                    Her kan du dele bilder som blir under.
-                </p>
-            </div>
-        </section>
-
-        <section class="image-grid-a zindex">
-            <div class="image-grid-a_media bg-white" id="image-grid-a_media">
-                <picture class="image-grid-a_media_img--1">
-                    <img src="img/mod/mat.jpg" alt="">
-                </picture>
-                <picture class="image-grid-a_media_img--2">
-                    <img src="img/mod/juke-sanger.jpg" alt=""></picture>
-                <picture class="image-grid-a_media_img--3">
-                    <img src="img/mod/scene.jpg" alt=""></picture>
-                <picture class="image-grid-a_media_img--4">
-                    <img src="img/mod/fotovinner-1.jpg" alt=""></picture>
-                <picture class="image-grid-a_media_img--5">
-                    <img src="img/mod/skull.jpg" alt=""></picture>
-                <picture class="image-grid-a_media_img-6">
-                    <img src="img/mod/familien-far.jpg" alt=""></picture>
-                <picture class="image-grid-a_media_img--7">
-                    <img src="img/mod/bil-pickup.jpg" alt=""></picture>
-                <picture class="image-grid-a_media_img--8">
-                    <img src="img/mod/biler-bak.jpg" alt=""></picture>
-                <picture class="image-grid-a_media_img--9">
-                    <img src="img/mod/skull.jpg" alt=""></picture>
-                <picture class="image-grid-a_media_img--10">
-                    <img src="img/mod/familien-2.jpg" alt=""></picture>
-                <picture class="image-grid-a_media_img--11">
-                    <img src="img/mod/felger.jpg" alt=""></picture>
-                <picture class="image-grid-a_media_img--12">
-                    <img src="img/mod/diner-flagg.jpg" alt=""></picture>
-            </div>
-        </section>
-
+      </section>
     </div>
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcpp_Alc9pjgyaMdWw03-gP6ekLWYifMw&callback=myMap"></script>
-    <script type="text/javascript" src="js/main.js"></script>
-</body>
-
+    <!--
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcpp_Alc9pjgyaMdWw03-gP6ekLWYifMw&callback=myMap" defer></script>
+    -->
+    <script type="text/javascript" src="js/main.js" defer></script>
+  </body>
 </html>
