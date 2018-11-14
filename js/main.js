@@ -61,12 +61,8 @@ var mm_a = document.getElementById("multimedia-a");
 
 // multimedia-a nils petter
 var mm_a_text = document.getElementById("multimedia-a_text");
-var mm_a_media_img1 = document.getElementById(
-  "multimedia-a_media_img--1"
-);
-var mm_a_media_img2 = document.getElementById(
-  "multimedia-a_media_img--2"
-);
+var mm_a_media_img1 = document.getElementById("multimedia-a_media_img--1");
+var mm_a_media_img2 = document.getElementById("multimedia-a_media_img--2");
 
 // multimedia-a familien
 var mm_b_text = document.getElementById("multimedia-b_text");
@@ -98,6 +94,8 @@ var img1 = document.getElementById("img-1");
 var img2 = document.getElementById("img-2");
 var img3 = document.getElementById("img-3");
 
+var mm_h = document.getElementById("multimedia-h");
+
 // scroll listener function
 window.addEventListener("scroll", function(e) {
   if (isTopScrolledIntoView(mm_a_media_img2)) {
@@ -122,6 +120,9 @@ window.addEventListener("scroll", function(e) {
     mm_b_quote1.classList.remove("fade-out");
 
     mm_b_quote1.classList.add("slide-up-medium");
+  } else {
+    mm_b_quote1.classList.remove("slide-up-medium");
+    mm_b_quote1.classList.add("fade-out");
   }
 
   if (isBottomScrolledIntoView(video)) {
@@ -132,8 +133,6 @@ window.addEventListener("scroll", function(e) {
     video.classList.remove("sticky");
   }
 
-
-  
   if (isScrolledIntoView(multimedia_scroll)) {
     multimedia_scroll_media.classList.remove("not-visible");
 
@@ -159,6 +158,10 @@ window.addEventListener("scroll", function(e) {
     img2.classList.add("fade-out");
     img3.classList.remove("fade-out");
   }
+
+ // if (isScrolledIntoView(mm_h)) {
+   // img3.classList.add("fade-out");
+  //}
 });
 
 // top or bottom
@@ -198,28 +201,22 @@ function isBottomScrolledIntoView(el) {
 
 // multimedia-f klikk for å vise video
 var mm_f_button = document.getElementById("multimedia-f_button"),
-    mm_f_video = document.getElementById("multimedia-f_media_video");
-
+  mm_f_video = document.getElementById("multimedia-f_media_video");
 
 mm_f_button.onclick = function() {
   mm_f_video.classList.remove("fade-out");
-  mm_f_video.classList.add("fade-in-2")
+  mm_f_video.classList.add("fade-in-2");
   mm_f_video.play();
-  mm_f_video.addEventListener('ended', function() {
+  mm_f_video.addEventListener("ended", function() {
     mm_f_button.innerHTML = "Se igjen";
     mm_f_button.classList.add("fade-in-2");
     mm_f_button.classList.remove("fade-out");
-    
-  })
+  });
 
   mm_f_button.classList.add("fade-out");
-}
+};
+
+// map
 
 
-// instagram feed to grid-items
-
-
-
-
-
-
+// test parallax
