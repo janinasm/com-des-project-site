@@ -61,11 +61,20 @@ video {
 }
 
 .ease {
-  transition: all .5s ease;
+  transition: all .4s ease;
 }
 
 .scroll-helper {
   height: 10vh;
   width: 100%;
   border: 3px solid orange;
+}
+
+.show {
+  display: grid !important;
+  visibility: visible !important;
+}
+
+.active {
+  background: red !important;
 }

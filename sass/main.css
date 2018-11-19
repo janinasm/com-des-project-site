@@ -56,14 +56,24 @@ video {
 }
 
 .ease {
-  -webkit-transition: all .5s ease;
-  transition: all .5s ease;
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
 }
 
 .scroll-helper {
   height: 10vh;
   width: 100%;
   border: 3px solid orange;
+}
+
+.show {
+  display: -ms-grid !important;
+  display: grid !important;
+  visibility: visible !important;
+}
+
+.active {
+  background: red !important;
 }
 
 .slide-up-long {
@@ -800,7 +810,7 @@ body {
   -ms-grid-columns: (minmax(50rem, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
   grid-gap: 3rem;
-  margin-top: -15vh;
+  margin-top: -5vh;
 }
 
 .multimedia-c_media {
@@ -1355,6 +1365,42 @@ body {
   width: 150%;
 }
 
+.multimedia-j {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(50rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+  grid-gap: 3rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.multimedia-j_text {
+  max-width: 60rem;
+  display: -ms-grid;
+  display: grid;
+  grid-row-gap: 2rem;
+  -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.multimedia-j_media {
+  padding: 2rem;
+}
+
+.multimedia-j_media_image img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 0 0;
+     object-position: 0 0;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
 .text-a {
   padding: 10rem 0rem;
 }
@@ -1398,21 +1444,25 @@ body {
   height: 115vh;
 }
 
-.video {
+.video-a_container {
+  max-height: 100vh;
+}
+
+.video-a .video {
   top: 0;
   left: 0;
-  max-height: 100vh;
   width: 100%;
   height: 100%;
-  -o-object-fit: fill;
-     object-fit: fill;
-  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media only screen and (max-width: 37.5em) {
-  .video {
+  .video-a .video {
     -o-object-fit: cover;
        object-fit: cover;
+    -o-object-position: 70%;
+       object-position: 70%;
   }
 }
 
@@ -1589,28 +1639,54 @@ body {
 }
 
 .crowdsourced-map {
-  background: no-repeat url(../img/placeholder/halden-map.PNG);
-  background-size: cover;
+  height: 100vh;
   display: -ms-grid;
   display: grid;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-grid-columns: (1fr)[9];
+      grid-template-columns: repeat(9, 1fr);
+  -ms-grid-rows: (1fr)[9];
+      grid-template-rows: repeat(9, 1fr);
+}
+
+.crowdsourced-map_googleMap {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+}
+
+.crowdsourced-map_options {
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-grid-row: 2;
+  grid-row: 2;
+  z-index: 2;
+}
+
+.crowdsourced-map_options_text {
+  background: white;
+  padding: 2rem;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1rem;
 }
 
 .crowdsourced-map_form {
-  background: #f8f9fa;
-  border: 1px solid gray;
-  max-width: 40rem;
-  padding: 5rem;
-}
-
-.crowdsourced-map_form > form {
+  padding: 2rem;
+  -ms-grid-column: 5;
+  grid-column: 5;
+  -ms-grid-row: 5;
+  grid-row: 5;
+  background: white;
   display: -ms-grid;
   display: grid;
-  grid-row-gap: 3rem;
+  z-index: 10;
+  display: none;
+  visibility: hidden;
+}
+
+.crowdsourced-map .carInfo {
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
 .image-grid-a_media {
@@ -1914,90 +1990,5 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
   display: block;
-}
-
-.dv-small-a {
-  padding: 10rem 0rem;
-  background: linear-gradient(55deg, #2c0303a2 0%, #3a3a3aa8 85%), no-repeat center url(../img/bilder-bak_8443.jpg);
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(50rem, 70rem))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(50rem, 70rem));
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.dv-small-a_text {
-  width: 80%;
-  padding: 5rem;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-row-align: center;
-      align-self: center;
-  -ms-grid-column-align: center;
-      justify-self: center;
-  grid-row-gap: 2rem;
-}
-
-.dv-small-a_data {
-  margin-top: 30rem;
-  height: 40vh;
-  width: 80%;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  -ms-grid-column-align: center;
-      justify-self: center;
-  background: greenyellow;
-  position: relative;
-}
-
-.dv-small-a_data_number {
-  font-size: 15rem;
-  color: white;
-  position: absolute;
-  top: -12rem;
-  right: 0;
-}
-
-.dv-small-b {
-  width: 100%;
-  padding: 10rem 0rem;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(50rem, 70rem))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(50rem, 70rem));
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.dv-small-b_text {
-  width: 80%;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-row-align: center;
-      align-self: center;
-  -ms-grid-column-align: center;
-      justify-self: center;
-  grid-row-gap: 2rem;
-}
-
-.dv-small-b_data {
-  height: 40rem;
-  width: 80%;
-  background: orangered;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  -ms-grid-column-align: center;
-      justify-self: center;
-}
-
-.dv-big-a {
-  width: 100%;
-  min-height: 100%;
-  background: var(--light);
 }
 /*# sourceMappingURL=main.css.map */
