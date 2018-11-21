@@ -1,0 +1,103 @@
+.multimedia-k {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+  grid-gap: 3rem;
+  justify-content: center;
+
+  &_media {
+    padding: 3rem;
+
+    &_image {
+    }
+  }
+
+  &_text {
+    max-width: 50rem;
+    display: grid;
+
+    align-self: center;
+    justify-self: center;
+    grid-row-gap: 2rem;
+  }
+}
+
+.crowdsourced-map {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr;
+  justify-content: center;
+
+  &_sidebar {
+    grid-column: 1;
+    grid-row: 1;
+
+    background: #333;
+    box-shadow: 0 0 10px #00000080;
+    color: white;
+    padding: 3rem;
+    z-index: 2;
+
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    align-content: start;
+    grid-gap: 3rem;
+
+    &_stats {
+    display: grid;
+    grid-row-gap: 3rem;
+    margin-top: 10rem;
+    }
+
+    &_totalcars {
+    }
+  }
+
+  &_googleMap {
+    grid-column: 2;
+    grid-row: 1 / -1;
+  }
+
+  &_cta {
+    background: #9f4545;
+    padding: 3rem;
+    font-weight: 600;
+  }
+
+  &_form {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: center;
+    justify-self: center;
+    justify-items: center;
+    grid-gap: 1rem;
+
+    padding: 3rem;
+    background: white;
+    display: grid;
+    z-index: 10;
+    border-radius: 3px;
+    box-shadow: 3px 3px 5px #36363680;
+    display: none;
+    visibility: hidden;
+
+    &_button {
+        background: #28a745;
+        font-size: 2rem;
+    }
+
+    &_close {
+        background: #dc3545;
+        font-size: 2rem;
+    }
+  }
+
+  & .carInfo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+  }
+}

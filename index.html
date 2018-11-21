@@ -6,19 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
     <link
-      href="https://fonts.googleapis.com/css?family=Anton|Open+Sans|Oswald:200,400,600,700"
+      href="https://fonts.googleapis.com/css?family=Anton|Open+Sans:400,700,800|Raleway"
       rel="stylesheet"
       defer
     />
 
     <link rel="stylesheet" href="sass/main.css" />
 
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
-
     <title>Amcar Halden</title>
   </head>
 
   <body>
+    <!-- Script displays a black page until site is fully loaded -->
     <script>
       window.onload = function load() {
         document.getElementsByClassName("page-loader")[0].style.display =
@@ -29,58 +28,12 @@
     <div class="container">
       <!-- Loading -->
       <div class="page-loader"></div>
-
-      <!--
-        Halden Times Logo/Link
-
-
-
-
-
-
-
-
-
-
-        <div class="halden-times-logo">
-
-
-
-
-
-
-
-
-
-
-
-            <a href="http://it.hiof.no/HaldenTimes/" class="halden-times-logo">
-
-
-
-
-
-
-
-
-
-
-
-                <img src="img/placeholder/halden-times-logo.svg" alt="">
-
-
-
-
-
-
-
-
-
-
-
-            </a>
-      -->
-
+      <!-- Halden Times Logo/Link -->
+      <div class="halden-times-logo">
+        <a href="http://it.hiof.no/HaldenTimes/" class="halden-times-logo_link">
+          <img src="img/placeholder/halden-times-logo.svg" alt="" />
+        </a>
+      </div>
       <!-- Headline -->
       <header class="header_landing" id="header_landing">
         <div class="header_landing_grid" id="header_landing_grid">
@@ -106,6 +59,7 @@
             class="header_landing_img--3"
           />
         </div>
+
         <div class="header_landing_text">
           <h1 class="header_landing_text_headline headline--xl">
             Amcar Halden
@@ -140,7 +94,7 @@
 
       <section class="multimedia-f fill-page">
         <div
-          class="multimedia-f_button headline--xs bounce2"
+          class="multimedia-f_button headline--xs bounce2 button"
           id="multimedia-f_button"
         >
           Se innsiden
@@ -152,6 +106,8 @@
             src="video/klubben-inne-2-liten.mp4"
           ></video>
         </div>
+
+        <!-- Klubben Inne/Ute -->
         <div class="multimedia-f_text text--s bg-black">
           <h2 class="multimedia-f_text_headline headline--m">
             Et lite stykke Amerika
@@ -196,18 +152,19 @@
           <h2 class="multimedia-a_text_headline headline--m">Uskreven regel</h2>
           <p>Nils Petter Nilsen er formannen av Street and Cruising Club.</p>
           <p>
-            Den første bilen fikk han før han ble 18. I likhet med flere andre
-            biler han har eid kom den aldri på veien, men det var gøy å ha.
-            Favoritten 1963 Chevrolet, har han hatt 5 stykk av.
+            Den første bilen fikk han før han ble 18 år. I likhet med flere
+            andre biler han har eid kom den aldri på veien, men det var gøy å
+            ha. Favoritten, 1963 Chevrolet, har han hatt 5 stykk av.
           </p>
           <p>
             &ndash; Chevrolet er amerikas folkevogn, nederst på rangstigen, men
             i Norge har det blitt luksusbil.
           </p>
           <p>
-            Det har blitt noen turer til USA gjennom årene, route 66. Men han
-            legger til at det ikke er sånn at de i amcar-miljøet elsker alt med
-            Amerika, det er mye tull der og, flirer Nils Petter.
+            Det har blitt flere turer til USA gjennom årene, lange "roadtrips"
+            med amerikansk leiebil på route 66. &ndash; Men det er ikke er sånn
+            at alle i amcar-miljøet elsker alt med Amerika, det er mye tull der
+            og, flirer Nils Petter.
           </p>
           <p>
             Bak på olajakka hans står det “Leader of the Pack”, og stjernene
@@ -215,15 +172,15 @@
             det skulle vært 10 nå.
           </p>
           <p>
-            Det er mye arbeid, men motivasjonen får han enkelt gjennom alle de
-            som bidrar og stiller opp. Han forteller at han stiller opp til
+            Det er mye arbeid, men motivasjonen finner han alltid gjennom alle
+            de som bidrar i klubben. Han forteller at han stiller opp til
             intervju fordi det er en uskreven regel i amcar-miljøet å fremme
             interessen.
           </p>
           <p>
             Spesielt stolt er han av “pensjonistkjøringa” som arrangeres årlig.
-            Siden 80-tallet har klubben hentet beboere på eldrehjem og tatt med
-            de på kjøretur rundt i byen for å se, det blir ofte turer til den
+            Siden 80-tallet har klubben hentet beboere på eldrehjem og tatt de
+            med på kjøretur rundt i byen for å se, det blir ofte turer til den
             gamle arbeidsplassen og nye landemerker.
           </p>
         </div>
@@ -237,6 +194,7 @@
             id="video"
             src="video/nils-petter-video.mp4"
             controls
+            poster="img/mod/nilspetter-overlay.jpg"
           >
             <source src="movie.mp4" type="video/mp4" />
             Avspilling av video er ikke støttet av din nettleser.
@@ -244,7 +202,7 @@
         </div>
       </section>
 
-      <!-- Map -->
+      <!-- Klubbkartet, om medlemmer -->
       <section class="multimedia-c bg-white fill-page">
         <div class="multimedia-c_media">
           <picture class="multimedia-c_media_image">
@@ -262,11 +220,11 @@
             men det er entusiasme for bil som har bragt dem sammen.
           </p>
           <p>
-            De fleste har en amerikaner eller flere, og enkelte har veldig
-            mange. Antall biler i klubben er ikke lett å telle, sist de prøvde
-            ble det 135 cabber og 400 biler totalt. I klubbhuset har de hengt
-            opp et stort kart over Halden der medlemmer kan markere merke,
-            modell og stedet bilen befinner seg.
+            De fleste har en amerikaner eller flere, og enkelte har mange.
+            Antall biler i klubben er ikke lett å telle, men sist de prøvde ble
+            det 135 "cabber" og 400 biler totalt. I klubbhuset har de hengt opp
+            et stort kart over Halden der medlemmer kan markere merke, modell og
+            stedet bilen befinner seg.
           </p>
           <p>
             Vegg i vegg med kafeen har klubben flere verksteder der medlemmer
@@ -276,7 +234,7 @@
         </div>
       </section>
 
-      <!-- Familien -->
+      <!-- Familien, far og sønn -->
       <section class="multimedia-b fill-page">
         <div class="multimedia-b_excerpt quote--l">
           <p
@@ -294,7 +252,8 @@
             Med nesa dypt i et bil-magasin sitter Severin, en av klubbens yngste
             stamgjester. Ikledd svart skinnjakke og caps som fronter “Aarnes
             amerikanske bildeler” forteller han at han er den eneste han kjenner
-            på sin alder som er så opptatt av amerikanske biler, noe han synes er litt rart.
+            på sin alder som er så opptatt av amerikanske biler, noe han synes
+            er litt rart.
           </p>
           <p>
             Pappa Ole Willy forteller at sønnen bladde i bilblader allerede fra
@@ -308,33 +267,36 @@
         </div>
       </section>
 
-      <!-- TEKST -->
+      <!-- Alf Petter -->
       <section class="multimedia-j fill-page bg-white">
         <div class="multimedia-j_text text--s">
           <h2 class="headline--m">Gutta i byen</h2>
           <p>
-            Alf Gunnar Nilsen er en av de aller første medlemmene i Street and
-            Cruising Club. Han har hatt interesse for motor siden han var 13 år
-            gammel og har vært med i bilmiljøet i Halden siden han fikk
-            sertifikat.
+            Alf Gunnar Nilsen er en av de aller første medlemmene i klubben. Han
+            har hatt interesse for motor siden han var 13 år gammel og har vært
+            med i bilmiljøet i Halden siden han fikk sertifikat.
+          </p>
+          <p>
+            &ndash; Kjørte med gutta i byen, vi hørte med "Særp" og
+            Fredrikstad-klubben, men de ble delt så vi lagde vår egen i Halden.
           </p>
           <p>
             Som en av de første i klubben har han vært med på det meste av treff
             og arrangementer opp gjennom, og er fortsatt med på møtene nesten
-            hver uke. Har ikke fått vært med på grensetreffet de siste årene på
-            grunn av dårlig ben, men prøver fortsatt å være så aktiv som mulig i
-            miljøet.
+            hver uke. Han gar ikke fått vært med på grensetreffet de siste årene
+            på grunn av dårlig ben, men prøver fortsatt å være så aktiv som
+            mulig i miljøet.
           </p>
           <p>
             Han kjører amcar selv, og den første amerikanske bilen var en 55
             Ford Customline. Han er den eneste i hans familie som fortsatt har
             amcar interessen. Sønnen var interessert en stund, men mistet
-            gnisten. Men som Alf sa, “Hele familien her, og særpe kamerater er
-            familie for meg.”
+            gnisten.
           </p>
           <p>
-            &ndash; Det spesielle med klubben er jo det sosiale miljøet og
-            gleden av å samles og kjøre sammen.
+            &ndash; Hele familien her, og særpe-kamerater er familie for meg.
+            Det spesielle med klubben er jo det sosiale miljøet og gleden av å
+            samles og kjøre sammen.
           </p>
         </div>
         <div class="multimedia-j_media">
@@ -382,7 +344,7 @@
             Impala kjøpt gjennom Ebay.
           </p>
           <p>
-            Hun er stolt over miljøet i klubben, og presisterer at her er alle
+            Hun er stolt over miljøet i klubben, og forteller at her er alle
             velkommen.
           </p>
         </div>
@@ -399,8 +361,8 @@
           </p>
           <p class="multimedia-e_text_p">
             Fra mai til september har styret kåret ukesvinnere som på slutten av
-            sesongen kjempet om tittelen “Årets Blinkskudd” og en premie på 2000
-            kroner.
+            sesongen kjempet for tittelen “Årets Blinkskudd” og en premie på
+            2000 kroner.
           </p>
           <p class="multimedia-e_text_p">
             &ndash; For det meste har det ikke vært profesjonelle fotografer som
@@ -430,7 +392,7 @@
           <div class="number headline--l">3 / 3</div>
 
           <div class="multimedia-e_media_next">
-            <a class="multimedia-e_media_next_a" onclick="plusSlides(1)"
+            <a class="multimedia-e_media_next_a button" onclick="plusSlides(1)"
               >&#10095;</a
             >
           </div>
@@ -455,284 +417,21 @@
             Rett ved siden av ligger "Streeten", ruta bilene kjører gjennom
             sentrum. Tilskuere på Fiskebrygga kan oppleve bilene som kjører
             sakte forbi. I andre byer kalles den ofte for "Stripa", men I Halden
-            har navnet fått en mer amerikansk vri. Det er også her klubben fikk
-            navnet sitt "Street and Cruising Club".
+            har navnet fått en mer amerikansk vri. Det er faktisk her klubben
+            fikk navnet sitt "Street and Cruising Club".
           </p>
         </div>
         <div class="multimedia-g_media">
-          <!--
-            <picture class="multimedia-g_media_img--1">
-
-              <img src="img/mod/fiskebrygga-5_5448.jpg" alt="" />
-            </picture>
-          -->
           <video
             class="multimedia-g_media_map"
             src="video/StreetenNåtid.mp4"
-            autoplay
-            loop
+            controls
             muted
-          >
-            <!--
-                id="googleMap"
-              style="width:100%; height:100%"
-                Map script
-
-
-
-                <script async defer>
-
-
-
-                  function myMap() {
-
-
-
-                    var mapProp = {
-
-
-
-                      center: new google.maps.LatLng(59.120749, 11.383609),
-
-
-
-
-                      zoom: 16
-
-
-
-                    };
-
-
-
-
-                    var map = new google.maps.Map(
-
-
-
-                      document.getElementById("googleMap"),
-
-
-
-
-                      mapProp
-
-
-
-                    );
-
-
-
-
-                    var fiskebrygga = { lat: 59.121305, lng: 11.384094 };
-
-
-
-
-                    var driveCoords = [
-
-
-
-                      { lat: 59.121934, lng: 11.377741 },
-
-
-
-
-                      { lat: 59.121521, lng: 11.384136 },
-
-
-
-
-                      { lat: 59.121752, lng: 11.387505 },
-
-
-
-
-                      { lat: 59.120303, lng: 11.389263 },
-
-
-
-
-                      { lat: 59.11938, lng: 11.389161 },
-
-
-
-
-                      { lat: 59.118961, lng: 11.387478 },
-
-
-
-
-                      { lat: 59.11936, lng: 11.38481 }
-
-
-
-                    ];
-
-
-
-
-                    var drivePath = new google.maps.Polyline({
-
-
-
-                      path: driveCoords,
-
-
-
-
-                      geodesic: true,
-
-
-
-
-                      strokeColor: "#007bff",
-
-
-
-
-                      strokeOpacity: 1.0,
-
-
-
-
-                      strokeWeight: 5
-
-
-
-                    });
-
-
-
-
-                    drivePath.setMap(map);
-
-
-
-
-                    var fiskebryggaAreaCoords = [
-
-
-
-                      { lat: 59.121575, lng: 11.383686 },
-
-
-
-
-                      { lat: 59.12138, lng: 11.385462 },
-
-
-
-
-                      { lat: 59.121225, lng: 11.38544 },
-
-
-
-
-                      { lat: 59.121113, lng: 11.38381 }
-
-
-
-                    ];
-
-
-
-
-                    var fiskebryggaArea = new google.maps.Polygon({
-
-
-
-                      paths: fiskebryggaAreaCoords,
-
-
-
-
-                      strokeColor: "#FF0000",
-
-
-
-
-                      strokeOpacity: 0.8,
-
-
-
-
-                      strokeWeight: 2,
-
-
-
-
-                      fillColor: "#FF0000",
-
-
-
-
-                      fillOpacity: 0.35
-
-
-
-                    });
-
-
-
-
-                    fiskebryggaArea.setMap(map);
-
-
-
-
-                    var marker = new google.maps.Marker({
-
-
-
-                      position: fiskebrygga,
-
-
-
-
-                      label: "Fiskebrygga",
-
-
-
-
-                      map: map
-
-
-
-                    });
-
-
-
-                  }
-
-
-
-                </script>
-            -->
-          </video>
-
-          <!--
-            <picture class="multimedia-g_media_img--2">
-              <img src="img/mod/fiskebrygga-2_5415.jpg" alt="" />
-            </picture>
-          -->
+          ></video>
         </div>
       </section>
 
-      <!--
-        TEKST
-        <section class="text-b bg-white zindex">
-          <div class="text-b_text">
-            <h2 class="headline--m">Slutten på Fiskebrygga?</h2>
-            <p class="text--m">
-              I 2017 ble det vedtatt nye planer for Halden sentrum og en større
-              del av Fiskebrygga har blitt satt av til sentrumsformål.
-            </p>
-          </div>
-        </section>
-      -->
-
-      <!-- Scroll-seksjon -->
+      <!-- Fiskebrygga statistikk scroll-seksjon -->
       <section class="multimedia-scroll" id="multimedia-scroll">
         <div
           class="multimedia-scroll_media not-visible ease"
@@ -742,38 +441,24 @@
             class="multimedia-scroll_media_img--1 fade-out sticky ease"
             id="img-1"
           >
-            <img src="img/placeholder/fiskebrygga-kart.png" alt="" />
+            <img src="img/data-meetings.svg" alt="" />
           </div>
+          <p></p>
           <div
             class="multimedia-scroll_media_img--2 fade-out sticky ease"
             id="img-2"
           >
-            <div class="gfx">
-              <div class="gfx_round gfx_round--1">
-                <p class="gfx_round_number headline--m">22</p>
-                <p class="gfx_round_text headline--xs">Treff</p>
-              </div>
-
-              <div class="gfx_round gfx_round--2">
-                <p class="gfx_round_number headline--m">100-150</p>
-                <p class="gfx_round_text headline--xs">Besøkende</p>
-              </div>
-
-              <div class="gfx_round gfx_round--3">
-                <p class="gfx_round_number headline--m">40</p>
-                <p class="gfx_round_text headline--xs">År</p>
-              </div>
-            </div>
+            <img src="img/data-years.svg" alt="" />
           </div>
           <div
             class="multimedia-scroll_media_img--3 fade-out sticky ease"
             id="img-3"
           >
-            <img src="img/mod/nils-petter_crop_8460.png" />
+            <img src="img/data-visitors.svg" />
           </div>
         </div>
 
-        <div class="multimedia-scroll_text text--s">
+        <div class="multimedia-scroll_text text--m">
           <div
             class="multimedia-scroll_text_quoteblock multimedia-scroll_text_quoteblock--1"
           ></div>
@@ -781,8 +466,8 @@
           <div class="multimedia-scroll_text_quoteblock">
             <div>
               <p>
-                I planene for utbyggingen vises det at plassen klubben bruker nå
-                blir vesentlig mindre.
+                I løpet av sommersesongen blir det
+                <span class="text-quote">22 treff</span>.
               </p>
             </div>
           </div>
@@ -790,10 +475,8 @@
           <div class="multimedia-scroll_text_quoteblock">
             <div>
               <p>
-                Biltreff på Fiskebrygga har lang tradisjon i Halden, og har
-                pågått siden tidlig 80-tallet. Klubben har 22 treff i året med
-                100-150 oppmøtte. Totalt blir det rundt 3000 besøkende i løpet
-                av sesongen.
+                Biltreff på Fiskebrygga har lang tradisjon i Halden og det har
+                foregått i rundt <span class="text-quote">40 år</span>.
               </p>
             </div>
           </div>
@@ -803,62 +486,98 @@
           >
             <div>
               <p>
-                &ndash; Det er jo det som har gjort at det er så bra i dag. At
-                vi faktisk har er sted å møtes ute. Og det er ikke noe annet
-                sted som har den beliggenhet. Vi kan ikke bare flytte til
-                parken, det er her vi har "Streeten", forteller Nils Petter.
+                Hvert treff har mellom
+                <span class="text-quote">100 og 150 oppmøtte.</span> Totalt blir
+                det rundt 3000 besøkende i løpet av sesongen.
               </p>
             </div>
           </div>
         </div>
       </section>
-      <!--
-        <section class="multimedia-h bg-white zindex" id="multimedia-h">
-          <div class="multimedia-h_media">
-            <div class="multimedia-h_media_block multimedia-h_media_block--1">
-              <img src="img/mod/familien-far.jpg" alt="" />
-              <p class="text--m">Svein: Fiskebrygga er tradisjon.</p>
-            </div>
-            <div class="multimedia-h_media_block multimedia-h_media_block--2">
-              <img src="img/mod/aarum.jpg" alt="" />
-              <p class="text--m">Kjersti: Fiskebrygga er alt for oss.</p>
-            </div>
-            <div class="multimedia-h_media_block multimedia-h_media_block--3">
-              <img src="img/mod/nils-petter.jpg" alt="" />
-              <p class="text--m">
-                Nils Petter: Det blir ikke plass til oss på Fiskebrygga.
-              </p>
-            </div>
-          </div>
-        </section>
-      -->
 
-      <section class="text-a bg-white zindex">
+      <!-- Fiskebrygga forandringer, intervju -->
+      <section class="multimedia-h fill-page bg-white zindex">
+        <div class="multimedia-h_media">
+          <picture class="multimedia-h_media_image--2">
+            <img src="img/fiskebrygga-planer.JPG" alt="" />
+          </picture>
+          <picture class="multimedia-h_media_image--3">
+            <img src="img/mod/nils-petter-3_8461.jpg" alt="" />
+          </picture>
+        </div>
+        <div class="multimedia-h_text text--s">
+          <h2 class="headline--m">Endringer</h2>
+          <p>
+            UNDER ARBEID + PLACEHOLDER BILDE: Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit. Maiores iusto assumenda iste non quia
+            vero quaerat commodi, consequuntur facilis dolorum quod sit
+            excepturi voluptatibus nihil maxime blanditiis ipsum. Ab, facere.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores
+            iusto assumenda iste non quia vero quaerat commodi, consequuntur
+            facilis dolorum quod sit excepturi voluptatibus nihil maxime
+            blanditiis ipsum. Ab, facere.
+          </p>
+          <picture>
+            <img src="img/fiskebrygga-planer-visuelt.JPG" alt="" />
+          </picture>
+        </div>
+      </section>
+
+      <!-- Crowdsourced google map intro-tekst -->
+      <section class="text-a bg-white-2 zindex ">
         <div class="text-a_text text--s">
           <h2 class="headline--m">Har du amcar?</h2>
-          <h3 class="text--s">
-            UNDER ARBEID: Informasjon om interaktivt kart og instruksjoner. Må
-            føles enkelt og intuitivt for bruker.
-          </h3>
+          <h3 class="text--s"> På kartet under kan du se biler andre har plassert, og du kan legge
+              inn din egen amcar.</h3>
+          <p>
+           
+          </p>
         </div>
       </section>
 
+      <!-- Crowdsourced google map -->
       <section class="crowdsourced-map fill-page bg-white zindex">
+        <div class="crowdsourced-map_sidebar">
+          <div
+            class="crowdsourced-map_cta text--s button"
+            id="crowdsourced-map_option--car"
+          >
+            Plasser din amcar
+          </div>
+          <div class="crowdsourced-map_sidebar_stats">
+            <p
+              class="crowdsourced-map_sidebar_totalcars headline--s"
+              id="map-totalcars"
+            ></p>
+            <p
+              class="crowdsourced-map_sidebar_totalcars headline--xs"
+              id="map-totalford"
+            ></p>
+            <p
+              class="crowdsourced-map_sidebar_totalcars headline--xs"
+              id="map-totalchev"
+            ></p>
+            <p
+              class="crowdsourced-map_sidebar_totalcars headline--xs"
+              id="map-totaldodge"
+            ></p>
+            <p
+              class="crowdsourced-map_sidebar_totalcars headline--xs"
+              id="map-totalother"
+            ></p>
+          </div>
+          <div
+            class="crowdsourced-map_sidebar_chart"
+            id="crowdsourced-map_sidebar_chart"
+          ></div>
+        </div>
         <div
           class="crowdsourced-map_googleMap"
           id="ccGoogleMap"
           style="width:100%;height:100%;"
         ></div>
-
-        <div class="crowdsourced-map_options">
-          <div
-            class="crowdsourced-map_options_text text--m"
-            id="crowdsourced-map_option--car"
-          >
-            Plasser amcar
-          </div>
-        </div>
-        <div class="crowdsourced-map_message"><p>Test</p></div>
         <form
           action=""
           class="crowdsourced-map_form"
@@ -866,23 +585,28 @@
         >
           <h3 class="headline--xs">Din informasjon</h3>
           <label class="text--m" for="make">Bilmerke</label>
-          <input type="text" name="make" />
+          <select name="make">
+            <option value="Annet">Annet Merke</option>
+            <option value="Chevrolet">Chevrolet</option>
+            <option value="Dodge">Dodge</option>
+            <option value="Ford">Ford</option>
+          </select>
           <label class="text--m" for="model">Bilmodell</label>
           <input type="text" name="model" />
           <label class="text--m" for="year">Årsmodell</label>
-          <input type="text" name="year" />
+          <input type="number" name="year" />
 
           <div
-            class="text--m crowdsourced-map_form_button"
+            class="text--m crowdsourced-map_form_button button"
             id="crowdsourced-map_form_button"
           >
             Send inn
           </div>
           <div
-            class="text--m crowdsourced-map_form_close"
+            class="text--m crowdsourced-map_form_close button"
             id="crowdsourced-map_form_close"
           >
-            &times;
+            Avbryt
           </div>
         </form>
       </section>
@@ -890,7 +614,7 @@
       <section class="text-a bg-white zindex">
         <div class="text-a_text text--xs">
           <p class="text-a_text_p">
-            Alle bilder på siden er tatt av Janina og Martin, med unntak av det
+            Alle bilder på siden er tatt av redaksjonen, med unntak av det
             amerikanske flagget som er hentet fra en mediebanken XXXXXXXXX og
             kartet fra Haldens planer for Fiskebrygga.
           </p>
@@ -903,7 +627,7 @@
             <img src="img/mod/mat.jpg" alt="" />
           </picture>
           <picture class="image-grid-a_media_img--2">
-            <img src="img/mod/juke-sanger.jpg" alt=""
+            <img src="img/mod/fiskebrygga-5_5448.jpg" alt=""
           /></picture>
 
           <picture class="image-grid-a_media_img--3">
@@ -911,11 +635,11 @@
           /></picture>
 
           <picture class="image-grid-a_media_img--4">
-            <img src="img/mod/fotovinner-1.jpg" alt=""
+            <img src="img/mod/unge.jpg" alt=""
           /></picture>
 
           <picture class="image-grid-a_media_img--5">
-            <img src="img/mod/skull.jpg" alt=""
+            <img src="img/mod/fiskebrygga-3_5417.jpg" alt=""
           /></picture>
 
           <picture class="image-grid-a_media_img-6">
@@ -939,7 +663,7 @@
           /></picture>
 
           <picture class="image-grid-a_media_img--11">
-            <img src="img/mod/felger.jpg" alt=""
+            <img src="img/mod/fiskebrygga-1_5411.jpg" alt=""
           /></picture>
 
           <picture class="image-grid-a_media_img--12">
@@ -963,6 +687,7 @@
     -->
 
     <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+
     <script>
       // Initialize Firebase
       var config = {
@@ -982,6 +707,44 @@
       src="https://maps.googleapis.com/maps/api/js?key=&callback=myMap"
       defer
     ></script>
+
+    <!--
+      <script
+        type="text/javascript"
+        src="https://www.gstatic.com/charts/loader.js"
+      ></script>
+
+      <script type="text/javascript">
+        google.charts.load("current", { packages: ["corechart"] });
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+          // Define the chart to be drawn.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "Topping");
+          data.addColumn("number", "Slices");
+          data.addRows([
+            ["Chevrolet", 3],
+            ["Ford", 1],
+            ["Dodge", 1],
+            ["Andre", 1]
+          ]);
+
+          var options = {
+            backgroundColor: { fill: "transparent" },
+            legend: { position: "none" },
+            hAxis: {
+              textStyle: { color: "#FFF" }
+            }
+          };
+
+          // Instantiate and draw the chart.
+          var chart = new google.visualization.ColumnChart(
+            document.getElementById("crowdsourced-map_sidebar_chart")
+          );
+          chart.draw(data, options);
+        }
+      </script>
+    -->
 
     <script type="text/javascript" src="js/main.js" defer></script>
   </body>

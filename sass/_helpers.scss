@@ -11,7 +11,7 @@ video {
 .fill-page {
   min-height: 100vh;
 
-  @media only screen and (max-width: 1000px) {
+  @media only screen and (max-width: 100rem) {
     //min-height: initial;
   }
 }
@@ -20,7 +20,16 @@ video {
   background: white;
   color: #333;
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 60rem) {
+    padding-top: 5rem;
+  }
+}
+
+.bg-white-2 {
+  background: #F8F9FA;
+  color: #333;
+
+  @media only screen and (max-width: 60rem) {
     padding-top: 5rem;
   }
 }
@@ -31,7 +40,7 @@ video {
   max-width: 60rem;
   color: white;
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 60rem) {
   }
 }
 
@@ -76,5 +85,23 @@ video {
 }
 
 .active {
-  background: red !important;
+  background: #28a745 !important;
+}
+
+.button {
+  text-transform: uppercase;
+  color: white;
+  padding: 0.7rem;
+  border-radius: 3px;
+  line-height: 1;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  transition: all .1s ease-in-out;
+  text-shadow: 1px 1px 2px rgb(0, 0, 0);
+
+  &:hover {
+    filter: brightness(120%);
+  }
 }

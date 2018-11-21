@@ -125,6 +125,7 @@ window.addEventListener("scroll", function(e) {
     mm_b_quote1.classList.add("fade-out");
   }
 
+  /*
   if (isBottomScrolledIntoView(video)) {
     video.classList.add("sticky");
   }
@@ -132,6 +133,7 @@ window.addEventListener("scroll", function(e) {
   if (isBottomScrolledIntoView(video_a) || isScrolledIntoView(mm_a_text)) {
     video.classList.remove("sticky");
   }
+  */
 
   if (isScrolledIntoView(multimedia_scroll)) {
     multimedia_scroll_media.classList.remove("not-visible");

@@ -1,5 +1,4 @@
 @import "mixins";
-@import "variables";
 @import "helpers";
 
 @import "animations";
@@ -8,4 +7,6 @@
 
 @import "header";
 @import "multimedia-modules";
+@import "mm-scroll";
+@import "mm-ccmap";
 @import "multimedia-grid-modules";
