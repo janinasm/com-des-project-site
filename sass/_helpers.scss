@@ -1,13 +1,3 @@
-img {
-  width: 100%;
-  height: auto;
-}
-
-video {
-  width: 100%;
-  height: auto;
-}
-
 .fill-page {
   min-height: 100vh;
 
@@ -17,17 +7,17 @@ video {
 }
 
 .bg-white {
-  background: white;
-  color: #333;
+  background: $base-color--white;
+  color: $base-color--dark;
 
   @media only screen and (max-width: 60rem) {
     padding-top: 5rem;
   }
 }
 
-.bg-white-2 {
-  background: #F8F9FA;
-  color: #333;
+.bg-light {
+  background: $base-color--light;
+  color: $base-color--dark;
 
   @media only screen and (max-width: 60rem) {
     padding-top: 5rem;
@@ -38,7 +28,7 @@ video {
   background: #06090ab3;
   padding: 5rem;
   max-width: 60rem;
-  color: white;
+  color: $base-color--white;
 
   @media only screen and (max-width: 60rem) {
   }
@@ -90,9 +80,8 @@ video {
 
 .button {
   text-transform: uppercase;
-  color: white;
+  color: $base-color--white;
   padding: 0.7rem;
-  border-radius: 3px;
   line-height: 1;
   cursor: pointer;
   width: 100%;
@@ -104,4 +93,8 @@ video {
   &:hover {
     filter: brightness(120%);
   }
+}
+
+.no-break {
+  white-space: nowrap;
 }

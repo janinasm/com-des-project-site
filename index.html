@@ -1,502 +1,493 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Anton|Open+Sans:400,700,800|Raleway"
-      rel="stylesheet"
-      defer
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <link rel="stylesheet" href="sass/main.css" />
+  <link href="https://fonts.googleapis.com/css?family=Anton|Open+Sans:400,700,800|Raleway" rel="stylesheet" defer />
 
-    <title>Amcar Halden</title>
-  </head>
+  <link rel="stylesheet" href="sass/main.css" />
 
-  <body>
-    <!-- Script displays a black page until site is fully loaded -->
-    <script>
-      window.onload = function load() {
+  <title>Amcar Halden</title>
+</head>
+
+<body>
+  <!-- Script displays a black page until site is fully loaded -->
+  <script>
+    window.onload = function load() {
         document.getElementsByClassName("page-loader")[0].style.display =
           "none";
       };
     </script>
 
-    <div class="container">
-      <!-- Loading -->
-      <div class="page-loader"></div>
-      <!-- Halden Times Logo/Link -->
-      <div class="halden-times-logo">
-        <a href="http://it.hiof.no/HaldenTimes/" class="halden-times-logo_link">
-          <img src="img/placeholder/halden-times-logo.svg" alt="" />
+  <div class="container">
+    <!-- Loading -->
+    <div class="page-loader"></div>
+    <!-- Halden Times Logo/Link -->
+    <div class="halden-times-logo">
+      <a href="http://it.hiof.no/HaldenTimes/" class="halden-times-logo_link">
+        <img src="img/logo--outlines--white.svg" alt="" />
+      </a>
+    </div>
+    <!-- Headline -->
+    <header class="header_landing" id="header_landing">
+      <div class="header_landing_grid" id="header_landing_grid">
+        <video class="header_landing_video" autoplay muted src="video/juke-2-mini.mp4"></video>
+        <img src="img/mod/aarum.jpg" alt="Kjersti Aarum snakker" class="header_landing_img--1" />
+        <img src="img/mod/bar-front.jpg" alt="amerikansk diner bar" class="header_landing_img--2" />
+        <img src="img/mod/familien-2.jpg" alt="Severin leser i et bilmagasin" class="header_landing_img--3" />
+      </div>
+
+      <div class="header_landing_text">
+        <h1 class="header_landing_text_headline headline--xl">
+          Amcar Halden
+        </h1>
+        <h2 class="header_landing_text_subtitle headline--s">
+          Hver onsdag møtes unge og gamle til quiz, kake og masse bilprat
+        </h2>
+      </div>
+
+      <div class="scroll-indicator">
+        <a href="#next">
+          <img src="img/placeholder/down_arrow.svg" alt="Ned pil som viser at man kan lese mer på siden" />
         </a>
       </div>
-      <!-- Headline -->
-      <header class="header_landing" id="header_landing">
-        <div class="header_landing_grid" id="header_landing_grid">
-          <video
-            class="header_landing_video"
-            autoplay
-            muted
-            src="video/juke-2-mini.mp4"
-          ></video>
-          <img
-            src="img/mod/aarum.jpg"
-            alt="Kjersti Aarum snakker"
-            class="header_landing_img--1"
-          />
-          <img
-            src="img/mod/bar-front.jpg"
-            alt="amerikansk diner bar"
-            class="header_landing_img--2"
-          />
-          <img
-            src="img/mod/familien-2.jpg"
-            alt="Severin leser i et bilmagasin"
-            class="header_landing_img--3"
-          />
-        </div>
+    </header>
 
-        <div class="header_landing_text">
-          <h1 class="header_landing_text_headline headline--xl">
-            Amcar Halden
-          </h1>
-          <h2 class="header_landing_text_subtitle headline--s">
-            Hver onsdag møtes unge og gamle til quiz, kake og masse bilprat
-          </h2>
-        </div>
+    <!-- Intro -->
+    <section class="introduction bg-white">
+      <p class="introduction_text text--m">
+        Med 468 medlemmer er Street & Cruising Club en av Norges største
+        bilklubber. De møtes onsdager hele året, i sommersesongen er det treff
+        på Fiskebrygga, og på vinteren møtes de på onsdagskafeen.
+      </p>
+      <p class="introduction_text text--m">
+        Bak skinnende felger og amerikanske flagg står mennesker som skaper
+        mye glede for hverandre.
+      </p>
+    </section>
 
-        <div class="scroll-indicator">
-          <a href="#next">
-            <img
-              src="img/placeholder/down_arrow.svg"
-              alt="Ned pil som viser at man kan lese mer på siden"
-            />
-          </a>
-        </div>
-      </header>
+    <section class="multimedia-f fill-page">
+      <div class="multimedia-f_button headline--xs bounce2 button" id="multimedia-f_button">
+        Se innsiden
+      </div>
+      <div class="multimedia-f_media">
+        <video class="multimedia-f_media_video fade-out" id="multimedia-f_media_video" src="video/klubben-inne-2-liten.mp4"></video>
+      </div>
 
-      <!-- Intro -->
-      <section class="introduction bg-white">
-        <p class="introduction_text text--m">
-          Med 468 medlemmer er Street & Cruising Club en av Norges største
-          bilklubber. De møtes onsdager hele året, i sommersesongen er det treff
-          på Fiskebrygga, og på vinteren møtes de på onsdagskafeen.
+      <!-- Klubben Inne/Ute -->
+      <div class="multimedia-f_text text--s bg-black">
+        <h2 class="multimedia-f_text_headline headline--m">
+          Et lite stykke Amerika
+        </h2>
+        <p class="multimedia-f_text_p text--s">
+          Langs Øbergveien i nærheten av Tistedal finner man klubbhuset. På
+          utsiden oppleves bygget anonymt og stille, nesten forlatt.
         </p>
-        <p class="introduction_text text--m">
-          Bak skinnende felger og amerikanske flagg står mennesker som skaper
-          mye glede for hverandre.
+        <p class="multimedia-f_text_p">
+          Men inne fortelles en annen historie. Her er det full amerikansk
+          stil, hver detalj nøye planlagt. En jukebox er fylt med gamle
+          slagere fra Creedence Clearwater Revival og Johnny Cash. På et skilt
+          står det "Stuck in the 50s" og det er bilder av James Dean og
+          Marilyn Monroe hengende på veggen.
         </p>
-      </section>
+      </div>
+    </section>
 
-      <section class="multimedia-f fill-page">
-        <div
-          class="multimedia-f_button headline--xs bounce2 button"
-          id="multimedia-f_button"
-        >
-          Se innsiden
-        </div>
-        <div class="multimedia-f_media">
-          <video
-            class="multimedia-f_media_video fade-out"
-            id="multimedia-f_media_video"
-            src="video/klubben-inne-2-liten.mp4"
-          ></video>
-        </div>
+    <!-- Klubben Inne, bildegrid -->
+    <section class="image-grid-b">
+      <div class="image-grid-b_media">
+        <picture class="image-grid-b_media_img--1">
+          <img src="img/amcar-3/juke-2.jpg" alt="" />
+        </picture>
+        <picture class="image-grid-b_media_img--2">
+          <img src="img/amcar-3/tom-bar.jpg" alt="" />
+        </picture>
+        <picture class="image-grid-b_media_img--3">
+          <img src="img/mod/bar-front-2.jpg" alt="" />
+        </picture>
+        <picture class="image-grid-b_media_img--4">
+          <img src="img/mod/diner-flagg-2.jpg" alt="" />
+        </picture>
+        <picture class="image-grid-b_media_img--5">
+          <img src="img/amcar-3/marilyn.jpg" alt="" />
+        </picture>
+        <picture class="image-grid-b_media_img--6">
+          <img src="img/amcar-3/lostin.jpg" alt="" />
+        </picture>
+        <picture class="image-grid-b_media_img--7">
+          <img src="img/mod/map-2.jpg" alt="" />
+        </picture>
+      </div>
+    </section>
 
-        <!-- Klubben Inne/Ute -->
-        <div class="multimedia-f_text text--s bg-black">
-          <h2 class="multimedia-f_text_headline headline--m">
-            Et lite stykke Amerika
-          </h2>
-          <p class="multimedia-f_text_p text--s">
-            Langs Øbergveien i nærheten av Tistedal finner man klubbhuset. På
-            utsiden oppleves bygget anonymt og stille, nesten forlatt.
-          </p>
-          <p class="multimedia-f_text_p">
-            Men inne fortelles en annen historie. Her er det full amerikansk
-            stil, hver detalj nøye planlagt. En jukebox er fylt med gamle
-            slagere fra Creedence Clearwater Revival og Johnny Cash. På et skilt
-            står det "Stuck in the 50s" og det er bilder av James Dean og
-            Marilyn Monroe hengende på veggen.
-          </p>
-        </div>
-      </section>
+    <!-- Nils Petter -->
+    <section class="multimedia-a bg-white fill-page">
+      <div class="multimedia-a_media" id="multimedia-a_media">
+        <picture class="multimedia-a_media_img--1 fade-out" id="multimedia-a_media_img--1">
+          <img src="img/mod/nils-petter.jpg" alt="Nils Petter Nilsen smiler" />
+        </picture>
+        <picture class="multimedia-a_media_img--2 fade-out" id="multimedia-a_media_img--2">
+          <img src="img/mod/nils-petter-bak.jpg" alt="Nils Petter Nilsen viser baksiden av jakka si hvor det står 'leader of the pack'" />
+        </picture>
+      </div>
+      <div class="multimedia-a_text text--s" id="multimedia-a_text">
+        <h2 class="multimedia-a_text_headline headline--m">Uskreven regel</h2>
+        <p>Nils Petter Nilsen er formannen av Street and Cruising Club.</p>
+        <p>
+          Den første bilen fikk han før han ble 18 år. I likhet med flere
+          andre biler han har eid kom den aldri på veien, men det var gøy å
+          ha. Favoritten, 1963 Chevrolet, har han hatt 5 stykk av.
+        </p>
+        <p>
+          &ndash; Chevrolet er amerikas folkevogn, nederst på rangstigen, men
+          i Norge har det blitt luksusbil.
+        </p>
+        <p>
+          Det har blitt flere turer til USA gjennom årene, lange "roadtrips"
+          med amerikansk leiebil på route 66. &ndash; Men det er ikke er sånn
+          at alle i amcar-miljøet elsker alt med Amerika, det er mye tull der
+          og, flirer Nils Petter.
+        </p>
+        <p>
+          Bak på olajakka hans står det “Leader of the Pack”, og stjernene
+          symboliserer antall år han har vært formann. Det er 9 stjerner, men
+          det skulle vært 10 nå.
+        </p>
+        <p>
+          Det er mye arbeid, men motivasjonen finner han alltid gjennom alle
+          de som bidrar i klubben. Han forteller at han stiller opp til
+          intervju fordi det er en uskreven regel i amcar-miljøet å fremme
+          interessen.
+        </p>
+        <p>
+          Spesielt stolt er han av “pensjonistkjøringa” som arrangeres årlig.
+          Siden 80-tallet har klubben hentet beboere på eldrehjem og tatt de
+          med på kjøretur rundt i byen for å se, det blir ofte turer til den
+          gamle arbeidsplassen og nye landemerker.
+        </p>
+      </div>
+    </section>
 
-      <!-- Nils Petter -->
-      <section class="multimedia-a bg-white fill-page">
-        <div class="multimedia-a_media" id="multimedia-a_media">
-          <picture
-            class="multimedia-a_media_img--1 fade-out"
-            id="multimedia-a_media_img--1"
-          >
-            <img
-              src="img/mod/nils-petter.jpg"
-              alt="Nils Petter Nilsen smiler"
-            />
-          </picture>
-          <picture
-            class="multimedia-a_media_img--2 fade-out"
-            id="multimedia-a_media_img--2"
-          >
-            <img
-              src="img/mod/nils-petter-bak.jpg"
-              alt="Nils Petter Nilsen viser baksiden av jakka si hvor det står 'leader of the pack'"
-            />
-          </picture>
-        </div>
-        <div class="multimedia-a_text text--s" id="multimedia-a_text">
-          <h2 class="multimedia-a_text_headline headline--m">Uskreven regel</h2>
-          <p>Nils Petter Nilsen er formannen av Street and Cruising Club.</p>
-          <p>
-            Den første bilen fikk han før han ble 18 år. I likhet med flere
-            andre biler han har eid kom den aldri på veien, men det var gøy å
-            ha. Favoritten, 1963 Chevrolet, har han hatt 5 stykk av.
-          </p>
-          <p>
-            &ndash; Chevrolet er amerikas folkevogn, nederst på rangstigen, men
-            i Norge har det blitt luksusbil.
-          </p>
-          <p>
-            Det har blitt flere turer til USA gjennom årene, lange "roadtrips"
-            med amerikansk leiebil på route 66. &ndash; Men det er ikke er sånn
-            at alle i amcar-miljøet elsker alt med Amerika, det er mye tull der
-            og, flirer Nils Petter.
-          </p>
-          <p>
-            Bak på olajakka hans står det “Leader of the Pack”, og stjernene
-            symboliserer antall år han har vært formann. Det er 9 stjerner, men
-            det skulle vært 10 nå.
-          </p>
-          <p>
-            Det er mye arbeid, men motivasjonen finner han alltid gjennom alle
-            de som bidrar i klubben. Han forteller at han stiller opp til
-            intervju fordi det er en uskreven regel i amcar-miljøet å fremme
-            interessen.
-          </p>
-          <p>
-            Spesielt stolt er han av “pensjonistkjøringa” som arrangeres årlig.
-            Siden 80-tallet har klubben hentet beboere på eldrehjem og tatt de
-            med på kjøretur rundt i byen for å se, det blir ofte turer til den
-            gamle arbeidsplassen og nye landemerker.
-          </p>
-        </div>
-      </section>
+    <!-- Nils Petter video-intervju -->
+    <section class="video-a"">
+        <div class=" video-a-container">
+      <video class="video" id="video-a" src="video/nils-petter-video_undertekst.mp4" controls muted>
+        <source src="movie.mp4" type="video/mp4" />
+        Avspilling av video er ikke støttet av din nettleser.
+      </video>
+  </div>
+  </section>
 
-      <!-- Nils Petter video-intervju -->
-      <section class="video-a" id="video-a">
-        <div class="video-a-container">
-          <video
-            class="video"
-            id="video"
-            src="video/nils-petter-video.mp4"
-            controls
-            poster="img/mod/nilspetter-overlay.jpg"
-          >
-            <source src="movie.mp4" type="video/mp4" />
-            Avspilling av video er ikke støttet av din nettleser.
-          </video>
-        </div>
-      </section>
+  <!-- Klubbkartet, om medlemmer -->
+  <section class="multimedia-c bg-white fill-page">
+    <div class="multimedia-c_media">
+      <picture class="multimedia-c_media_image">
+        <img class="border-white" src="img/mod/map-closeup_8416-2.jpg" alt="" />
+      </picture>
+    </div>
+    <div class="multimedia-c_text text--s">
+      <h2 class="multimedia-c_heading headline--m">I hjertet</h2>
+      <p>
+        Rundt året samles klubben til quiz, veledighetsarbeid og samhold,
+        men det er entusiasme for bil som har bragt dem sammen.
+      </p>
+      <p>
+        De fleste har en amerikaner eller flere, og enkelte har mange.
+        Antall biler i klubben er ikke lett å telle, men sist de prøvde ble
+        det 135 "cabber" og 400 biler totalt. I klubbhuset har de hengt opp
+        et stort kart over Halden der medlemmer kan markere merke, modell og
+        stedet bilen befinner seg.
+      </p>
+      <p>
+        Vegg i vegg med kafeen har klubben flere verksteder der medlemmer
+        kan ta “drop-in” med biler som trenger noen ekstra øyne eller
+        hender.
+      </p>
+    </div>
+  </section>
 
-      <!-- Klubbkartet, om medlemmer -->
-      <section class="multimedia-c bg-white fill-page">
-        <div class="multimedia-c_media">
-          <picture class="multimedia-c_media_image">
-            <img
-              class="border-white"
-              src="img/mod/map-closeup_8416-2.jpg"
-              alt=""
-            />
-          </picture>
-        </div>
-        <div class="multimedia-c_text text--s">
-          <h2 class="multimedia-c_heading headline--m">I hjertet</h2>
-          <p>
-            Rundt året samles klubben til quiz, veledighetsarbeid og samhold,
-            men det er entusiasme for bil som har bragt dem sammen.
-          </p>
-          <p>
-            De fleste har en amerikaner eller flere, og enkelte har mange.
-            Antall biler i klubben er ikke lett å telle, men sist de prøvde ble
-            det 135 "cabber" og 400 biler totalt. I klubbhuset har de hengt opp
-            et stort kart over Halden der medlemmer kan markere merke, modell og
-            stedet bilen befinner seg.
-          </p>
-          <p>
-            Vegg i vegg med kafeen har klubben flere verksteder der medlemmer
-            kan ta “drop-in” med biler som trenger noen ekstra øyne eller
-            hender.
-          </p>
-        </div>
-      </section>
+  <!-- Familien, far og sønn -->
+  <section class="multimedia-b fill-page">
+    <div class="multimedia-b_excerpt quote--l">
+      <p class="multimedia-b_excerpt_p fade-out" id="multimedia-b_excerpt_p">
+        &laquo;&nbsp;En&nbsp;sykdom man aldri blir&nbsp;kvitt&nbsp;&raquo;
+      </p>
+    </div>
+    <div class="multimedia-b_text text--s bg-black" id="multimedia-b_text">
+      <h2 class="multimedia-b_text_headline headline--m">
+        Ikke Donald Duck
+      </h2>
+      <p>
+        Med nesa dypt i et bil-magasin sitter Severin, en av klubbens yngste
+        stamgjester. Ikledd svart skinnjakke og caps som fronter “Aarnes
+        amerikanske bildeler” forteller han at han er den eneste han kjenner
+        på sin alder som er så opptatt av amerikanske biler, noe han synes
+        er litt rart.
+      </p>
+      <p>
+        Pappa Ole Willy forteller at sønnen bladde i bilblader allerede fra
+        småbarns-alder. Han forteller at han kjøpte barnebøker og Donald
+        Duck-blader, men det ble nesten aldri rørt.
+      </p>
+      <p>
+        Fra båsen ved siden av spøkes det at Amcar er en sykdom man aldri
+        blir kvitt. Ole Willy ler nikkende.
+      </p>
+    </div>
+  </section>
 
-      <!-- Familien, far og sønn -->
-      <section class="multimedia-b fill-page">
-        <div class="multimedia-b_excerpt quote--l">
-          <p
-            class="multimedia-b_excerpt_p fade-out"
-            id="multimedia-b_excerpt_p"
-          >
-            &laquo; En sykdom man aldri blir kvitt &raquo;
+  <!-- Alf Petter -->
+  <section class="multimedia-j fill-page bg-white">
+    <div class="multimedia-j_text text--s">
+      <h2 class="headline--m">Gutta i byen</h2>
+      <p>
+        Alf Gunnar Nilsen er en av de aller første medlemmene i klubben. Han
+        har hatt interesse for motor siden han var 13 år gammel og har vært
+        med i bilmiljøet i Halden siden han fikk sertifikat.
+      </p>
+      <p>
+        &ndash; Kjørte med gutta i byen, vi hørte med "Særp" og
+        Fredrikstad-klubben, men de ble delt så vi lagde vår egen i Halden.
+      </p>
+      <p>
+        Som en av de første i klubben har han vært med på det meste av treff
+        og arrangementer opp gjennom, og er fortsatt med på møtene nesten
+        hver uke. Han gar ikke fått vært med på grensetreffet de siste årene
+        på grunn av dårlig ben, men prøver fortsatt å være så aktiv som
+        mulig i miljøet.
+      </p>
+      <p>
+        Han kjører amcar selv, og den første amerikanske bilen var en 55
+        Ford Customline. Han er den eneste i hans familie som fortsatt har
+        amcar interessen. Sønnen var interessert en stund, men mistet
+        gnisten.
+      </p>
+      <p>
+        &ndash; Hele familien her, og særpe-kamerater er familie for meg.
+        Det spesielle med klubben er jo det sosiale miljøet og gleden av å
+        samles og kjøre sammen.
+      </p>
+    </div>
+    <div class="multimedia-j_media">
+      <picture class="multimedia-j_media_image">
+        <img src="img/mod/alf-petter-nilsen.jpg" alt="" />
+      </picture>
+    </div>
+  </section>
+
+  <!-- Kjersti Aarum -->
+  <section class="multimedia-d fill-page zindex">
+    <div class="multimedia-d_media">
+      <picture class="multimedia-d_media_img--1 fade-out">
+        <img class="border-white" src="img/mod/aarum.jpg" alt="" />
+      </picture>
+      <picture class="multimedia-d_media_img--2 fade-out">
+        <img class="border-white" src="img/mod/aarum-pynter-kake.jpg" alt="" />
+      </picture>
+
+      <div class="multimedia-d_excerpt quote--l">
+        <p class="multimedia-d_excerpt_p fade-out">
+          &laquo;&nbsp;Alle&nbsp;er velkommen&nbsp;her&nbsp;&raquo;&nbsp;
+        </p>
+      </div>
+    </div>
+    <div class="multimedia-d_text bg-black text--s">
+      <h2 class="multimedia-d_text_p headline--m">Chevy fra Ebay</h2>
+      <p>
+        En av ildsjelene bak onsdagskafeen er Kjersti Aarum. Når vi møter
+        henne står hun ved et biljardbord og pynter diverse kaker hun har
+        bakt hjemme, noen til salgs, andre til premier som skal gis ut i
+        løpet av kvelden.
+      </p>
+      <p>
+        På sommeren står hun i kiosken på Fiskebrygga som har betalt for mye
+        av inventaret i klubbhuset.
+      </p>
+      <p>
+        For henne startet eventyret da ektemannen Tom kjøpte seg veteran-bil
+        i 2005, og to år senere hadde hun sin egen ‘68 Chevrolet Chevy
+        Impala kjøpt gjennom Ebay.
+      </p>
+      <p>
+        Hun er stolt over miljøet i klubben, og forteller at her er alle
+        velkommen.
+      </p>
+    </div>
+  </section>
+
+  <!-- Fotokonkurransen -->
+  <section class="multimedia-e bg-white zindex fill-page">
+    <div class="multimedia-e_text text--s">
+      <h2 class="multimedia-e_text_h1 headline--m">Chrome and Curves</h2>
+      <p class="multimedia-e_text_p">
+        I “ute-sesongen” har det for første gang blitt avholdt
+        fotokonkurransen “Chrome and Curves”, hvor man kunne bidra med motiv
+        av amerikanske biler i alle varianter.
+      </p>
+      <p class="multimedia-e_text_p">
+        Fra mai til september har styret kåret ukesvinnere som på slutten av
+        sesongen kjempet for tittelen “Årets Blinkskudd” og en premie på
+        2000 kroner.
+      </p>
+      <p class="multimedia-e_text_p">
+        &ndash; For det meste har det ikke vært profesjonelle fotografer som
+        sender inn bidrag, men privatpersoner som enter tar bilder med
+        mobilen eller er “hobbyfotografer”, sier Nils Petter.
+      </p>
+      <p class="multimedia-e_text_p">
+        Noe av motivasjon bak konkurransen var å få de fine bildene. De
+        ville gjerne ha fra hele Norge, men naturlig at mesteparten kom fra
+        Fiskebrygga. Vinneren av årets fotokonkurranse ble Svein fra Hurum i
+        Buskerud.
+      </p>
+    </div>
+    <div class="multimedia-e_media">
+      <picture class="multimedia-e_media_image slides">
+        <img src="img/mod/fotovinner-2.jpg" alt="" />
+      </picture>
+      <picture class="multimedia-e_media_image slides">
+        <img src="img/mod/fotovinner-1.jpg" alt="" />
+      </picture>
+      <picture class="multimedia-e_media_image slides">
+        <img src="img/mod/fotovinner-4.jpg" alt="" />
+      </picture>
+      <picture class="multimedia-e_media_image slides">
+        <img src="img/placeholder/foto-vinner-svein.jpg" alt="" />
+      </picture>
+
+      <div class="numbertext headline--m">1 / 4</div>
+      <div class="numbertext headline--m">2 / 4</div>
+      <div class="numbertext headline--m">3 / 4</div>
+      <div class="numbertext headline--m">4 / 4</div>
+
+      <div class="multimedia-e_media_prev headline--l">
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      </div>
+
+      <div class="multimedia-e_media_next headline--l">
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+
+      <div class="multimedia-e_media_dots">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fiskebrygga -->
+  <section class="multimedia-g zindex bg-white fill-page">
+    <div class="multimedia-g_text text--s rellax">
+      <h1 class="multimedia-g_text_h1 headline--l">
+        Fiskebrygga og Streeten
+      </h1>
+      <p>
+        I sommersesongen er Fiskebrygga det offisielle møtestedet for
+        klubben. Hver onsdag samles blide og glade mennesker på denne
+        plassen for å prate bil og se hva de andre kjører. "Halden Cruise
+        Night" holdes hver onsdag fra mai til september. Fiskebrygga er noe
+        spesielt og det har blitt kultur for alle bilinteresserte og
+        nysgjerrige i Halden.
+      </p>
+      <p>
+        Rett ved siden av ligger "Streeten", ruta bilene kjører gjennom
+        sentrum. Tilskuere på Fiskebrygga kan oppleve bilene som kjører
+        sakte forbi. I andre byer kalles den ofte for "Stripa", men I Halden
+        har navnet fått en mer amerikansk vri. Det er faktisk her klubben
+        fikk navnet sitt "Street and Cruising Club".
+      </p>
+    </div>
+    <div class="multimedia-g_media">
+      <video class="multimedia-g_media_map" src="video/StreetenNåtid.mp4" muted autoplay></video>
+    </div>
+  </section>
+
+  <!-- bildegrid c -->
+  <section class="image-grid-c zindex bg-white ">
+    <div class="image-grid-c_media">
+      <picture class="image-grid-c_media_img--1">
+        <img src="img/mod/fiskebrygga-4_5419.jpg" alt="" />
+      </picture>
+      <picture class="image-grid-c_media_img--2">
+        <img src="img/mod/fiskebrygga-1_5411.jpg" alt="" />
+      </picture>
+      <picture class="image-grid-c_media_img--3">
+        <img src="img/mod/fiskebrygga-6_5453.jpg" alt="" />
+      </picture>
+      <picture class="image-grid-c_media_img--4">
+        <img src="img/mod/fiskebrygga-3_5417.jpg" alt="" />
+      </picture>
+      <picture class="image-grid-c_media_img--5">
+        <img src="img/mod/fiskebrygga-5_5448.jpg" alt="" />
+      </picture>
+    </div>
+  </section>
+
+  <!-- Fiskebrygga statistikk scroll-seksjon -->
+  <section class="multimedia-scroll" id="multimedia-scroll">
+    <div class="multimedia-scroll_media not-visible ease" id="multimedia-scroll_media">
+      <div class="multimedia-scroll_media_img--1 fade-out sticky ease" id="img-1">
+        <img src="img/fiskebrygga-planer.JPG" alt="" />
+      </div>
+      <p></p>
+      <div class="multimedia-scroll_media_img--2 fade-out sticky ease" id="img-2">
+        <img src="img/fiskebrygga-planer-visuelt.JPG" alt="" />
+      </div>
+      <div class="multimedia-scroll_media_img--3 fade-out sticky ease" id="img-3">
+        <img src="img/mod/nils-petter-4_8461.jpg" alt="" />
+      </div>
+    </div>
+
+    <div class="multimedia-scroll_text text--s">
+
+      <h1 class="headline--m">Nye planer for Fiskebrygga</h1>
+      <div class="multimedia-scroll_text_quoteblock multimedia-scroll_text_quoteblock--1"></div>
+      <div class="multimedia-scroll_text_quoteblock">
+        <div>
+
+          <p>
+            I 2017 ble det vedtatt nye planer for Halden sentrum og en
+            del av Fiskebrygga har blitt satt av til andre sentrumsformål.
+            Formålet er å skape et mer attraktivt sted å oppholde seg.
           </p>
         </div>
-        <div class="multimedia-b_text text--s bg-black" id="multimedia-b_text">
-          <h2 class="multimedia-b_text_headline headline--m">
-            Ikke Donald Duck
-          </h2>
+      </div>
+
+      <div class="multimedia-scroll_text_quoteblock">
+        <div>
           <p>
-            Med nesa dypt i et bil-magasin sitter Severin, en av klubbens yngste
-            stamgjester. Ikledd svart skinnjakke og caps som fronter “Aarnes
-            amerikanske bildeler” forteller han at han er den eneste han kjenner
-            på sin alder som er så opptatt av amerikanske biler, noe han synes
-            er litt rart.
-          </p>
-          <p>
-            Pappa Ole Willy forteller at sønnen bladde i bilblader allerede fra
-            småbarns-alder. Han forteller at han kjøpte barnebøker og Donald
-            Duck-blader, men det ble nesten aldri rørt.
-          </p>
-          <p>
-            Fra båsen ved siden av spøkes det at Amcar er en sykdom man aldri
-            blir kvitt. Ole Willy ler nikkende.
+            Kommunen tar hensyn til det forankrede bilmiljøet i byen og ser for seg at det fortsatt
+            skal være rom for biltreffene på brygga.<span>&nbsp;</span> I planene er det tegnet inn parkerte
+            amcars og bryggekanten gir forbipasserende god utsikt til bilene.
           </p>
         </div>
-      </section>
+      </div>
 
-      <!-- Alf Petter -->
-      <section class="multimedia-j fill-page bg-white">
-        <div class="multimedia-j_text text--s">
-          <h2 class="headline--m">Gutta i byen</h2>
+      <div class="multimedia-scroll_text_quoteblock multimedia-scroll_text_quoteblock--3">
+        <div>
           <p>
-            Alf Gunnar Nilsen er en av de aller første medlemmene i klubben. Han
-            har hatt interesse for motor siden han var 13 år gammel og har vært
-            med i bilmiljøet i Halden siden han fikk sertifikat.
-          </p>
-          <p>
-            &ndash; Kjørte med gutta i byen, vi hørte med "Særp" og
-            Fredrikstad-klubben, men de ble delt så vi lagde vår egen i Halden.
-          </p>
-          <p>
-            Som en av de første i klubben har han vært med på det meste av treff
-            og arrangementer opp gjennom, og er fortsatt med på møtene nesten
-            hver uke. Han gar ikke fått vært med på grensetreffet de siste årene
-            på grunn av dårlig ben, men prøver fortsatt å være så aktiv som
-            mulig i miljøet.
-          </p>
-          <p>
-            Han kjører amcar selv, og den første amerikanske bilen var en 55
-            Ford Customline. Han er den eneste i hans familie som fortsatt har
-            amcar interessen. Sønnen var interessert en stund, men mistet
-            gnisten.
-          </p>
-          <p>
-            &ndash; Hele familien her, og særpe-kamerater er familie for meg.
-            Det spesielle med klubben er jo det sosiale miljøet og gleden av å
-            samles og kjøre sammen.
+            I klubben er endringene mottatt med skepsis og mange mener at det blir for lite plass til
+            det voksende antallet oppmøtte på onsdagstreffene.
+
+            <span>&nbsp;</span>
+
+            &ndash; Det er jo det som har gjort at det er så bra i dag. At
+            vi faktisk har er sted å møtes ute. Og det er ikke noe annet
+            sted som har den beliggenhet. Vi kan ikke bare flytte til
+            parken, det er her vi har "Streeten", forteller Nils Petter.
           </p>
         </div>
-        <div class="multimedia-j_media">
-          <picture class="multimedia-j_media_image">
-            <img src="img/mod/alf-petter-nilsen.jpg" alt="" />
-          </picture>
-        </div>
-      </section>
+      </div>
+    </div>
+  </section>
 
-      <!-- Kjersti Aarum -->
-      <section class="multimedia-d fill-page zindex">
-        <div class="multimedia-d_media">
-          <picture class="multimedia-d_media_img--1 fade-out">
-            <img class="border-white" src="img/mod/aarum.jpg" alt="" />
-          </picture>
-          <picture class="multimedia-d_media_img--2 fade-out">
-            <img
-              class="border-white"
-              src="img/mod/aarum-pynter-kake.jpg"
-              alt=""
-            />
-          </picture>
-
-          <div class="multimedia-d_excerpt quote--l">
-            <p class="multimedia-d_excerpt_p fade-out">
-              &laquo; Alle er velkommen her &raquo;
-            </p>
-          </div>
-        </div>
-        <div class="multimedia-d_text bg-black text--s">
-          <h2 class="multimedia-d_text_p headline--m">Chevy fra Ebay</h2>
-          <p>
-            En av ildsjelene bak onsdagskafeen er Kjersti Aarum. Når vi møter
-            henne står hun ved et biljardbord og pynter diverse kaker hun har
-            bakt hjemme, noen til salgs, andre til premier som skal gis ut i
-            løpet av kvelden.
-          </p>
-          <p>
-            På sommeren står hun i kiosken på Fiskebrygga som har betalt for mye
-            av inventaret i klubbhuset.
-          </p>
-          <p>
-            For henne startet eventyret da ektemannen Tom kjøpte seg veteran-bil
-            i 2005, og to år senere hadde hun sin egen ‘68 Chevrolet Chevy
-            Impala kjøpt gjennom Ebay.
-          </p>
-          <p>
-            Hun er stolt over miljøet i klubben, og forteller at her er alle
-            velkommen.
-          </p>
-        </div>
-      </section>
-
-      <!-- Fotokonkurransen -->
-      <section class="multimedia-e bg-white zindex fill-page">
-        <div class="multimedia-e_text text--s">
-          <h2 class="multimedia-e_text_h1 headline--m">Chrome and Curves</h2>
-          <p class="multimedia-e_text_p">
-            I “ute-sesongen” har det for første gang blitt avholdt
-            fotokonkurransen “Chrome and Curves”, hvor man kunne bidra med motiv
-            av amerikanske biler i alle varianter.
-          </p>
-          <p class="multimedia-e_text_p">
-            Fra mai til september har styret kåret ukesvinnere som på slutten av
-            sesongen kjempet for tittelen “Årets Blinkskudd” og en premie på
-            2000 kroner.
-          </p>
-          <p class="multimedia-e_text_p">
-            &ndash; For det meste har det ikke vært profesjonelle fotografer som
-            sender inn bidrag, men privatpersoner som enter tar bilder med
-            mobilen eller er “hobbyfotografer”, sier Nils Petter.
-          </p>
-          <p class="multimedia-e_text_p">
-            Noe av motivasjon bak konkurransen var å få de fine bildene. De
-            ville gjerne ha fra hele Norge, men naturlig at mesteparten kom fra
-            Fiskebrygga. Vinneren av årets fotokonkurranse ble Svein fra Hurum i
-            Buskerud.
-          </p>
-        </div>
-        <div class="multimedia-e_media">
-          <picture class="multimedia-e_media_image slides">
-            <img src="img/mod/fotovinner-2.jpg" alt="" />
-          </picture>
-          <picture class="multimedia-e_media_image slides">
-            <img src="img/mod/fotovinner-1.jpg" alt="" />
-          </picture>
-          <picture class="multimedia-e_media_image slides">
-            <img src="img/mod/fotovinner-4.jpg" alt="" />
-          </picture>
-
-          <div class="number headline--l">1 / 3</div>
-          <div class="number headline--l">2 / 3</div>
-          <div class="number headline--l">3 / 3</div>
-
-          <div class="multimedia-e_media_next">
-            <a class="multimedia-e_media_next_a button" onclick="plusSlides(1)"
-              >&#10095;</a
-            >
-          </div>
-        </div>
-      </section>
-
-      <!-- Fiskebrygga -->
-      <section class="multimedia-g zindex bg-white fill-page">
-        <div class="multimedia-g_text text--s rellax">
-          <h1 class="multimedia-g_text_h1 headline--l">
-            Fiskebrygga og Streeten
-          </h1>
-          <p>
-            I sommersesongen er Fiskebrygga det offisielle møtestedet for
-            klubben. Hver onsdag samles blide og glade mennesker på denne
-            plassen for å prate bil og se hva de andre kjører. "Halden Cruise
-            Night" holdes hver onsdag fra mai til september. Fiskebrygga er noe
-            spesielt og det har blitt kultur for alle bilinteresserte og
-            nysgjerrige i Halden.
-          </p>
-          <p>
-            Rett ved siden av ligger "Streeten", ruta bilene kjører gjennom
-            sentrum. Tilskuere på Fiskebrygga kan oppleve bilene som kjører
-            sakte forbi. I andre byer kalles den ofte for "Stripa", men I Halden
-            har navnet fått en mer amerikansk vri. Det er faktisk her klubben
-            fikk navnet sitt "Street and Cruising Club".
-          </p>
-        </div>
-        <div class="multimedia-g_media">
-          <video
-            class="multimedia-g_media_map"
-            src="video/StreetenNåtid.mp4"
-            controls
-            muted
-          ></video>
-        </div>
-      </section>
-
-      <!-- Fiskebrygga statistikk scroll-seksjon -->
-      <section class="multimedia-scroll" id="multimedia-scroll">
-        <div
-          class="multimedia-scroll_media not-visible ease"
-          id="multimedia-scroll_media"
-        >
-          <div
-            class="multimedia-scroll_media_img--1 fade-out sticky ease"
-            id="img-1"
-          >
-            <img src="img/data-meetings.svg" alt="" />
-          </div>
-          <p></p>
-          <div
-            class="multimedia-scroll_media_img--2 fade-out sticky ease"
-            id="img-2"
-          >
-            <img src="img/data-years.svg" alt="" />
-          </div>
-          <div
-            class="multimedia-scroll_media_img--3 fade-out sticky ease"
-            id="img-3"
-          >
-            <img src="img/data-visitors.svg" />
-          </div>
-        </div>
-
-        <div class="multimedia-scroll_text text--m">
-          <div
-            class="multimedia-scroll_text_quoteblock multimedia-scroll_text_quoteblock--1"
-          ></div>
-
-          <div class="multimedia-scroll_text_quoteblock">
-            <div>
-              <p>
-                I løpet av sommersesongen blir det
-                <span class="text-quote">22 treff</span>.
-              </p>
-            </div>
-          </div>
-
-          <div class="multimedia-scroll_text_quoteblock">
-            <div>
-              <p>
-                Biltreff på Fiskebrygga har lang tradisjon i Halden og det har
-                foregått i rundt <span class="text-quote">40 år</span>.
-              </p>
-            </div>
-          </div>
-
-          <div
-            class="multimedia-scroll_text_quoteblock multimedia-scroll_text_quoteblock--3"
-          >
-            <div>
-              <p>
-                Hvert treff har mellom
-                <span class="text-quote">100 og 150 oppmøtte.</span> Totalt blir
-                det rundt 3000 besøkende i løpet av sesongen.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Fiskebrygga forandringer, intervju -->
-      <section class="multimedia-h fill-page bg-white zindex">
+  <!-- Fiskebrygga forandringer, intervju
+      <section class="multimedia-h fill-page bg-white-2 zindex">
         <div class="multimedia-h_media">
           <picture class="multimedia-h_media_image--2">
             <img src="img/fiskebrygga-planer.JPG" alt="" />
@@ -523,157 +514,132 @@
             <img src="img/fiskebrygga-planer-visuelt.JPG" alt="" />
           </picture>
         </div>
-      </section>
+      </section> -->
 
-      <!-- Crowdsourced google map intro-tekst -->
-      <section class="text-a bg-white-2 zindex ">
-        <div class="text-a_text text--s">
-          <h2 class="headline--m">Har du amcar?</h2>
-          <h3 class="text--s"> På kartet under kan du se biler andre har plassert, og du kan legge
-              inn din egen amcar.</h3>
-          <p>
-           
-          </p>
+  <!-- Crowdsourced google map intro-tekst -->
+  <section class="text-a bg-white zindex ">
+    <div class="text-a_text text--s">
+      <h2 class="headline--m">Prosjekt Amcars</h2>
+      <h3 class="text--s">
+        På kartet under kan du se biler andre har plassert, og du kan legge
+        inn din egen amcar.
+      </h3>
+      <p></p>
+    </div>
+  </section>
+
+  <!-- Crowdsourced google map -->
+  <section class="crowdsourced-map fill-page bg-white zindex">
+    <div class="crowdsourced-map_sidebar">
+
+      <div class="crowdsourced-map_sidebar_stats">
+        <div class="crowdsourced-map_sidebar_stats_totalamcars">
+          <!-- <img src="img/icon/846296.png" alt=""> -->
+          <p class="crowdsourced-map_sidebar_totalcars--total headline--s" id="map-totalcars"></p>
         </div>
-      </section>
+        <p class="crowdsourced-map_sidebar_total text--xs"><img src="img/icon/Ford.png" alt=""><span class="text--s" id="map-totalford"></span></p>
+        <p class="crowdsourced-map_sidebar_total text--xs"><img src="img/icon/Chevrolet.png" alt=""><span class="text--s" id="map-totalchev"></span></p>
+        <p class="crowdsourced-map_sidebar_total text--xs"><img src="img/icon/Dodge.png" alt=""><span class="text--s" id="map-totaldodge"></span></p>
 
-      <!-- Crowdsourced google map -->
-      <section class="crowdsourced-map fill-page bg-white zindex">
-        <div class="crowdsourced-map_sidebar">
-          <div
-            class="crowdsourced-map_cta text--s button"
-            id="crowdsourced-map_option--car"
-          >
-            Plasser din amcar
-          </div>
-          <div class="crowdsourced-map_sidebar_stats">
-            <p
-              class="crowdsourced-map_sidebar_totalcars headline--s"
-              id="map-totalcars"
-            ></p>
-            <p
-              class="crowdsourced-map_sidebar_totalcars headline--xs"
-              id="map-totalford"
-            ></p>
-            <p
-              class="crowdsourced-map_sidebar_totalcars headline--xs"
-              id="map-totalchev"
-            ></p>
-            <p
-              class="crowdsourced-map_sidebar_totalcars headline--xs"
-              id="map-totaldodge"
-            ></p>
-            <p
-              class="crowdsourced-map_sidebar_totalcars headline--xs"
-              id="map-totalother"
-            ></p>
-          </div>
-          <div
-            class="crowdsourced-map_sidebar_chart"
-            id="crowdsourced-map_sidebar_chart"
-          ></div>
-        </div>
-        <div
-          class="crowdsourced-map_googleMap"
-          id="ccGoogleMap"
-          style="width:100%;height:100%;"
-        ></div>
-        <form
-          action=""
-          class="crowdsourced-map_form"
-          id="crowdsourced-map_form"
-        >
-          <h3 class="headline--xs">Din informasjon</h3>
-          <label class="text--m" for="make">Bilmerke</label>
-          <select name="make">
-            <option value="Annet">Annet Merke</option>
-            <option value="Chevrolet">Chevrolet</option>
-            <option value="Dodge">Dodge</option>
-            <option value="Ford">Ford</option>
-          </select>
-          <label class="text--m" for="model">Bilmodell</label>
-          <input type="text" name="model" />
-          <label class="text--m" for="year">Årsmodell</label>
-          <input type="number" name="year" />
+        <p class="crowdsourced-map_sidebar_total text--xs"><img src="img/icon/Cadillac.png" alt=""><span class="text--s" id="map-totalcad"></span></p>
 
-          <div
-            class="text--m crowdsourced-map_form_button button"
-            id="crowdsourced-map_form_button"
-          >
-            Send inn
-          </div>
-          <div
-            class="text--m crowdsourced-map_form_close button"
-            id="crowdsourced-map_form_close"
-          >
-            Avbryt
-          </div>
-        </form>
-      </section>
+        <p class="crowdsourced-map_sidebar_total text--xs"><img src="img/icon/Buick.png" alt=""><span class="text--s" id="map-totalbuick"></span></p>
+        <p class="crowdsourced-map_sidebar_total text--xs"><img src="img/icon/Oldsmobile.png" alt=""><span class="text--s" id="map-totalolds"></span></p>
 
-      <section class="text-a bg-white zindex">
+        <p class="crowdsourced-map_sidebar_total text--xs"><img src="img/icon/Pontiac.png" alt="">
+          <span class="text--s" id="map-totalpont"></span>
+        </p>
+        <p class="crowdsourced-map_sidebar_total text--xs"><img src="img/icon/Annet.png" alt=""><span class="text--s" id="map-totalother"></span></p>
+
+        
+        <p class="crowdsourced-map_cta button text--m" id="crowdsourced-map_option--car">
+          Plasser din amcar
+        </p>
+      </div>
+    </div>
+    <div class="crowdsourced-map_googleMap" id="ccGoogleMap" style="width:100%;height:100%;"></div>
+    <form action="" class="crowdsourced-map_form" id="crowdsourced-map_form">
+      <h3 class="headline--xs">Din informasjon</h3>
+      <label class="text--m" for="make">Bilmerke</label>
+      <select name="make">
+        <option value="Annet">Annet Merke</option>
+        <option value="Chevrolet">Chevrolet</option>
+        <option value="Dodge">Dodge</option>
+        <option value="Ford">Ford</option>
+        <option value="Cadillac">Cadillac</option>
+        <option value="Pontiac">Pontiac</option>
+        <option value="Oldsmobile">Oldsmobile</option>
+        <option value="Buick">Buick</option>
+      </select>
+      <label class="text--m" for="model">Bilmodell</label>
+      <input type="text" name="model" />
+      <label class="text--m" for="year">Årsmodell</label>
+      <input type="number" name="year" />
+
+      <div class="text--m crowdsourced-map_form_button button" id="crowdsourced-map_form_button">
+        Send inn
+      </div>
+      <div class="text--m crowdsourced-map_form_close button" id="crowdsourced-map_form_close">
+        Avbryt
+      </div>
+    </form>
+  </section>
+
+  <!-- <section class="text-a bg-white zindex">
         <div class="text-a_text text--xs">
           <p class="text-a_text_p">
-            Alle bilder på siden er tatt av redaksjonen, med unntak av det
-            amerikanske flagget som er hentet fra en mediebanken XXXXXXXXX og
-            kartet fra Haldens planer for Fiskebrygga.
           </p>
         </div>
-      </section>
+      </section> -->
 
-      <section class="image-grid-a zindex">
-        <div class="image-grid-a_media bg-white" id="image-grid-a_media">
-          <picture class="image-grid-a_media_img--1">
-            <img src="img/mod/mat.jpg" alt="" />
-          </picture>
-          <picture class="image-grid-a_media_img--2">
-            <img src="img/mod/fiskebrygga-5_5448.jpg" alt=""
-          /></picture>
+  <section class="image-grid-a zindex">
+    <div class="image-grid-a_media bg-white" id="image-grid-a_media">
+      <picture class="image-grid-a_media_img--1">
+        <img src="img/mod/mat.jpg" alt="" />
+      </picture>
+      <picture class="image-grid-a_media_img--2">
+        <img src="img/mod/fiskebrygga-5_5448.jpg" alt="" /></picture>
 
-          <picture class="image-grid-a_media_img--3">
-            <img src="img/mod/scene.jpg" alt=""
-          /></picture>
+      <picture class="image-grid-a_media_img--3">
+        <img src="img/mod/scene.jpg" alt="" /></picture>
 
-          <picture class="image-grid-a_media_img--4">
-            <img src="img/mod/unge.jpg" alt=""
-          /></picture>
+      <picture class="image-grid-a_media_img--4">
+        <img src="img/mod/unge.jpg" alt="" /></picture>
 
-          <picture class="image-grid-a_media_img--5">
-            <img src="img/mod/fiskebrygga-3_5417.jpg" alt=""
-          /></picture>
+      <picture class="image-grid-a_media_img--5">
+        <img src="img/mod/fiskebrygga-3_5417.jpg" alt="" /></picture>
 
-          <picture class="image-grid-a_media_img-6">
-            <img src="img/mod/familien-far.jpg" alt=""
-          /></picture>
+      <picture class="image-grid-a_media_img-6">
+        <img src="img/mod/familien-far.jpg" alt="" /></picture>
 
-          <picture class="image-grid-a_media_img--7">
-            <img src="img/mod/bil-pickup.jpg" alt=""
-          /></picture>
+      <picture class="image-grid-a_media_img--7">
+        <img src="img/mod/bil-pickup.jpg" alt="" /></picture>
 
-          <picture class="image-grid-a_media_img--8">
-            <img src="img/mod/biler-bak.jpg" alt=""
-          /></picture>
+      <picture class="image-grid-a_media_img--8">
+        <img src="img/mod/biler-bak.jpg" alt="" /></picture>
 
-          <picture class="image-grid-a_media_img--9">
-            <img src="img/mod/skull.jpg" alt=""
-          /></picture>
+      <picture class="image-grid-a_media_img--9">
+        <img src="img/mod/skull.jpg" alt="" /></picture>
 
-          <picture class="image-grid-a_media_img--10">
-            <img src="img/mod/familien-2.jpg" alt=""
-          /></picture>
+      <picture class="image-grid-a_media_img--10">
+        <img src="img/mod/familien-2.jpg" alt="" /></picture>
 
-          <picture class="image-grid-a_media_img--11">
-            <img src="img/mod/fiskebrygga-1_5411.jpg" alt=""
-          /></picture>
+      <picture class="image-grid-a_media_img--11">
+        <img src="img/mod/fiskebrygga-1_5411.jpg" alt="" /></picture>
 
-          <picture class="image-grid-a_media_img--12">
-            <img src="img/mod/diner-flagg.jpg" alt=""
-          /></picture>
-        </div>
-      </section>
+      <picture class="image-grid-a_media_img--12">
+        <!-- <img src="img/mod/diner-flagg.jpg" alt="" -->
+        <a href="http://it.hiof.no/HaldenTimes/">
+          <img src="img/logo--outlines.svg" alt=""></a>
+        <p class="text--xs">Alle bilder på siden er tatt av redaksjonen, med unntak av det
+          amerikanske flagget som er hentet fra mediebanken unsplash.com, vinnerbilde av Svein fra Hurum og
+          tegninger av byplanlegging i Halden.</p>
+      </picture>
     </div>
+  </section>
+  </div>
 
-    <!--
+  <!--
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcpp_Alc9pjgyaMdWw03-gP6ekLWYifMw&callback=myMap" defer></script>
 
          <script src="js/rellax.js"></script>
@@ -686,29 +652,26 @@
       </script>
     -->
 
-    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
 
-    <script>
-      // Initialize Firebase
-      var config = {
-        apiKey: "AIzaSyCsh3-pnzNXARQ9ovjq_iLA-kYpY-nJ-k4",
-        authDomain: "ccmap-71c63.firebaseapp.com",
-        databaseURL: "https://ccmap-71c63.firebaseio.com",
-        projectId: "ccmap-71c63",
-        storageBucket: "ccmap-71c63.appspot.com",
-        messagingSenderId: "774444694432"
-      };
-      firebase.initializeApp(config);
-    </script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCsh3-pnzNXARQ9ovjq_iLA-kYpY-nJ-k4",
+      authDomain: "ccmap-71c63.firebaseapp.com",
+      databaseURL: "https://ccmap-71c63.firebaseio.com",
+      projectId: "ccmap-71c63",
+      storageBucket: "ccmap-71c63.appspot.com",
+      messagingSenderId: "774444694432"
+    };
+    firebase.initializeApp(config);
+  </script>
 
-    <script type="text/javascript" src="js/ccGoogleMap.js" defer></script>
+  <script type="text/javascript" src="js/ccGoogleMap.js" defer></script>
 
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=&callback=myMap"
-      defer
-    ></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=&callback=myMap" defer></script>
 
-    <!--
+  <!--
       <script
         type="text/javascript"
         src="https://www.gstatic.com/charts/loader.js"
@@ -745,7 +708,7 @@
         }
       </script>
     -->
+  <script type="text/javascript" src="js/main.js" defer></script>
+</body>
 
-    <script type="text/javascript" src="js/main.js" defer></script>
-  </body>
 </html>

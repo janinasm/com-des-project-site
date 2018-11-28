@@ -6,22 +6,36 @@ function plusSlides(n) {
   showSlides((slideIndex += n));
 }
 
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
 function showSlides(n) {
   var i;
-  var slides = document.getElementsByClassName("slides");
-  var numbers = document.getElementsByClassName("number");
+  const slides = document.getElementsByClassName("slides");
+  const numbers = document.getElementsByClassName("numbertext");
+  const dots = document.getElementsByClassName("dot");
 
   if (n > slides.length) {
     slideIndex = 1;
   }
+
   if (n < 1) {
     slideIndex = slides.length;
   }
 
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
+    numbers[i].style.display = "none";
   }
+
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" dot--active", "");
+  }
+
   slides[slideIndex - 1].style.display = "block";
+  numbers[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " dot--active";
 }
 
 // header
@@ -32,7 +46,7 @@ var header_height = header.offsetHeight;
 var header_grid = document.getElementById("header_landing_grid");
 var header_grid_height = header_grid.offsetHeight;
 
-window.addEventListener("scroll", function() {
+window.addEventListener("scroll", function () {
   scrollpos = window.scrollY;
 
   if (scrollpos > header_height) {
@@ -55,8 +69,8 @@ var multimedia_scroll_media = document.getElementById(
   "multimedia-scroll_media"
 );
 
-var video_a = document.getElementById("video-a");
-var video = document.getElementById("video");
+// video-a nils petter
+const nilsen_video = document.getElementById("video-a");
 var mm_a = document.getElementById("multimedia-a");
 
 // multimedia-a nils petter
@@ -97,16 +111,22 @@ var img3 = document.getElementById("img-3");
 var mm_h = document.getElementById("multimedia-h");
 
 // scroll listener function
-window.addEventListener("scroll", function(e) {
-  if (isTopScrolledIntoView(mm_a_media_img2)) {
+window.addEventListener("scroll", function (e) {
+  if (isTopScrolledIntoView(mm_a_media_img1)) {
     mm_a_media_img1.classList.remove("fade-out");
     mm_a_media_img2.classList.remove("fade-out");
 
-    mm_a_media_img1.classList.add("slide-up-long");
-    mm_a_media_img2.classList.add("slide-up-long");
+    mm_a_media_img1.classList.add("slide-up-short");
+    mm_a_media_img2.classList.add("slide-up-medium");
+  } else {
+    mm_a_media_img1.classList.add("fade-out");
+    mm_a_media_img2.classList.add("fade-out");
+
+    mm_a_media_img1.classList.remove("slide-up-short");
+    mm_a_media_img2.classList.remove("slide-up-medium");
   }
 
-  if (isTopScrolledIntoView(mm_d_media_quote1)) {
+  if (isTopScrolledIntoView(mm_d_media_img1)) {
     mm_d_media_img1.classList.remove("fade-out");
     mm_d_media_img2.classList.remove("fade-out");
     mm_d_media_quote1.classList.remove("fade-out");
@@ -114,11 +134,18 @@ window.addEventListener("scroll", function(e) {
     mm_d_media_img1.classList.add("slide-up-short");
     mm_d_media_img2.classList.add("slide-up-medium");
     mm_d_media_quote1.classList.add("slide-up-long");
+  } else {
+    mm_d_media_img1.classList.add("fade-out");
+    mm_d_media_img2.classList.add("fade-out");
+    mm_d_media_quote1.classList.add("fade-out");
+
+    mm_d_media_img1.classList.remove("slide-up-short");
+    mm_d_media_img2.classList.remove("slide-up-medium");
+    mm_d_media_quote1.classList.remove("slide-up-long");
   }
 
   if (isTopScrolledIntoView(mm_b_quote1)) {
     mm_b_quote1.classList.remove("fade-out");
-
     mm_b_quote1.classList.add("slide-up-medium");
   } else {
     mm_b_quote1.classList.remove("slide-up-medium");
@@ -138,33 +165,64 @@ window.addEventListener("scroll", function(e) {
   if (isScrolledIntoView(multimedia_scroll)) {
     multimedia_scroll_media.classList.remove("not-visible");
 
-    img1.classList.remove("fade-out");
+    img1.classList.add("fade-out");
   }
 
   if (!isScrolledIntoView(multimedia_scroll)) {
     multimedia_scroll_media.classList.add("not-visible");
   }
 
-  if (isScrolledIntoView(quote1)) {
+  if (isMiddleScrolledIntoView(quote1)) {
+    img1.classList.remove("fade-out");
     img2.classList.add("fade-out");
   }
 
-  if (isScrolledIntoView(quote2)) {
+  if (isMiddleScrolledIntoView(quote2)) {
     img1.classList.add("fade-out");
     img2.classList.remove("fade-out");
     img3.classList.add("fade-out");
   }
 
-  if (isScrolledIntoView(quote3)) {
+  if (isMiddleScrolledIntoView(quote3)) {
     img1.classList.add("fade-out");
     img2.classList.add("fade-out");
     img3.classList.remove("fade-out");
   }
 
- // if (isScrolledIntoView(mm_h)) {
-   // img3.classList.add("fade-out");
+  if (isSubtitleScrolledIntoView(nilsen_video)) {
+    nilsen_video.play();
+  }
+
+  if (isNotMiddleScrolledIntoView(nilsen_video)) {
+    nilsen_video.pause();
+  }
+
+  // if (isScrolledIntoView(mm_h)) {
+  // img3.classList.add("fade-out");
   //}
 });
+
+
+/*
+
+// IntersectionObserver, funker ikke i Safari
+var options = {
+  rootMargin: '0px',
+  threshold: 0.5
+}
+
+observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.intersectionRatio > 0.5) {
+      video.play(); 
+    } else {
+      video.pause();
+    }
+  });
+
+}, options);
+
+observer.observe(nilsen_video);*/
 
 // top or bottom
 function isScrolledIntoView(el) {
@@ -201,15 +259,42 @@ function isBottomScrolledIntoView(el) {
   return isVisible;
 }
 
-// multimedia-f klikk for å vise video
+// middle
+function isMiddleScrolledIntoView(el) {
+  var elemTop = el.getBoundingClientRect().top;
+  var elemBottom = el.getBoundingClientRect().bottom;
+
+  var isVisible = elemTop <= window.innerHeight / 2 && elemBottom >= 0;
+
+  return isVisible;
+}
+
+// video
+function isSubtitleScrolledIntoView(el) {
+  var elemBottom = el.getBoundingClientRect().bottom;
+
+  var isVisible = elemBottom <= (window.innerHeight * 1.2);
+  return isVisible;
+}
+
+function isNotMiddleScrolledIntoView(el) {
+  var elemTop = el.getBoundingClientRect().top;
+  var elemBottom = el.getBoundingClientRect().bottom;
+
+  var isVisible =
+    elemTop + elemBottom < 0 || (window.innerHeight / 2) * 1.2 < elemTop;
+  return isVisible;
+}
+
+// multimedia-f klubben inne/ute, klikk for å vise video
 var mm_f_button = document.getElementById("multimedia-f_button"),
   mm_f_video = document.getElementById("multimedia-f_media_video");
 
-mm_f_button.onclick = function() {
+mm_f_button.onclick = function () {
   mm_f_video.classList.remove("fade-out");
   mm_f_video.classList.add("fade-in-2");
   mm_f_video.play();
-  mm_f_video.addEventListener("ended", function() {
+  mm_f_video.addEventListener("ended", function () {
     mm_f_button.innerHTML = "Se igjen";
     mm_f_button.classList.add("fade-in-2");
     mm_f_button.classList.remove("fade-out");
@@ -218,8 +303,15 @@ mm_f_button.onclick = function() {
   mm_f_button.classList.add("fade-out");
 };
 
-// map
+var videoMuted = true;
 
-
-// test scrolling
-
+// nils petter, unmute
+nilsen_video.addEventListener('click', function () {
+  if (videoMuted) {
+    videoMuted = false;
+    nilsen_video.muted = false;
+  } else {
+    videoMuted = true;
+    nilsen_video.muted = true;
+  }
+})

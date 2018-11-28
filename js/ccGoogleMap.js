@@ -6,6 +6,10 @@ const mapFormOpinion = document.getElementById("crowdsourced-map_form"),
   totalFordText = document.getElementById("map-totalford"),
   totalChevText = document.getElementById("map-totalchev"),
   totalDodgeText = document.getElementById("map-totaldodge"),
+  totalCadText = document.getElementById("map-totalcad"),
+  totalBuickText = document.getElementById("map-totalbuick"),
+  totalPontText = document.getElementById("map-totalpont"),
+  totalOldsText = document.getElementById("map-totalolds"),
   totalOtherText = document.getElementById("map-totalother");
 
 // firebase
@@ -15,40 +19,36 @@ const carsRef = db.ref("cars");
 var countedCars = new Array(),
   placingCar = false;
 
+  var markers = [];
+
 function myMap() {
+ 
+
   // map info and styling
   var mapProp = {
     center: new google.maps.LatLng(59.120749, 11.383609),
     zoom: 16,
-    styles: [
-      {
-        featureType: "poi.business",
-        elementType: "labels",
-        stylers: [
-          {
-            visibility: "off"
-          }
-        ]
-      },
-      {
-        "featureType": "road",
-        "elementType": "geometry.stroke",
-        "stylers": [
-          {
-            "color": "#873B3B"
-          }
-        ]
-      },
-      {
-        "featureType": "water",
-        "elementType": "geometry.fill",
-        "stylers": [
-          {
-            "color": "#254576"
-          }
-        ]
-      }
-    ],
+    styles: [{
+      featureType: "poi.business",
+      elementType: "labels",
+      stylers: [{
+        visibility: "off"
+      }]
+      // },
+      // {
+      //   "featureType": "road",
+      //   "elementType": "geometry.stroke",
+      //   "stylers": [{
+      //     "color": "#873B3B"
+      //   }]
+      // },
+      // {
+      //   "featureType": "water",
+      //   "elementType": "geometry.fill",
+      //   "stylers": [{
+      //     "color": "#254576"
+      //   }]
+    }],
     clickableIcons: false,
     disableDoubleClickZoom: true,
     streetViewControl: false
@@ -60,8 +60,9 @@ function myMap() {
     mapProp
   );
 
+
   // listener for clicks on map
-  google.maps.event.addListener(map, "click", function(e) {
+  google.maps.event.addListener(map, "click", function (e) {
     if (placingCar) {
       mapFormOpinion.classList.add("show");
 
@@ -75,25 +76,26 @@ function myMap() {
   });
 
   // listener for leaving map
-  google.maps.event.addListener(map, "mouseout", function() {
+  google.maps.event.addListener(map, "mouseout", function () {
     placingCar = false;
     mapOptionCar.classList.remove("active");
   });
 
   // listen for all cars added to database
-  carsRef.on("child_added", function(data) {
+  carsRef.on("child_added", function (data) {
     countCars(data);
 
-    // makes marker at position clicked
-    marker = new google.maps.Marker({
-      position: { lat: data.val().lat, lng: data.val().lng },
-      map: map
-    });
+    // custom icon
+    var custom_icon = {
+      url: 'img/icon/' + data.val().make + '.png',
+      scaledSize: new google.maps.Size(60, 60), // scaled size
+      origin: new google.maps.Point(0, 0), // origin
+      anchor: new google.maps.Point(0, 0) // anchor
+    };
 
     // makes textwindow at marker
     infowindow = new google.maps.InfoWindow({
-      content:
-        '<div class="carInfo"><p>' +
+      content: '<div class="carInfo"><p>' +
         data.val().make +
         "</p><p>" +
         data.val().model +
@@ -101,9 +103,37 @@ function myMap() {
         data.val().year +
         "</p></div>"
     });
-    infowindow.open(map, marker);
+
+    // makes marker at position clicked
+    marker = new google.maps.Marker({
+      position: {
+        lat: data.val().lat,
+        lng: data.val().lng
+      },
+      icon: custom_icon,
+     // content: infowindow,
+      map: map
+    });
+    markers.push(marker);
+
+    //infowindow.open(map, marker);
+
+    addClickHandler(marker, infowindow, map);
+  
   });
+
 }
+
+function addClickHandler(marker, infowindow, map) {
+  google.maps.event.addListener(marker, 'mouseover', function() {
+    infowindow.open(map, marker);
+    });
+
+    google.maps.event.addListener(marker, 'mouseout', function() {
+      infowindow.close(map, marker);
+      });
+  }
+
 
 // saves car object to db
 function writeUserData() {
@@ -141,30 +171,40 @@ function countCarsToHtml() {
   totalFordText.innerHTML = countedCars.Ford + " Ford";
   totalChevText.innerHTML = countedCars.Chevrolet + " Chevrolet";
   totalDodgeText.innerHTML = countedCars.Dodge + " Dodge";
-  totalOtherText.innerHTML = countedCars.Annet + " andre merker";
+  totalCadText.innerHTML = countedCars.Cadillac + " Cadillac";
+  totalBuickText.innerHTML = countedCars.Buick + " Buick";
+  totalOldsText.innerHTML = countedCars.Oldsmobile + " Oldsmobile";
+  totalPontText.innerHTML = countedCars.Pontiac + " Pontiac";
+
+  totalOtherText.innerHTML = countedCars.Annet + " Andre Merker";
+
   totalCarsText.innerHTML =
     countedCars.Ford +
     countedCars.Chevrolet +
     countedCars.Dodge +
+    countedCars.Cadillac +
+    countedCars.Buick +
+    countedCars.Oldsmobile +
+    countedCars.Pontiac +
     countedCars.Annet +
     " amcars";
 }
 
 // enables user placing car on click
-mapOptionCar.onclick = function() {
+mapOptionCar.onclick = function () {
   mapOptionCar.classList.add("active");
   placingCar = true;
 };
 
 // hides form when user confirms
-mapFormButton.onclick = function() {
+mapFormButton.onclick = function () {
   mapFormOpinion.classList.remove("show");
 
   getForm();
 };
 
 // hides form when user cancels
-mapFormClose.onclick = function() {
+mapFormClose.onclick = function () {
   mapFormOpinion.classList.remove("show");
   mapFormOpinion.reset();
 };

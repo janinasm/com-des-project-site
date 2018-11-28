@@ -15,7 +15,7 @@
 
 // HEADER LANDING PAGE
 .header_landing {
-  background: black;
+  background: $base-color--black;
   top: 0;
   height: 120vh;
   display: grid;
@@ -143,7 +143,7 @@
     }
 
     &_subtitle {
-      color: white;
+      color: $base-color--white;
       margin: 0 auto;
       width: 80%;
     }
@@ -157,7 +157,7 @@
 
 .scroll-indicator {
   width: 7rem;
-  color: white;
+  color: $base-color--white;
   position: absolute;
   left: 50%;
   transform: translate(-50%);

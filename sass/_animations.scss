@@ -1,13 +1,13 @@
 .slide-up-long {
-    animation: slide-up-long 3s;
+    animation: slide-up-long 2s;
  }
 
  .slide-up-medium {
-    animation: slide-up-medium 2.5s;
+    animation: slide-up-medium 1.5s;
  }
  
  .slide-up-short {
-    animation: slide-up-short 2s;
+    animation: slide-up-short 1s;
  }
 
  .bounce2 {
@@ -28,7 +28,7 @@
 
  @keyframes slide-up-long {
     0% {
-        transform: translateY(30rem);
+        transform: translateY(15rem);
         opacity: 0;
     }
     50% {
@@ -41,7 +41,7 @@
 
  @keyframes slide-up-medium {
     0% {
-        transform: translateY(20rem);
+        transform: translateY(10rem);
         opacity: 0;
     }
     50% {
@@ -54,7 +54,7 @@
 
  @keyframes slide-up-short {
     0% {
-        transform: translateY(10rem);
+        transform: translateY(5rem);
         opacity: 0;
     }
     50% {

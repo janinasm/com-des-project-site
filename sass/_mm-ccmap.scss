@@ -1,55 +1,67 @@
-.multimedia-k {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
-  grid-gap: 3rem;
-  justify-content: center;
-
-  &_media {
-    padding: 3rem;
-
-    &_image {
-    }
-  }
-
-  &_text {
-    max-width: 50rem;
-    display: grid;
-
-    align-self: center;
-    justify-self: center;
-    grid-row-gap: 2rem;
-  }
-}
-
 .crowdsourced-map {
+  background: #333;
+  padding: .5rem;
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 2fr 6fr;
   grid-template-rows: 1fr;
   justify-content: center;
 
   &_sidebar {
     grid-column: 1;
     grid-row: 1;
+    padding-right: .5rem;
 
-    background: #333;
-    box-shadow: 0 0 10px #00000080;
-    color: white;
-    padding: 3rem;
+    min-height: 100vh;
+    background: $base-color--dark;
+    //box-shadow: 0 0 10px #00000080;
+    color: $base-color--light;
+
     z-index: 2;
 
     display: grid;
-    justify-content: center;
-    justify-items: center;
-    align-content: start;
-    grid-gap: 3rem;
+
+
+
 
     &_stats {
-    display: grid;
-    grid-row-gap: 3rem;
-    margin-top: 10rem;
+      display: grid;
+      grid-gap: .5rem;
+      grid-template-rows: 2fr repeat(5, minmax(1rem, 1fr));
+      grid-template-columns: 1fr 1fr;
+
+      &_totalamcars {
+        background: center url(../img/mod/map-closeup_8416-2.jpg);
+        text-shadow: 0 0 20px #050505;
+        object-fit: contain;
+        grid-row: 1;
+        grid-column: 1 / -1;
+
+        display: grid;
+        align-content: center;
+        justify-items: center;
+
+        &>img {
+          height: 7rem;
+          width: 7rem;
+        }
+      }
+
     }
 
-    &_totalcars {
+    &_total {
+      background: #444;
+
+      display: grid;
+      grid-template-columns: 1fr;
+      align-content: center;
+      justify-items: center;
+
+      &>img {
+        height: 4rem;
+        width: 4rem;
+      }
+
+      &>span {}
     }
   }
 
@@ -59,11 +71,15 @@
   }
 
   &_cta {
-    background: #9f4545;
-    padding: 3rem;
+    background: $primary-color;
     font-weight: 600;
+    grid-column: 1 / -1;
+    grid-row: 6;
+    display: grid;
+    align-content: center;
   }
 
+  // form
   &_form {
     grid-column: 2;
     grid-row: 1;
@@ -71,9 +87,8 @@
     justify-self: center;
     justify-items: center;
     grid-gap: 1rem;
-
     padding: 3rem;
-    background: white;
+    background: $base-color--white;
     display: grid;
     z-index: 10;
     border-radius: 3px;
@@ -82,22 +97,22 @@
     visibility: hidden;
 
     &_button {
-        background: #28a745;
-        font-size: 2rem;
+      background: #28a745;
+      font-size: 2rem;
     }
 
     &_close {
-        background: #dc3545;
-        font-size: 2rem;
+      background: #dc3545;
+      font-size: 2rem;
     }
   }
 
+  // google map infowindow
   & .carInfo {
     font-size: 1.5rem;
     font-weight: 600;
     text-transform: uppercase;
   }
 
-  @media only screen and (max-width: $bp-small) {
-  }
+  @media only screen and (max-width: $bp-small) {}
 }

@@ -20,7 +20,6 @@ $bp-small: 37.5em; // 600px;
 */
 
 html {
-  // This defines what 1rem is
   font-size: 62.5%;
 
   @media only screen and (max-width: $bp-largest) {
@@ -36,6 +35,20 @@ body {
 select, input {
   width: 100%;
   font-size: 2rem;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+video {
+  width: 100%;
+  height: auto;
+}
+
+video::-webkit-media-controls-overlay-play-button {
+  display: none;
 }
 
 .page-loader {

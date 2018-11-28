@@ -1,4 +1,15 @@
 // IMAGE GRID A, 3 rows of 6 columns
+%grid-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 1s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
 .image-grid-a {
   &_media {
     display: grid;
@@ -6,6 +17,9 @@
     grid-gap: 1.5rem;
     padding: 1.5rem;
 
+    & picture {
+      overflow: hidden;
+    }
 
     &_img {
       &--1 {
@@ -122,6 +136,26 @@
         grid-row: 3 / span 1;
         grid-column: 5 / -1;
 
+        background: $base-color--light;
+        padding: 2rem;
+
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        align-content: space-around;
+
+        img {
+          object-fit: contain !important;
+          transition: none;
+
+          &:hover {
+            transform: none;
+          }
+        }
+
+        p {
+          text-align: center;
+        }
+
         @media only screen and (max-width: $bp-small) {
           grid-row: 6;
           grid-column: 3;
@@ -139,22 +173,22 @@
   }
 
   & img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+    @extend %grid-img;
   }
 }
-
 
 // IMAGE GRID B, 2 rows of 6 columns
 .image-grid-b {
   &_media {
-    background: white;
+    background: $base-color--white;
     display: grid;
     grid-template: repeat(2, 15vw) / repeat(6, 1fr);
     grid-gap: 1.5rem;
     padding: 1.5rem;
+
+    & picture {
+      overflow: hidden;
+    }
 
     &_img {
       &--1 {
@@ -195,9 +229,47 @@
   }
 
   & img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+    @extend %grid-img;
+  }
+}
+
+// IMAGE GRID B, 2 rows of 6 columns
+.image-grid-c {
+  &_media {
+    background: $base-color--white;
+    display: grid;
+    grid-template: repeat(1, 15vw) / repeat(6, 1fr);
+    grid-gap: 1.5rem;
+    padding: 1.5rem;
+
+    & picture {
+      overflow: hidden;
+    }
+
+    &_img {
+      &--1 {
+        grid-column: 1;
+      }
+
+      &--2 {
+        grid-column: 2 / span 2;
+      }
+
+      &--3 {
+        grid-column: 4;
+      }
+
+      &--4 {
+        grid-column: 5;
+      }
+
+      &--5 {
+        grid-column: 6;
+      }
+    }
+  }
+
+  & img {
+    @extend %grid-img;
   }
 }
