@@ -328,10 +328,9 @@ video {
   height: auto;
 }
 
-video::-webkit-media-controls-overlay-play-button {
+/* video::-webkit-media-controls-overlay-play-button {
   display: none;
-}
-
+} */
 .page-loader {
   display: block;
   position: absolute;
@@ -809,7 +808,7 @@ video::-webkit-media-controls-overlay-play-button {
 
 .multimedia-b {
   width: 100%;
-  background: linear-gradient(55deg, #182949de 0%, #804646a4 85%), no-repeat center url(../img/mod/familien.jpg);
+  background: linear-gradient(55deg, #182949de 0%, #804646a4 85%), no-repeat center url(../img/familien.jpg);
   background-size: cover;
   background-attachment: fixed;
   display: -ms-grid;
@@ -930,7 +929,7 @@ video::-webkit-media-controls-overlay-play-button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: linear-gradient(55deg, #804646a4 0%, #182949de 85%), no-repeat center url(../img/mod/juke-vid.jpg);
+  background: linear-gradient(55deg, #804646a4 0%, #182949de 85%), no-repeat center url(../img/juke-vid.jpg);
   background-size: cover;
   background-attachment: fixed;
 }
@@ -1196,12 +1195,14 @@ video::-webkit-media-controls-overlay-play-button {
   background-size: cover;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(50rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+  -ms-grid-columns: (minmax(50rem, 70rem))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(50rem, 70rem));
   justify-items: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .multimedia-f_button {
@@ -1275,6 +1276,7 @@ video::-webkit-media-controls-overlay-play-button {
   -ms-grid-column-align: center;
       justify-self: center;
   grid-row-gap: 2rem;
+  max-width: 55rem;
 }
 
 @media only screen and (max-width: 62.5em) {
@@ -1296,8 +1298,8 @@ video::-webkit-media-controls-overlay-play-button {
 }
 
 .multimedia-g {
-  background: -webkit-gradient(linear, left top, left bottom, from(#06090a63), to(#06090ab3)), no-repeat center url(../img/mod/fiskebrygga.jpg);
-  background: linear-gradient(#06090a63, #06090ab3), no-repeat center url(../img/mod/fiskebrygga.jpg);
+  background: -webkit-gradient(linear, left top, left bottom, from(#06090a63), to(#06090ab3)), no-repeat center url(../img/fiskebrygga.jpg);
+  background: linear-gradient(#06090a63, #06090ab3), no-repeat center url(../img/fiskebrygga.jpg);
   background-size: cover;
   background-attachment: fixed;
   display: -ms-grid;
@@ -1623,8 +1625,6 @@ video::-webkit-media-controls-overlay-play-button {
 }
 
 .crowdsourced-map {
-  background: #333;
-  padding: .5rem;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 2fr 6fr;
@@ -1641,7 +1641,7 @@ video::-webkit-media-controls-overlay-play-button {
   grid-column: 1;
   -ms-grid-row: 1;
   grid-row: 1;
-  padding-right: .5rem;
+  padding: 0.5rem;
   min-height: 100vh;
   background: #333;
   color: #f8f9fa;
@@ -1653,7 +1653,7 @@ video::-webkit-media-controls-overlay-play-button {
 .crowdsourced-map_sidebar_stats {
   display: -ms-grid;
   display: grid;
-  grid-gap: .5rem;
+  grid-gap: 0.5rem;
   -ms-grid-rows: 2fr (minmax(1rem, 1fr))[5];
       grid-template-rows: 2fr repeat(5, minmax(1rem, 1fr));
   -ms-grid-columns: 1fr 1fr;
@@ -1661,7 +1661,7 @@ video::-webkit-media-controls-overlay-play-button {
 }
 
 .crowdsourced-map_sidebar_stats_totalamcars {
-  background: center url(../img/mod/map-closeup_8416-2.jpg);
+  background: center url(../img/map-closeup_8416-2.jpg);
   text-shadow: 0 0 20px #050505;
   -o-object-fit: contain;
      object-fit: contain;

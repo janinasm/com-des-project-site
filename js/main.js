@@ -1,4 +1,43 @@
-// multimedia-e imageslider
+// referanser til html-elementer
+const header = document.getElementById("header_landing"),
+  header_grid = document.getElementById("header_landing_grid"),
+  multimedia_scroll = document.getElementById("multimedia-scroll"),
+  multimedia_scroll_media = document.getElementById("multimedia-scroll_media"),
+  nilsen_video = document.getElementById("video-a"),
+  mm_a = document.getElementById("multimedia-a"),
+  mm_a_text = document.getElementById("multimedia-a_text"),
+  mm_a_media_img1 = document.getElementById("multimedia-a_media_img--1"),
+  mm_a_media_img2 = document.getElementById("multimedia-a_media_img--2"),
+  mm_b_text = document.getElementById("multimedia-b_text"),
+  mm_b_quote1 = document.getElementById("multimedia-b_excerpt_p"),
+  mm_d_text = document.getElementsByClassName("multimedia-d_text")[0],
+  mm_d_media_img1 = document.getElementsByClassName(
+    "multimedia-d_media_img--1"
+  )[0],
+  mm_d_media_img2 = document.getElementsByClassName(
+    "multimedia-d_media_img--2"
+  )[0],
+  mm_d_media_quote1 = document.getElementsByClassName(
+    "multimedia-d_excerpt_p"
+  )[0],
+  quote1 = document.getElementsByClassName(
+    "multimedia-scroll_text_quoteblock"
+  )[1],
+  quote2 = document.getElementsByClassName(
+    "multimedia-scroll_text_quoteblock"
+  )[2],
+  quote3 = document.getElementsByClassName(
+    "multimedia-scroll_text_quoteblock"
+  )[3],
+  img1 = document.getElementById("img-1"),
+  img2 = document.getElementById("img-2"),
+  img3 = document.getElementById("img-3"),
+  mm_f_button = document.getElementById("multimedia-f_button"),
+  mm_f_video = document.getElementById("multimedia-f_media_video"),
+  mm_h = document.getElementById("multimedia-h");
+
+// multimedia-e "fotovinner" bildekarusell
+// hentet fra https://www.w3schools.com/howto/howto_js_slideshow.asp
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -7,7 +46,7 @@ function plusSlides(n) {
 }
 
 function currentSlide(n) {
-  showSlides(slideIndex = n);
+  showSlides((slideIndex = n));
 }
 
 function showSlides(n) {
@@ -38,15 +77,12 @@ function showSlides(n) {
   dots[slideIndex - 1].className += " dot--active";
 }
 
-// header
-var scrollpos = window.scrollY;
-var header = document.getElementById("header_landing");
-var header_height = header.offsetHeight;
+// header scroll-event
+var scrollpos = window.scrollY,
+  header_height = header.offsetHeight,
+  header_grid_height = header_grid.offsetHeight;
 
-var header_grid = document.getElementById("header_landing_grid");
-var header_grid_height = header_grid.offsetHeight;
-
-window.addEventListener("scroll", function () {
+window.addEventListener("scroll", function() {
   scrollpos = window.scrollY;
 
   if (scrollpos > header_height) {
@@ -62,56 +98,37 @@ window.addEventListener("scroll", function () {
   }
 });
 
-// scroll-seksjon
-// https://jsfiddle.net/shaaraddalvi/4rp09jL0/
-var multimedia_scroll = document.getElementById("multimedia-scroll");
-var multimedia_scroll_media = document.getElementById(
-  "multimedia-scroll_media"
-);
+// multimedia-f "klubben inne/ute", klikk for å vise video
+mm_f_button.onclick = function() {
+  mm_f_video.classList.remove("fade-out");
+  mm_f_video.classList.add("fade-in-2");
+  mm_f_video.play();
+  mm_f_video.addEventListener("ended", function() {
+    mm_f_button.innerHTML = "Se igjen";
+    mm_f_button.classList.add("fade-in-2");
+    mm_f_button.classList.remove("fade-out");
+  });
 
-// video-a nils petter
-const nilsen_video = document.getElementById("video-a");
-var mm_a = document.getElementById("multimedia-a");
+  mm_f_button.classList.add("fade-out");
+};
 
-// multimedia-a nils petter
-var mm_a_text = document.getElementById("multimedia-a_text");
-var mm_a_media_img1 = document.getElementById("multimedia-a_media_img--1");
-var mm_a_media_img2 = document.getElementById("multimedia-a_media_img--2");
+// nils petter video-intervju, lyd av/på
+/* nilsen_video.addEventListener('click', function () {
+  if (nilsen_video.muted == true) {
+    nilsen_video.muted = false;
+  } else {
+    nilsen_video.muted = true;
+  }
+}) */
 
-// multimedia-a familien
-var mm_b_text = document.getElementById("multimedia-b_text");
-var mm_b_quote1 = document.getElementById("multimedia-b_excerpt_p");
 
-// multimedia-d aarum
-var mm_d_text = document.getElementsByClassName("multimedia-d_text")[0];
-var mm_d_media_img1 = document.getElementsByClassName(
-  "multimedia-d_media_img--1"
-)[0];
-var mm_d_media_img2 = document.getElementsByClassName(
-  "multimedia-d_media_img--2"
-)[0];
-var mm_d_media_quote1 = document.getElementsByClassName(
-  "multimedia-d_excerpt_p"
-)[0];
-
-var quote1 = document.getElementsByClassName(
-  "multimedia-scroll_text_quoteblock"
-)[1];
-var quote2 = document.getElementsByClassName(
-  "multimedia-scroll_text_quoteblock"
-)[2];
-var quote3 = document.getElementsByClassName(
-  "multimedia-scroll_text_quoteblock"
-)[3];
-
-var img1 = document.getElementById("img-1");
-var img2 = document.getElementById("img-2");
-var img3 = document.getElementById("img-3");
-
-var mm_h = document.getElementById("multimedia-h");
+// body scroll-events
+// basert på kode fra https://jsfiddle.net/shaaraddalvi/4rp09jL0/
 
 // scroll listener function
-window.addEventListener("scroll", function (e) {
+// legger til klasser på elementer hvis de er synlig på diverse måter
+window.addEventListener("scroll", function(e) {
+  // animasjon for nils petter tekst-intervju
   if (isTopScrolledIntoView(mm_a_media_img1)) {
     mm_a_media_img1.classList.remove("fade-out");
     mm_a_media_img2.classList.remove("fade-out");
@@ -124,8 +141,9 @@ window.addEventListener("scroll", function (e) {
 
     mm_a_media_img1.classList.remove("slide-up-short");
     mm_a_media_img2.classList.remove("slide-up-medium");
-  }
+  };
 
+  // animasjon for kjersti aarum tekst-intervju
   if (isTopScrolledIntoView(mm_d_media_img1)) {
     mm_d_media_img1.classList.remove("fade-out");
     mm_d_media_img2.classList.remove("fade-out");
@@ -142,8 +160,9 @@ window.addEventListener("scroll", function (e) {
     mm_d_media_img1.classList.remove("slide-up-short");
     mm_d_media_img2.classList.remove("slide-up-medium");
     mm_d_media_quote1.classList.remove("slide-up-long");
-  }
+  };
 
+  // animasjon for familien tekst-intervju
   if (isTopScrolledIntoView(mm_b_quote1)) {
     mm_b_quote1.classList.remove("fade-out");
     mm_b_quote1.classList.add("slide-up-medium");
@@ -152,16 +171,7 @@ window.addEventListener("scroll", function (e) {
     mm_b_quote1.classList.add("fade-out");
   }
 
-  /*
-  if (isBottomScrolledIntoView(video)) {
-    video.classList.add("sticky");
-  }
-
-  if (isBottomScrolledIntoView(video_a) || isScrolledIntoView(mm_a_text)) {
-    video.classList.remove("sticky");
-  }
-  */
-
+  // animasjon for "nye planer for fiskebrygga"
   if (isScrolledIntoView(multimedia_scroll)) {
     multimedia_scroll_media.classList.remove("not-visible");
 
@@ -189,42 +199,30 @@ window.addEventListener("scroll", function (e) {
     img3.classList.remove("fade-out");
   }
 
+  // automatisk avspilling av video, nils petter video-intervju
   if (isSubtitleScrolledIntoView(nilsen_video)) {
-    nilsen_video.play();
-  }
-
-  if (isNotMiddleScrolledIntoView(nilsen_video)) {
+    // pga autoplay-policy forandringer i Chrome kan man ikke lengre automatisk spille av lyd
+    // dersom bruker ikke har hatt noen interaksjon med nettstedet.
+    // https://developers.google.com/web/updates/2017/09/autoplay-policy-changes
+    // koden under gjør at videoen blir satt til mute hvis bruker ikke har interagert slik at den kan spilles automatisk
+    
+    var promise = nilsen_video.play();
+    if (promise !== undefined) {
+      promise
+        .then(_ => {})
+        .catch(error => {
+          nilsen_video.muted = true;
+        });
+    }
+    
+  }else{
     nilsen_video.pause();
   }
-
-  // if (isScrolledIntoView(mm_h)) {
-  // img3.classList.add("fade-out");
-  //}
 });
 
+// metoder for å sjekke om elementet synlig i viewport på diverse måter
 
-/*
-
-// IntersectionObserver, funker ikke i Safari
-var options = {
-  rootMargin: '0px',
-  threshold: 0.5
-}
-
-observer = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
-    if (entry.intersectionRatio > 0.5) {
-      video.play(); 
-    } else {
-      video.pause();
-    }
-  });
-
-}, options);
-
-observer.observe(nilsen_video);*/
-
-// top or bottom
+// sjekker om TOPP ELLER BUNN av elementet er synlig
 function isScrolledIntoView(el) {
   var elemTop = el.getBoundingClientRect().top;
   var elemBottom = el.getBoundingClientRect().bottom;
@@ -234,7 +232,7 @@ function isScrolledIntoView(el) {
   return isVisible;
 }
 
-// fully
+// sjekker om HELE elementet er synlig
 function isScrolledFullyIntoView(el) {
   var elemTop = el.getBoundingClientRect().top;
   var elemBottom = el.getBoundingClientRect().bottom;
@@ -243,75 +241,41 @@ function isScrolledFullyIntoView(el) {
   return isVisible;
 }
 
-// top
+// sjekker om TOPPEN av elementet er synlig
 function isTopScrolledIntoView(el) {
   var elemTop = el.getBoundingClientRect().top;
-
   var isVisible = elemTop <= window.innerHeight;
   return isVisible;
 }
 
-// bottom
+// sjekker om BUNNEN av elementet er synlig
 function isBottomScrolledIntoView(el) {
   var elemBottom = el.getBoundingClientRect().bottom;
-
   var isVisible = elemBottom <= window.innerHeight;
   return isVisible;
 }
 
-// middle
+// sjekker om MIDTEN av elementet har scrollet inn i MIDTEN AV VIEWPORT
 function isMiddleScrolledIntoView(el) {
   var elemTop = el.getBoundingClientRect().top;
   var elemBottom = el.getBoundingClientRect().bottom;
-
   var isVisible = elemTop <= window.innerHeight / 2 && elemBottom >= 0;
-
   return isVisible;
 }
 
-// video
+// sjekker om UNDERTEKSTEN på VIDEO er synlig på nils petter-intervju
 function isSubtitleScrolledIntoView(el) {
   var elemBottom = el.getBoundingClientRect().bottom;
+  var isVisible = elemBottom <= window.innerHeight * 1.2 && elemBottom > 0;
 
-  var isVisible = elemBottom <= (window.innerHeight * 1.2);
   return isVisible;
 }
 
+// sjekker om MIDTEN av elementet IKKE er synlig på nils petter-intervju
 function isNotMiddleScrolledIntoView(el) {
   var elemTop = el.getBoundingClientRect().top;
   var elemBottom = el.getBoundingClientRect().bottom;
-
   var isVisible =
     elemTop + elemBottom < 0 || (window.innerHeight / 2) * 1.2 < elemTop;
   return isVisible;
 }
-
-// multimedia-f klubben inne/ute, klikk for å vise video
-var mm_f_button = document.getElementById("multimedia-f_button"),
-  mm_f_video = document.getElementById("multimedia-f_media_video");
-
-mm_f_button.onclick = function () {
-  mm_f_video.classList.remove("fade-out");
-  mm_f_video.classList.add("fade-in-2");
-  mm_f_video.play();
-  mm_f_video.addEventListener("ended", function () {
-    mm_f_button.innerHTML = "Se igjen";
-    mm_f_button.classList.add("fade-in-2");
-    mm_f_button.classList.remove("fade-out");
-  });
-
-  mm_f_button.classList.add("fade-out");
-};
-
-var videoMuted = true;
-
-// nils petter, unmute
-nilsen_video.addEventListener('click', function () {
-  if (videoMuted) {
-    videoMuted = false;
-    nilsen_video.muted = false;
-  } else {
-    videoMuted = true;
-    nilsen_video.muted = true;
-  }
-})

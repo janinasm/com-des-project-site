@@ -1,6 +1,4 @@
 .crowdsourced-map {
-  background: #333;
-  padding: .5rem;
   display: grid;
   grid-template-columns: 2fr 6fr;
   grid-template-rows: 1fr;
@@ -9,7 +7,7 @@
   &_sidebar {
     grid-column: 1;
     grid-row: 1;
-    padding-right: .5rem;
+    padding: 0.5rem;
 
     min-height: 100vh;
     background: $base-color--dark;
@@ -20,17 +18,14 @@
 
     display: grid;
 
-
-
-
     &_stats {
       display: grid;
-      grid-gap: .5rem;
+      grid-gap: 0.5rem;
       grid-template-rows: 2fr repeat(5, minmax(1rem, 1fr));
       grid-template-columns: 1fr 1fr;
 
       &_totalamcars {
-        background: center url(../img/mod/map-closeup_8416-2.jpg);
+        background: center url(../img/map-closeup_8416-2.jpg);
         text-shadow: 0 0 20px #050505;
         object-fit: contain;
         grid-row: 1;
@@ -40,12 +35,11 @@
         align-content: center;
         justify-items: center;
 
-        &>img {
+        & > img {
           height: 7rem;
           width: 7rem;
         }
       }
-
     }
 
     &_total {
@@ -56,12 +50,13 @@
       align-content: center;
       justify-items: center;
 
-      &>img {
+      & > img {
         height: 4rem;
         width: 4rem;
       }
 
-      &>span {}
+      & > span {
+      }
     }
   }
 
@@ -114,5 +109,6 @@
     text-transform: uppercase;
   }
 
-  @media only screen and (max-width: $bp-small) {}
+  @media only screen and (max-width: $bp-small) {
+  }
 }
